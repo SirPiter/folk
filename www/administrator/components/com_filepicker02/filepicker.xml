@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
+<install type="component" version="1.5">
+	<name>FilePicker</name>
+	<creationDate>18th December 2010</creationDate>
+	<author>Milton Pfenninger</author>
+	<authorEmail>info@webconstruction.ch</authorEmail>
+	<authorUrl>http://www.webconstruction.ch</authorUrl>
+	<copyright>copyright 2009-2010 by Milton Pfenninger</copyright>
+	<license>GLP/GNU</license>
+	<version>1.1.2</version>
+	<description>Get links of files or upload them on your file-system, then insert them to your Joomla! editor.</description>
+	<files folder="site">	
+		<filename>index.html</filename>
+		<filename>controller.php</filename>
+		<filename>filepicker.php</filename>
+		<folder>views</folder>
+		<folder>assets</folder>
+		<folder>helpers</folder>
+	</files>
+	<administration>
+		<menu img="components/com_filepicker/assets/images/filepicker.png">FilePicker</menu>
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>admin.filepicker.php</filename>
+			<filename>config.xml</filename>	
+			<filename>controller.php</filename>				
+			<folder>views</folder>		
+			<folder>assets</folder>		
+		</files>
+	</administration>
+<uninstallfile>uninstall.php</uninstallfile></install>

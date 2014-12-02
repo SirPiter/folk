@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE extension>
+<extension version="2.5" type="plugin" group="quickicon" method="upgrade">
+	<name>plg_quickicon_konsaexp</name>
+	<version>2.5.0</version>
+	<creationDate>2014-07-03</creationDate>
+	<author>SirPiter</author>
+	<authorEmail>sirpiter@sirpiter.ru</authorEmail>
+	<authorUrl>http://www.sirpiter.ru</authorUrl>
+	<copyright>www.sirpiter.ru</copyright>
+	<license>GNU/GPLv3 or later</license>
+	<description>PLG_QUICKICON_KONSAEXP_DESC</description>
+	<files>
+		<filename plugin="konsaexp">konsaexp.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+	</files>
+
+<!-- Site Main Media File Copy Section -->
+    <media destination="com_konsaexp">
+	<folder>icons</folder>
+	<folder>images</folder>
+    </media>
+
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="context"
+					   type="text"
+					   default="mod_quickicon"
+					   description="PLG_QUICKICON_KONSAEXP_GROUP_DESC"
+					   label="PLG_QUICKICON_KONSAEXP_GROUP_LABEL"
+						/>
+			</fieldset>
+		</fields>
+	</config>
+<scriptfile>install_script.php</scriptfile>
+
+</extension>

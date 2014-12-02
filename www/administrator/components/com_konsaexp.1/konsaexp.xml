@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="install">
+ <name>KonsaExp</name>
+ <!-- Следующие элементы являются необязательными -->
+ <creationDate>June 2012</creationDate>
+ <author>SirPiter</author>
+ <authorEmail>kolyamba831@inbox.ru</authorEmail>
+ <authorUrl>http://www.joomla-code.ru</authorUrl>
+ <copyright>Информация о копирайте</copyright>
+ <license>Информация о лицензии</license>
+ <!-- /////////// -->
+ <!-- Версия компонента -->
+ <version>0.1.0</version>
+ <!-- Описание компонента, не является обязательным, и по умолчанию используется имя -->
+ <description>Описание компонента "Привет!" ...</description>
+ 
+ <!-- Копируем файлы для сайта -->
+ <!-- Обратите внимание на аттрибут folder, он указыает с какой папки будут копироваться файлы -->
+ <files folder="site">
+ 	<folder>helpers</folder>
+	<folder>assets</folder>
+	<folder>models</folder>
+	<folder>views</folder>
+
+
+ <filename>index.html</filename>
+ <filename>konsaexp.php</filename>
+ <filename>controller.php</filename>
+ </files>
+ 
+ <administration>
+ <!-- Создаем меню для аминистративной панели -->
+ <menu>KonsaExp</menu>
+ <!-- Копируем файлы для административной панели -->
+
+ <files folder="admin">
+	<folder>controllers</folder>
+	<folder>assets</folder>
+	<folder>helpers</folder>
+	<folder>models</folder>
+	<folder>tables</folder>
+	<folder>views</folder>
+
+
+ <filename>index.html</filename>
+ <filename>konsaexp.php</filename>
+ <filename>controller.php</filename>
+ <filename>config.xml</filename>
+ </files> 
+ </administration>
+</extension>

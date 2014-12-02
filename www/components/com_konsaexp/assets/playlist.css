@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* CSS Document */
+
+h1.playlist_name {
+	color:#006699;
+	font-family:"century gothic",arial;
+	font-size:34px;
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	text-align:left;
+}

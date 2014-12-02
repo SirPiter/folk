@@ -1,0 +1,165 @@
+*{
+	padding:0;
+	margin:0;
+}
+
+body{
+	background:#FFF;
+	color:#000;
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size:13px;
+}
+
+a, a:link, a:hover, a:visited, a:active{
+	color:#000088;
+	text-decoration:none;
+}
+
+p{
+	padding-bottom:20px;
+}
+
+li a, li a:link, li a:hover, li a:visited, li a:active{
+	color:#000088;
+	text-decoration:none;
+}
+
+a:hover, li a:hover{
+	color:#0033FF;
+	text-decoration:none;
+}
+
+ul{
+	padding-left:10px;
+}
+
+li {
+	list-style-type:none;
+	list-style-position:outside;
+	margin-left:20px;
+	padding-bottom:5px;
+}
+
+#dirs li{
+	list-style-image:url(../images/folder.gif);
+}
+
+#files li{
+	list-style-type:none;
+	list-style-position:inside;
+	padding:0;
+	margin:0;
+	padding-bottom:5px;
+}
+
+#files img{
+	padding-right:5px;
+}
+
+img {
+	border:none;
+}
+
+/* settings */
+
+.newsettingsheader{
+	background-color:#000088;
+	color:#FFF;
+}
+
+.pluginsettingsheader{
+	background-color:#008800;
+	color:#FFF;
+}
+
+.info {
+	border-bottom:1px dashed red;
+	cursor:help;
+}
+
+#overrideSettings table{
+}
+
+/* directories */
+
+#dirs{
+	width:49%;
+	float:left;
+}
+
+#files{
+	width:49%;
+	float:right;
+}
+
+/* tabs */
+
+dl.tabs {
+	float: left;
+	margin: 10px 0 -1px 0;
+	z-index: 50;
+}
+
+dl.tabs dt {
+	float: left;
+	padding: 4px 10px;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	margin-left: 3px;
+	background: #f0f0f0;
+	color: #666;
+}
+
+dl.tabs dt.open {
+	background: #F9F9F9;
+	border-bottom: 1px solid #F9F9F9;
+	z-index: 100;
+	color: #000;
+}
+
+div.current {
+	clear: both;
+	border: 1px solid #ccc;
+	padding: 10px 10px;
+}
+
+div.current dd {
+	padding: 0;
+	margin: 0;
+}
+/** cpanel settings **/
+
+#cpanel div.icon {
+	text-align: center;
+	margin-right: 5px;
+	float: left;
+	margin-bottom: 5px;
+}
+
+#cpanel div.icon a {
+	display: block;
+	float: left;
+	border: 1px solid #f0f0f0;
+	height: 97px;
+	width: 108px;
+	color: #666;
+	vertical-align: middle;
+	text-decoration: none;
+}
+
+#cpanel div.icon a:hover {
+	border-left: 1px solid #eee;
+	border-top: 1px solid #eee;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	background: #f9f9f9;
+	color: #0B55C4;
+}
+
+#cpanel img  { padding: 10px 0; margin: 0 auto; }
+#cpanel span { display: block; text-align: center; }
+
+#filepickerFooter{
+	text-align:center;
+}

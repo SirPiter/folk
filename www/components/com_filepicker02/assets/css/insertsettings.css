@@ -1,0 +1,101 @@
+@CHARSET "UTF-8";
+*{	font-size:12px !important;
+}
+
+body{
+	background-color:#EFEFEF !important;
+	font-size:12px !important;
+}
+
+#filepickerLinksettings{
+	padding:15px !important;	
+}
+
+#filepickerLinksettings{
+	background:#EFEFEF !important;
+	color:#000 !important;
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif !important;
+	font-size:12px !important;
+}
+
+#system-message{
+	display:none !important;
+}
+
+#filepickerLinksettings option,#filepickerLinksettings select{
+	font-size:10px !important;		
+}
+
+#filepickerLinksettings input{
+	font-size:12px !important;
+	letter-spacing:normal !important;
+}
+
+#filepickerLinksettings h3{
+	font-size:17px !important;
+	color:#000 !important;
+	border:none !important;
+	letter-spacing:0 !important;
+	margin:0 !important;
+	padding:0 !important;
+	padding-bottom:0 !important;
+}
+
+#filepickerLinksettings table, #filepickerLinksettings tr, #filepickerLinksettings td{
+	padding:0 !important;
+	margin:0 !important;
+} 
+
+#filepickerLinksettings p{
+	padding:0 !important;
+	margin:0 !important;
+}
+
+#filepickerLinksettings #buttons{
+	width:100% !important;
+	height:60px !important;
+	text-align:left !important;
+}
+
+#filepickerLinksettings .button{
+	float:right !important;
+	width:80px !important;
+	height:60px !important;
+}
+
+#filepickerLinksettings .title{
+	float:left !important;
+}
+
+#filepickerLinksettings img{
+	border:none !important;
+}
+
+/* Tooltips */
+
+.tool-tip {
+	float: left !important;
+	background: #ffc !important;
+	border: 1px solid #D4D5AA !important;
+	padding: 5px !important;
+	max-width: 200px !important;
+}
+
+.tool-title {
+	padding: 0 !important;
+	margin: 0 !important;
+	font-size: 100% !important;
+	font-weight: bold !important;
+	margin-top: -15px !important;
+	padding-top: 15px !important;
+	padding-bottom: 5px !important;
+	border:none !important;
+	background: url(../../../../templates/system/images/selector-arrow.png) no-repeat !important;
+}
+
+.tool-text {
+	font-size: 100% !important;
+	margin: 0 !important;
+}
+
+

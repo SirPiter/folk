@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <params group="guests">
+    	<param name="@spacer1" type="spacer" label="Guests" default="Guests" />
+    	<param name="guestEnable" type="list" default="0" label="Enabled for guests" description="Should Filepicker be enabled for guests?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="guestEnableUploads" type="list" default="0" label="Enabled uploads for guests" description="Should uploading be enabled for guests?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="guestRootPath" type="text" size="80" default="images" label="Rootpath for guests" description="Which should be the root path of the filemanager?" />
+		<param name="guestFileExtensions" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions viewing for guests" description="Which file extensions are allowed for viewing for guests, if configuration settings are not used?" />
+		<param name="guestFileExtensionsUpload" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions for uploading for guests" description="Which file extensions are allowed to be uploaded for guests, if configuration settings are not used?" />
+    	<param name="guestEnableCreateDir" type="list" default="0" label="Enabled creating directories for guests" description="Should creating directories be enabled for guests?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+    <params group="registered">
+		<param name="@spacer1" type="spacer" label="Registered" default="Registered" />
+    	<param name="registeredEnable" type="list" default="0" label="Enabled for registered" description="Should Filepicker be enabled for registered?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="registeredEnableUploads" type="list" default="0" label="Enabled uploads for registered" description="Should uploading be enabled for registered?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="registeredRootPath" type="text" default="images" size="80" label="Rootpath for registered" description="Which should be the root path of the filemanager?" />
+		<param name="registeredFileExtensions" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions viewing for registered" description="Which file extensions are allowed for viewing for registered, if configuration settings are not used?" />
+		<param name="registeredFileExtensionsUpload" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions for uploading for registered" description="Which file extensions are allowed to be uploaded for registered, if configuration settings are not used?" />
+		<param name="registeredSubDirUser" type="list" default="0" label="Use sub directories for every user" description="Set if you want a new root path for every user. This creates a hashed path beneath rootpath/user/ for every new user.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>					
+		</param>
+    	<param name="registeredEnableCreateDir" type="list" default="0" label="Enabled creating directories for registered" description="Should creating directories be enabled for registereds?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+	<params group="authors">
+		<param name="@spacer1" type="spacer" label="Authors" default="Authors" />
+    	<param name="authorEnable" type="list" default="1" label="Enabled for authors" description="Should Filepicker be enabled for authors?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="authorEnableUploads" type="list" default="1" label="Enabled uploads for authors" description="Should uploading be enabled for authors?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="authorRootPath" type="text" size="80" default="images" label="Rootpath for authors" description="Which should be the root path of the filemanager?" />
+		<param name="authorFileExtensions" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions viewing for authors" description="Which file extensions are allowed for viewing for authors, if configuration settings are not used?" />
+		<param name="authorFileExtensionsUpload" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions for uploading for authors" description="Which file extensions are allowed to be uploaded for authors, if configuration settings are not used?" />
+		<param name="authorSubDirUser" type="list" default="1" label="Use sub directories for every user" description="Set if you want a new root path for every user. This creates a hashed path beneath rootpath/user/ for every new user.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>					
+		</param>
+    	<param name="authorEnableCreateDir" type="list" default="0" label="Enabled creating directories for authors" description="Should creating directories be enabled for authors?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+	<params group="editors">
+		
+		<param name="@spacer1" type="spacer" label="Editors" default="Editors" />
+    	<param name="editorEnable" type="list" default="1" label="Enabled for editors" description="Should Filepicker be enabled for editors?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="editorEnableUploads" type="list" default="1" label="Enabled uploads for editors" description="Should uploading be enabled for editors?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="editorRootPath" type="text" size="80" default="images" label="Rootpath for editors" description="Which should be the root path of the filemanager?" />
+		<param name="editorFileExtensions" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions viewing for editor" description="Which file extensions are allowed for viewing for editor, if configuration settings are not used?" />
+		<param name="editorFileExtensionsUpload" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions for uploading for editor" description="Which file extensions are allowed to be uploaded for editor, if configuration settings are not used?" />
+		<param name="editorSubDirUser" type="list" default="1" label="Use sub directories for every user" description="Set if you want a new root path for every user. This creates a hashed path beneath rootpath/user/ for every new user.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>					
+		</param>
+    	<param name="editorEnableCreateDir" type="list" default="0" label="Enabled creating directories for editors" description="Should creating directories be enabled for editors?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+	<params group="publishers">
+		
+		<param name="@spacer1" type="spacer" label="Publishers" default="Publishers" />
+    	<param name="publisherEnable" type="list" default="1" label="Enabled for publishers" description="Should Filepicker be enabled for publishers?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="publisherEnableUploads" type="list" default="1" label="Enabled uploads for publishers" description="Should uploading be enabled for publishers?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="publisherRootPath" type="text" size="80" default="images" label="Rootpath for publishers" description="Which should be the root path of the filemanager?" />
+		<param name="publisherFileExtensions" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions viewing for publishers" description="Which file extensions are allowed for viewing for publishers, if configuration settings are not used?" />
+		<param name="publisherFileExtensionsUpload" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions for uploading for publishers" description="Which file extensions are allowed to be uploaded for publishers, if configuration settings are not used?" />
+		
+		<param name="publisherSubDirUser" type="list" default="0" label="Use sub directories for every user" description="Set if you want a new root path for every user. This creates a hashed path beneath rootpath/user/ for every new user.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>					
+		</param>
+    	<param name="publisherEnableCreateDir" type="list" default="1" label="Enabled creating directories for publishers" description="Should creating directories be enabled for publishers?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+
+	</params>
+	<params group="managers">
+
+		<param name="@spacer1" type="spacer" label="Managers" default="Managers" />
+    	<param name="managerEnable" type="list" default="1" label="Enabled for managers" description="Should Filepicker be enabled for managers?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="managerEnableUploads" type="list" default="1" label="Enabled uploads for managers" description="Should uploading be enabled for managers?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="managerRootPath" type="text" size="80" default="images" label="Rootpath for managers" description="Which should be the root path of the filemanager?" />
+		<param name="managerFileExtensions" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions viewing for managers" description="Which file extensions are allowed for viewing for managers, if configuration settings are not used?" />
+		<param name="managerFileExtensionsUpload" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions for uploading for managers" description="Which file extensions are allowed to be uploaded for managers, if configuration settings are not used?" />
+		
+		<param name="managerSubDirUser" type="list" default="0" label="Use sub directories for every user" description="Set if you want a new root path for every user. This creates a hashed path beneath rootpath/user/ for every new user.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>					
+		</param>
+    	<param name="managerEnableCreateDir" type="list" default="1" label="Enabled creating directories for managers" description="Should creating directories be enabled for managers?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		
+</params>
+<params group="administrators">
+		<param name="@spacer1" type="spacer" label="Administrators" default="Administrators" />
+    	<param name="administratorEnable" type="list" default="1" label="Enabled for administrators" description="Should Filepicker be enabled for administrators?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="administratorEnableUploads" type="list" default="1" label="Enabled uploads for administrators" description="Should uploading be enabled for administrators?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="administratorRootPath" type="text" size="80" default="images" label="Rootpath for administrators" description="Which should be the root path of the filemanager?" />
+		<param name="administratorFileExtensions" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions viewing for administrator" description="Which file extensions are allowed for viewing for administrator, if configuration settings are not used?" />
+		<param name="administratorFileExtensionsUpload" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions for uploading for administrator" description="Which file extensions are allowed to be uploaded for administrator, if configuration settings are not used?" />
+		<param name="administratorSubDirUser" type="list" default="0" label="Use sub directories for every user" description="Set if you want a new root path for every user. This creates a hashed path beneath rootpath/user/ for every new user.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>					
+		</param>
+    	<param name="administratorEnableCreateDir" type="list" default="1" label="Enabled creating directories for administrators" description="Should creating directories be enabled for administrators?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+</params>
+<params group="superadministrators">
+
+		<param name="@spacer1" type="spacer" label="Super Administrators" default="Super Administrators" />
+    	<param name="superadministratorEnable" type="list" default="1" label="Enabled for superadministrators" description="Should Filepicker be enabled for superadministrators?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="superadministratorEnableUploads" type="list" default="1" label="Enabled uploads for superadministrators" description="Should uploading be enabled for superadministrators?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>		
+		<param name="superadministratorRootPath" type="text" size="80" default="images" label="Rootpath for superadministrators" description="Which should be the root path of the filemanager?" />
+		<param name="superadministratorFileExtensions" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions viewing for superadministrators" description="Which file extensions are allowed for viewing for superadministrators, if configuration settings are not used?" />
+		<param name="superadministratorFileExtensionsUpload" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions for uploading for superadministrators" description="Which file extensions are allowed to be uploaded for superadministrators, if configuration settings are not used?" />
+		<param name="superadministratorSubDirUser" type="list" default="1" label="Use sub directories for every user" description="Set if you want a new root path for every user. This creates a hashed path beneath rootpath/user/ for every new user.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>					
+		</param>
+		<param name="superadministratorEnableCreateDir" type="list" default="1" label="Enabled creating directories for super administrators" description="Should creating directories be enabled for administrators?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+
+	</params>
+	<params group="templates">
+		<param name="textDefaultSelect" type="textarea" cols="55" rows="10" default="{file},Click to download {img} {file},Download {file},Click to download from {url},Click to download {path},Click to download from {urlnohttp}" label="Filetext templates" description="Comma or enter seperated list of default file text which can be selected. Use {file}, {url}, {urlnohttp}, {path}, {dir}, {img}, {size} as placeholders." />
+		<param name="titleDefaultSelect" type="textarea" cols="55" rows="10" default="{linktext},{file},Click to download {linktext},Download {linktext},Click to download {file},Download {file},Click to download from {url},Click to download {path},Click to download from {urlnohttp}" label="Title templates" description="Comma or enter seperated list of default titles which can be selected. Use {linktext}, {file}, {url}, {urlnohttp}, {path}, {dir}, {size} as placeholders." />				
+	</params>
+	<params group="icons">
+    	<param name="FileImages" type="textarea" cols="55" rows="10" default="ai={ComponentImagesPath}ai.gif,csv={ComponentImagesPath}csv.gif,doc={ComponentImagesPath}doc.gif,exe={ComponentImagesPath}exe.gif,fla={ComponentImagesPath}fla.gif,flv={ComponentImagesPath}flv.gif,gif={ComponentImagesPath}gif.gif,gzip={ComponentImagesPath}gzip.gif,htm={ComponentImagesPath}htm.gif,html={ComponentImagesPath}htm.gif,xhtml={ComponentImagesPath}htm.gif,jpg={ComponentImagesPath}jpg.gif,indd={ComponentImagesPath}indd.gif,mp3={ComponentImagesPath}mp3.gif,odp={ComponentImagesPath}odp.gif,ods={ComponentImagesPath}ods.gif,odt={ComponentImagesPath}odt.gif,pdf={ComponentImagesPath}pdf.gif,png={ComponentImagesPath}png.gif,ppt={ComponentImagesPath}ppt.gif,psd={ComponentImagesPath}psd.gif,rtf={ComponentImagesPath}rtf.gif,swf={ComponentImagesPath}swf.gif,tar={ComponentImagesPath}tar.gif,ttf={ComponentImagesPath}ttf.gif,xcf={ComponentImagesPath}xcf.gif,zip={ComponentImagesPath}zip.gif,gz={ComponentImagesPath}gz.gif" label="Images for filetypes" description="Comma or enter seperated list of filetype with image reference. Use {ComponentImagePath} as a placeholder of /components/com_filepicker/assets/images/filetypes/." />
+		<param name="DefaultFileImage" type="text" size="40" default="{ComponentImagesPath}default.gif" label="Default file image" description="Image which should be loaded for file extensions, which are not supported 'Images for filetypes'. Use {ComponentImagePath} as a placeholder of /components/com_filepicker/assets/images/filetypes/." />
+	</params>
+	<params group="settings">
+		<param name="defaultLinkText" type="text" size="40" default="{file}" label="Default file text" description="Default setting of link text. Use {file}, {url}, {urlnohttp}, {path}, {dir},{img}, {size} as placeholders." />
+		<param name="defaultTitle" type="text" size="40" default="" label="Default title" description="Default setting of title. Use {file}, {linktext}, {url}, {urlnohttp}, {path}, {dir}, {size} as placeholders." />
+		<param name="defaultTarget" type="text" size="40" default="" label="Default target" description="Default setting of target." />
+
+		<param name="defaultAddImage" type="list" default="Left" label="Default add extension image" description="Default setting, if the file extension image should be added.">
+			<option value="No">No</option>
+			<option value="Left">Left</option>
+			<option value="Right">Right</option>
+			<option value="Only in template">Only in template</option>
+		</param>		
+
+		<param name="defaultAbsoluteUrl" type="list" default="0" label="Default absolute URL" description="Default setting, if the absolute URLs should be used.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>		s
+		<param name="defaultEscapeUrl" type="list" default="1" label="Default URL escaping" description="Default setting, if the URL should be escaped.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>		
+		<param name="defaultOnlyText" type="list" default="0" label="Default only text" description="Default setting if only text should be inserted, instead of link.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+</config>

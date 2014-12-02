@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+<fieldset
+		name="scan"
+		label="ATOOLS_JCONFIG_SCAN_LABEL"
+		description="ATOOLS_JCONFIG_SCAN_DESC"
+		>
+
+    	<field name="@spacer1" type="spacer" label="Guests" default="Guests" />
+    	<field name="guestEnable" type="list" default="0" label="Enabled for guests" description="Should Filepicker be enabled for guests?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="guestEnableUploads" type="list" default="0" label="Enabled uploads for guests" description="Should uploading be enabled for guests?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="guestRootPath" type="text" size="80" default="library" label="Rootpath for guests" description="Which should be the root path of the filemanager?" />
+		<field name="guestFileExtensions" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions viewing for guests" description="Which file extensions are allowed for viewing for guests, if configuration settings are not used?" />
+		<field name="guestFileExtensionsUpload" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions for uploading for guests" description="Which file extensions are allowed to be uploaded for guests, if configuration settings are not used?" />
+
+		
+		<field name="@spacer1" type="spacer" label="Registered" default="Registered" />
+    	<field name="registeredEnable" type="list" default="0" label="Enabled for registered" description="Should Filepicker be enabled for registered?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="registeredEnableUploads" type="list" default="0" label="Enabled uploads for registered" description="Should uploading be enabled for registered?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="registeredRootPath" type="text" default="library" size="80" label="Rootpath for registered" description="Which should be the root path of the filemanager?" />
+		<field name="registeredFileExtensions" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions viewing for registered" description="Which file extensions are allowed for viewing for registered, if configuration settings are not used?" />
+		<field name="registeredFileExtensionsUpload" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions for uploading for registered" description="Which file extensions are allowed to be uploaded for registered, if configuration settings are not used?" />
+		
+		<field name="@spacer1" type="spacer" label="Authors" default="Authors" />
+    	<field name="authorEnable" type="list" default="1" label="Enabled for authors" description="Should Filepicker be enabled for authors?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="authorEnableUploads" type="list" default="1" label="Enabled uploads for authors" description="Should uploading be enabled for authors?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="authorRootPath" type="text" size="80" default="library" label="Rootpath for authors" description="Which should be the root path of the filemanager?" />
+		<field name="authorFileExtensions" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions viewing for authors" description="Which file extensions are allowed for viewing for authors, if configuration settings are not used?" />
+		<field name="authorFileExtensionsUpload" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions for uploading for authors" description="Which file extensions are allowed to be uploaded for authors, if configuration settings are not used?" />
+		
+		
+		<field name="@spacer1" type="spacer" label="Editors" default="Editors" />
+    	<field name="editorEnable" type="list" default="1" label="Enabled for editors" description="Should Filepicker be enabled for editors?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="editorEnableUploads" type="list" default="1" label="Enabled uploads for editors" description="Should uploading be enabled for editors?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="editorRootPath" type="text" size="80" default="library" label="Rootpath for editors" description="Which should be the root path of the filemanager?" />
+		<field name="editorFileExtensions" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions viewing for editor" description="Which file extensions are allowed for viewing for editor, if configuration settings are not used?" />
+		<field name="editorFileExtensionsUpload" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions for uploading for editor" description="Which file extensions are allowed to be uploaded for editor, if configuration settings are not used?" />
+		
+		
+		<field name="@spacer1" type="spacer" label="Publishers" default="Publishers" />
+    	<field name="publisherEnable" type="list" default="1" label="Enabled for publishers" description="Should Filepicker be enabled for publishers?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="publisherEnableUploads" type="list" default="1" label="Enabled uploads for publishers" description="Should uploading be enabled for publishers?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="publisherRootPath" type="text" size="80" default="library" label="Rootpath for publishers" description="Which should be the root path of the filemanager?" />
+		<field name="publisherFileExtensions" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions viewing for publishers" description="Which file extensions are allowed for viewing for publishers, if configuration settings are not used?" />
+		<field name="publisherFileExtensionsUpload" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions for uploading for publishers" description="Which file extensions are allowed to be uploaded for publishers, if configuration settings are not used?" />
+		
+		
+		<field name="@spacer1" type="spacer" label="Managers" default="Managers" />
+    	<field name="managerEnable" type="list" default="1" label="Enabled for managers" description="Should Filepicker be enabled for managers?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="managerEnableUploads" type="list" default="1" label="Enabled uploads for managers" description="Should uploading be enabled for managers?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="managerRootPath" type="text" size="80" default="library" label="Rootpath for managers" description="Which should be the root path of the filemanager?" />
+		<field name="managerFileExtensions" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions viewing for managers" description="Which file extensions are allowed for viewing for managers, if configuration settings are not used?" />
+		<field name="managerFileExtensionsUpload" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions for uploading for managers" description="Which file extensions are allowed to be uploaded for managers, if configuration settings are not used?" />
+		
+		
+		<field name="@spacer1" type="spacer" label="Administrators" default="Administrators" />
+    	<field name="administratorEnable" type="list" default="1" label="Enabled for administrators" description="Should Filepicker be enabled for administrators?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="administratorEnableUploads" type="list" default="1" label="Enabled uploads for administrators" description="Should uploading be enabled for administrators?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="administratorRootPath" type="text" size="80" default="library" label="Rootpath for administrators" description="Which should be the root path of the filemanager?" />
+		<field name="administratorFileExtensions" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions viewing for administrator" description="Which file extensions are allowed for viewing for administrator, if configuration settings are not used?" />
+		<field name="administratorFileExtensionsUpload" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions for uploading for administrator" description="Which file extensions are allowed to be uploaded for administrator, if configuration settings are not used?" />
+		
+		
+		<field name="@spacer1" type="spacer" label="Super Administrators" default="Super Administrators" />
+    	<field name="superadministratorEnable" type="list" default="1" label="Enabled for superadministrators" description="Should Filepicker be enabled for superadministrators?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="superadministratorEnableUploads" type="list" default="1" label="Enabled uploads for superadministrators" description="Should uploading be enabled for superadministrators?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>		
+		<field name="superadministratorRootPath" type="text" size="80" default="library" label="Rootpath for superadministrators" description="Which should be the root path of the filemanager?" />
+		<field name="superadministratorFileExtensions" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions viewing for superadministrators" description="Which file extensions are allowed for viewing for superadministrators, if configuration settings are not used?" />
+		<field name="superadministratorFileExtensionsUpload" type="text" size="80" default="ai,csv,doc,exe,fla,flv,gif,gzip,htm,html,xhtml,indd,jpg,mp3,odp,ods,odt,pdf,png,ppt,psd,rtf,swf,tar,ttf,xcf,xls,zip,gz" label="Legal file extensions for uploading for superadministrators" description="Which file extensions are allowed to be uploaded for superadministrators, if configuration settings are not used?" />
+
+
+		<field name="@spacer1" type="spacer" label="File Images" default="File Images" />
+    	<field name="FileImages" type="textarea" cols="55" rows="10" default="ai={ComponentImagesPath}ai.gif,csv={ComponentImagesPath}csv.gif,doc={ComponentImagesPath}doc.gif,exe={ComponentImagesPath}exe.gif,fla={ComponentImagesPath}fla.gif,flv={ComponentImagesPath}flv.gif,gif={ComponentImagesPath}gif.gif,gzip={ComponentImagesPath}gzip.gif,htm={ComponentImagesPath}htm.gif,html={ComponentImagesPath}htm.gif,xhtml={ComponentImagesPath}htm.gif,jpg={ComponentImagesPath}jpg.gif,indd={ComponentImagesPath}indd.gif,mp3={ComponentImagesPath}mp3.gif,odp={ComponentImagesPath}odp.gif,ods={ComponentImagesPath}ods.gif,odt={ComponentImagesPath}odt.gif,pdf={ComponentImagesPath}pdf.gif,png={ComponentImagesPath}png.gif,ppt={ComponentImagesPath}ppt.gif,psd={ComponentImagesPath}psd.gif,rtf={ComponentImagesPath}rtf.gif,swf={ComponentImagesPath}swf.gif,tar={ComponentImagesPath}tar.gif,ttf={ComponentImagesPath}ttf.gif,xcf={ComponentImagesPath}xcf.gif,zip={ComponentImagesPath}zip.gif,gz={ComponentImagesPath}gz.gif" label="Images for filetypes" description="Comma or enter seperated list of filetype with image reference. Use {ComponentImagePath} as a placeholder of /components/com_filepicker/assets/images/filetypes/." />
+		<field name="DefaultFileImage" type="text" size="80" default="{ComponentImagesPath}default.gif" label="Default file image" description="Image which should be loaded for file extensions, which are not supported 'Images for filetypes'. Use {ComponentImagePath} as a placeholder of /components/com_filepicker/assets/images/filetypes/." />
+
+</fieldset>
+</config>

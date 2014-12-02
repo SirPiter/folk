@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <params>
+  
+		<param name="expeditions_view" type="list" default="detailed" label="Default view for albums list" description="The default layout in the albums list view. You can add you own templates here... (only those familiar to Joomla! views and templates! Use at own risk)">
+			<option value="default">Default view</option>
+			<option value="grid">Grid View</option>
+			<option value="detailed">Detailed View</option>
+		</param>
+		<param name="showchangetemplate" type="radio" default="1" label="Allow users to switch between album list templates" description="Allow users to change the template of the albums list view. If set to NO, template selected as default in the previous field will be shown">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="thumbs_mode" type="radio" default="1" label="Thumbnails" description="How to create thumbnails: staticly or dynamicly. If you choose STATIC, all following Small thumbnail paramaters must be setted to 40, and all Big thumbnail parameters must be setted to 115">
+			<option value="0">STATIC</option>
+			<option value="1">DYNAMIC</option>
+		</param>
+		
+		<param name="thumb_size_artist_1" type="text" default="40" size="4" label="Small thumbnail size for artist view" description="The WIDTH of the thumbnail album image used on the artist DEFAULT view" />
+		
+		<param name="thumb_size_artist_2" type="text" default="115" size="4" label="Big thumbnail size for artist view" description="The WIDTH of the thumbnail album image used on the artist DETAILED view" />
+		
+		<param name="artists_view" type="list" default="detailed" label="View for artists list" description="The  layout in the artist view. You can add you own templates here... (only those familiar to Joomla! views and templates! Use at own risk)">
+			<option value="default">Default view</option>
+			<option value="detailed">Detailed View</option>
+		</param>
+		
+		<param name="thumb_size_artists_1" type="text" default="40" size="4" label="Small thumbnail size for artists detailed view" description="The WIDTH of the thumbnail album image used on the artists (not artist) DETAILED view" />
+		
+		<param name="thumb_size_album_1" type="text" default="40" size="4" label="Small thumbnail size for album chronology bar" description="The WIDTH of the thumbnail album image used on the album chronology bar" />
+		
+		<param name="thumb_size_song_1" type="text" default="115" size="4" label="Small thumbnail size for album image on song view" description="The WIDTH of the thumbnail album image used on the song view" />
+		
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="showartistcountry" type="radio" default="1" label="Show artist country" description="To show or not the country of the artist on the artist page">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="showartistshome" type="radio" default="0" label="Show artists on MC home" description="If set to YES, artists from ALL letters will be shown on the home of MC component. BE CAREFUL!!: if this option is enabled and 'Usepagination in artists view' is disabled, ALL ARTISTS on your collection will be displayed!! (not a good idea if you have many artists...)" >
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		
+		<param name="usepaginationartists" type="radio" default="0" label="Use pagination in artists view" description="If set to YES, a pagination object will be displayed on the artists view." >
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		
+		<param name="introtext" type="textarea" rows="10" cols="70" default="" label="Introduction text" description="Text to show in the frontend when entering the Music Collection Component, BEFORE the search bars" />
+		
+		<param name="introtext2" type="textarea" rows="10" cols="70" default="" label="Introduction text 2" description="Text to show in the frontend when entering the Music Collection Component, AFTER the search bars" />
+		
+		<param name="processcontentplugins" type="radio" default="1" label="Process content plugins" description="If set to YES, content plugins will be processed on 'Introduction text' and 'Introduction text 2' fields" >
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		
+		<param name="keywords" type="textarea" rows="3" cols="70" default="" label="Meta Keywords for MC" description="Keywords to include in the head section of every MC page" />
+		
+		<param name="description" type="textarea" rows="3" cols="70" default="" label="Meta description for MC" description="Description to include in the head section of every MC page" />
+
+		<param name="currency" type="text" default="€" label="Currency" description="The currency used in the price the albums" />
+		
+		<param name="itemid" type="text" default="" label="Default ItemId" description="ItemId to link to the ALL the links inside MC component (very usefull to mantain navigation and modules displayed while we are navigating throug MC" />
+		
+		<param name="showletternavigation" type="radio" default="1" label="Show letter navigation" description="Show ltter navigation bar at the top of each page inside Music Collection component" >
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+
+		<param name="showalbumsearch" type="radio" default="1" label="Show album search form" description="Show album search form in the frontend when entering the Music Collection Component" >
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		
+		<param name="showsongsearch" type="radio" default="1" label="Show song search form" description="Show song search form in the frontend when entering the Music Collection Component">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		
+		<param name="displayplayer" type="radio" default="1" label="Show online player for registered users" description="Specify who can listen to songs online">
+			<option value="0">Nobody</option>
+			<option value="1">Registered users only</option>
+			<option value="2">Everybody</option>
+		</param>
+		
+		<param name="allowsongdownload" type="radio" default="1" label="Allow song downloads" description="Specify who can download the audio files to their computers">
+			<option value="0">Nobody</option>
+			<option value="1">Registered users only</option>
+			<option value="2">Everybody</option>
+		</param>
+		
+		<param name="allowcreateplaylists" type="radio" default="1" label="Allow playlist storage" description="Allow registered users to save their playlists on the database">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+
+		</param>
+		
+		<param name="loadimagesplayer" type="radio" default="1" label="Load images on the player" description="Not recommended for slow servers (it can slow down the page load time)">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+
+		</param>
+		
+		<param name="showpdficon" type="radio" default="1" label="Show PDF icon" description="Displays the PDF icon at the top of artists view and artist view">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="showalbumcomments" type="radio" default="1" label="Show/allow album comments" description="Shows album comments and allows registered users to post comments on albums">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		
+		<param name="showsongcomments" type="radio" default="1" label="Show/allow songs comments" description="Shows song comments and allows registered users to post comments on songs">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		
+		<param name="showartistcomments" type="radio" default="1" label="Show/allow artist comments" description="Shows artist comments and allows registered users to post comments on artists">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		
+		<param name="showplaylistcomments" type="radio" default="1" label="Show/allow playlists comments" description="Shows playlist comments and allows registered users to post comments on playlists">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		
+		<param name="commentsystem" type="radio" default="konsaexp" label="Comment engine" description="Choose if you want the built-in comment system included in Music Collection or you want to use the JomComment engine (you MUST have JomComment installed)">
+			<option value="konsaexp">Music Collection built-in comment engine</option>
+			<option value="jomcomment">JomComment comment engine</option>
+		</param>
+		
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="showalbumratings" type="radio" default="1" label="Allow album ratings" description="Allows users to rate albums">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		
+		<param name="showalbumdetails" type="radio" default="1" label="Show album details" description="If set to YES, albums details (such as release date, genre, price, edition details...) are shown in the frontend album view">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		
+		<param name="showalbumchrono" type="radio" default="1" label="Show albums chronology" description="If set to YES, 'PREV' and 'NEXT' albums (if available) are shown on the album view">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="youtube_width" type="text" default="425" size="4" label="Youtube video embed WIDTH" description="The WIDTH of the Youtube video embedded on the SONG page" />
+		
+		<param name="youtube_height" type="text" default="344" size="4" label="Youtube video embed HEIGHT" description="The HEIGHT of the Youtube video embedded on the SONG page" />
+		
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="showhits" type="radio" default="1" label="Show Hits" description="To show the number of hits on albums, songs and artists">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="allowsongbuy" type="radio" default="1" label="Show BUY button on songs" description="To show the buy button on songs, if the buy link is not empty">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		
+		<param name="allowalbumbuy" type="radio" default="1" label="Show BUY button on albums" description="To show the buy button on albums, if the buy link is not empty">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+		
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="songsserver" type="text" default="" label="Songs server" description="The server where the songs are located. LEAVE EMPTY AS DEFAULT OPTION for use the current site. To get the songs from an external server/site, write the complete URL to that server. DO THIS ONLY IF YOU KNOW WHAT YOU ARE DOING. Example: 'http://www.example.com/songsfolder'" />
+		
+		<param name="songspath" type="text" default="/songs" label="Songs folder" description="The folder were the songs mp3 files will be, starting at your Joomla root. Must START with a SLASH. Example: '/songs'. Example: '/firstfolder/secondfolder/finalfolder'. Write only a slash for base directory. If empty, '/songs' folder will be used" />
+		
+		
+  </params>
+</root>
