@@ -1,9 +1,9 @@
 <?php
 
 /**
- * @version	2.5.0
+ * @version	2.5.14
  * @package	konsaexp
- * @copyright	2012
+ * @copyright	2014
  * @license	GPLv2
  */
 
@@ -13,13 +13,13 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 jimport( 'joomla.application.component.view' );
 //require_once(JPATH_COMPONENT.DS.'helpers'.DS.'helpers.php');
 
-class ExpeditionsViewExpeditions extends JView
+class SessionsViewSessions extends JView
 {
 
 	function display($tpl = null)
 	{
-//		JToolBarHelper::title(   JText::_( 'EXPEDITION_MANAGER' ), 'expedition' );
-		JToolBarHelper::title(   JText::_( 'COM_KONSAEXP_EXPEDITION_MANAGER' ), 'expedition' );
+//		JToolBarHelper::title(   JText::_( 'SESSION_MANAGER' ), 'session' );
+		JToolBarHelper::title(   JText::_( 'COM_KONSAEXP_SESSION_MANAGER' ), 'session' );
 		JToolBarHelper::deleteList();
 		JToolBarHelper::editListX();
 		JToolBarHelper::addNewX();
