@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @version		2.5.0
+ * @version		2.5.14
  * @package		konsaexp
  * @copyright	2012
  * @license		GPLv2

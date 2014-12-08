@@ -1,33 +1,22 @@
 <?php
 /**
- * Kunena Component
- * @package Kunena.Administrator
- * @subpackage Views
- *
- * @copyright (C) 2008 - 2012 Kunena Team. All rights reserved.
- * @license http://www.gnu.org/copyleft/gpl.html GNU/GPL
- * @link http://www.kunena.org
+ * @version		2.5.14
+ * @package		konsaexp
+ * @copyright	2012
+ * @license		GPLv2
  **/
 defined ( '_JEXEC' ) or die ();
 
 /**
- * About view for Kunena cpanel
+ * About view for KonsaExp cpanel
  */
 jimport( 'joomla.application.component.view' );
 class CpanelViewCpanel extends JView {
 	function display($tpl = null) {
 		JToolBarHelper::title ( JText::_('COM_KONSAEXP'), 'konsaexp' );
-		//$this->versioncheck = $this->get('latestversion');
 
-//		if (version_compare(JVERSION, '1.6', '>')) {
-//			if (JFactory::getUser()->authorise('core.admin', 'com_konsaexp')) {
-//				JToolBarHelper::preferences('com_konsaexp');
-//			}
-//		}
+		JToolBarHelper::preferences('com_konsaexp');
 		
-				JToolBarHelper::preferences('com_konsaexp');
-		
-//		$this->display ();
 		parent::display($tpl);
 	}
 }

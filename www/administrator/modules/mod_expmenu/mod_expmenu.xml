@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="administrator">
+	<name>Expedition Administrator Menu</name>
+    <creationDate>November 10 2014</creationDate>
+    <author>The Expeditions Development Team</author>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>2.6.12.2</version>
+	<description>MOD_EXPMENU_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_expmenu">mod_expmenu.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+    <config>
+    <fields name="params">
+    <fieldset name="advanced">
+    <field
+            name="show_expmenu"
+            type="list"
+            default="1"
+            label="MOD_EXPMENU_FIELD_SHOW_EXPMENU"
+            description="MOD_EXPMENU_FIELD_SHOW_EXPMENU_DESC">
+        <option value="0">JHIDE</option>
+        <option value="1">JSHOW</option>
+    </field>
+    </fieldset>
+    </fields>
+    </config>
+    <updateservers>
+        <!-- Note: No spaces or linebreaks allowed between the server tags -->
+        <server type="extension" name="Expedition MOD_EXPMENU Update Site"><![CDATA[http://localhost/mod_expmenu_update.xml]]></server>
+    </updateservers>
+</extension>

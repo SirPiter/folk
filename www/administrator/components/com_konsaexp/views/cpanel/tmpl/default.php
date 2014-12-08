@@ -1,12 +1,9 @@
 <?php
 /**
- * Kunena Component
- * @package Kunena.Administrator.Template
- * @subpackage CPanel
- *
- * @copyright (C) 2008 - 2012 Kunena Team. All rights reserved.
- * @license http://www.gnu.org/copyleft/gpl.html GNU/GPL
- * @link http://www.kunena.org
+ * @version		2.5.14
+ * @package		konsaexp
+ * @copyright	2012
+ * @license		GPLv2
  **/
 defined ( '_JEXEC' ) or die ();
 
@@ -32,6 +29,9 @@ if (JFactory::getLanguage()->isRTL()) $document->addStyleSheet ( JURI::base().'c
 					</div>
 					<div class="icon-container">
 						<div class="icon"> <a href="<?php echo JRoute::_('index.php?option=com_konsaexp&controller=expeditions') ?>" title="<?php echo JText::_('COM_KONSAEXP_C_EXPEDITIONS_DESC');?>"> <img src="<?php echo JURI::base(true); ?>/components/com_konsaexp/media/icons/large/expeditions.png" align="middle" border="0" alt="" /> <span> <?php echo JText::_('COM_KONSAEXP_C_EXPEDITIONS'); ?> </span></a> </div>
+					</div>
+					<div class="icon-container">
+						<div class="icon"> <a href="<?php echo JRoute::_('index.php?option=com_konsaexp&controller=sessions') ?>" title="<?php echo JText::_('COM_KONSAEXP_C_SESSIONS_DESC');?>"> <img src="<?php echo JURI::base(true); ?>/components/com_konsaexp/media/icons/large/sessions_48.png" align="middle" border="0" alt="" /> <span> <?php echo JText::_('COM_KONSAEXP_C_SESSIONS'); ?> </span></a> </div>
 					</div>
 					<div class="icon-container">
 						<div class="icon"> <a href="<?php echo JRoute::_('index.php?option=com_konsaexp&controller=collectors') ?>" title="<?php echo JText::_('COM_KONSAEXP_C_COLLECTORS_DESC');?>"> <img src="<?php echo JURI::base(true); ?>/components/com_konsaexp/media/icons/large/collectors.png" align="middle" border="0" alt="" /> <span> <?php echo JText::_('COM_KONSAEXP_C_COLLECTORS'); ?> </span> </a> </div>

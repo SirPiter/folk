@@ -28,10 +28,10 @@
  <administration>
  <!-- Создаем меню для аминистративной панели -->
  <menu>COM_KONSAEXP_MENU</menu>
- 		<submenu>
-            <menu link="option=com_konsaexp&amp;controller=phonograms">COM_KONSAEXP</menu>
-			<menu link="option=com_konsaexp&amp;controller=expeditions">COM_KONSAEXP_EXPEDITIONS</menu>
-		</submenu>
+ 	<submenu>
+            <menu link="option=com_konsaexp&amp;controller=phonograms">COM_KONSAEXP_MENU</menu>
+	    <menu link="option=com_konsaexp&amp;controller=expeditions">COM_KONSAEXP_EXPEDITIONS</menu>
+	</submenu>
  <!-- Копируем файлы для административной панели -->
 
  <files folder="admin">
