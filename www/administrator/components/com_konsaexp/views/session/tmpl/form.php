@@ -7,11 +7,11 @@
 jimport('joomla.html.pane');
 $pane =& JPane::getInstance('tabs', array('startOffset' => $this->tab ));
 echo $pane->startPane( 'pane' );
-echo $pane->startPanel( JText::_('COM_KONSAEXP_EXPEDITION_DETAILS'), 'panel1' );
+echo $pane->startPanel( JText::_('COM_KONSAEXP_SESSION_DETAILS'), 'panel1' );
 //print_r($this->expedition); die;
 ?>
 
-	<fieldset class="adminform">  <!-- Блок для основных данных экспедиции: название, руководитель, краткие даты  -->
+	<fieldset class="adminform">  <!-- Блок для основных данных сессии: название, код, краткие даты  -->
 		<legend><?php echo JText::_( 'COM_KONSAEXP_MAIN' ); ?></legend>
         <table class="admintable" border=0>
 	    	<tr>   <!-- строка для темы экспедиции -->

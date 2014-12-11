@@ -20,8 +20,7 @@ class ExpeditionsViewExpedition extends JView
 		$document	= & JFactory::getDocument();
 		$document->addStyleSheet('components/com_konsaexp/assets/albums.css');
 
-		$expedition		=& $this->get('Data');
-		$tracks		=& $this->get('Tracks');
+		$session		=& $this->get('Data');
 		$collectors		=& $this->get('CollectorsList');
 		$towns	=& $this->get('TownsList');
 		$townswithregions	=& $this->get('ExtendedTownsList');
@@ -34,7 +33,7 @@ class ExpeditionsViewExpedition extends JView
 		$isNew		= ($expedition->id < 1);
 
 		$text = $isNew ? JText::_( 'COM_KONSAEXP_NEW' ) : JText::_( 'COM_KONSAEXP_EDIT' );
-		JToolBarHelper::title(   JText::_( 'COM_KONSAEXP_EXPEDITION' ).': <small><small>[ ' . $text.' ]</small></small>','expeditionedit' );
+		JToolBarHelper::title(   JText::_( 'COM_KONSAEXP_SESSION' ).': <small><small>[ ' . $text.' ]</small></small>','sessionedit' );
 		JToolBarHelper::save();
 
 		if ($isNew)  {
@@ -48,8 +47,7 @@ class ExpeditionsViewExpedition extends JView
 // JToolBarHelper::addNew('item.add');
 		
 		// push data into the template
-		$this->assignRef('expedition',	$expedition);
-		$this->assignRef('tracks',		$tracks);
+		$this->assignRef('session',	$session);
 		$this->assignRef('collectors',	$collectors);
 		$this->assignRef('towns',		$towns);
 		$this->assignRef('townswithregions',	$townswithregions);

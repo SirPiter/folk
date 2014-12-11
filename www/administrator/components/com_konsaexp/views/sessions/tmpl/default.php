@@ -10,7 +10,7 @@
                         </td>
                         <td nowrap="nowrap">
 						<?php
-						echo $this->lists['chief_collector'];
+//						echo $this->lists['chief_collector'];
 						?>
 					</td>
                         </tr>
@@ -26,21 +26,26 @@
 				<input type="checkbox" name="toggle" value="" onclick="checkAll(<?php echo count( $this->items ); ?>);" />
 			</th>
 			<th>
-				<?php // echo JText::_( 'Expedition theme' ); ?>
-                <?php echo JHTML::_( 'grid.sort', 'COM_KONSAEXP_EXPEDITION_TITLE', 'expedition_title', $this->lists['exp_order_Dir'], $this->lists['exp_order']); ?>
+				<?php // echo JText::_( 'Session code' ); ?>
+                <?php echo JHTML::_( 'grid.sort', 'COM_KONSAEXP_SESSION_CODE', 'session_code', $this->lists['session_order_Dir'], $this->lists['session_order']); ?>
 			</th>
             <th align="center">
-				<?php //echo JText::_( 'Expedition Chief' ); ?>
-                <?php echo JHTML::_( 'grid.sort', 'COM_KONSAEXP_EXPEDITION_CHIEF', 'chief_collector', $this->lists['exp_order_Dir'], $this->lists['exp_order']); ?>
+				<?php //echo JText::_( 'Session Theme' ); ?>
+                <?php echo JHTML::_( 'grid.sort', 'COM_KONSAEXP_SESSION_THEME', 'session_theme', $this->lists['session_order_Dir'], $this->lists['session_order']); ?>
 			</th>
             <th align="center">
-				<?php //echo JText::_( 'Year' ); ?>
-                <?php echo JHTML::_( 'grid.sort', 'COM_KONSAEXP_EXPEDITION_YEAR', 'year_begin', $this->lists['exp_order_Dir'], $this->lists['exp_order']); ?>
+				<?php //echo JText::_( 'Date' ); ?>
+                <?php echo JHTML::_( 'grid.sort', 'COM_KONSAEXP_SESSION_DATE', 'date', $this->lists['session_order_Dir'], $this->lists['session_order']); ?>
 			</th>
-            <th align="center" width="100">
-				<?php echo JText::_( 'COM_KONSAEXP_ACTION' ); ?>
+            <th align="center">
+				<?php //echo JText::_( 'Place' ); ?>
+                <?php echo JHTML::_( 'grid.sort', 'COM_KONSAEXP_SESSION_PLACE', 'place', $this->lists['session_order_Dir'], $this->lists['session_order']); ?>
 			</th>
-
+            <th align="center">
+				<?php //echo JText::_( 'Expedition' ); ?>
+                <?php echo JHTML::_( 'grid.sort', 'COM_KONSAEXP_SESSION_EXPEDITION', 'expedition', $this->lists['session_order_Dir'], $this->lists['session_order']); ?>
+			</th>
+			
 		</tr>
 	</thead>
 	<?php
@@ -50,8 +55,8 @@
 	//	print_r($row);//die();
 
 		$checked 	= JHTML::_('grid.id',   $i, $row->id );
-		$link 		= JRoute::_( 'index.php?option=com_konsaexp&controller=expedition&task=edit&cid[]='. $row->id );
-		$link_collector = JRoute::_( 'index.php?option=com_konsaexp&controller=collector&task=edit&cid[]='. $row->chief_collector );
+		$link 		= JRoute::_( 'index.php?option=com_konsaexp&controller=session&task=edit&cid[]='. $row->id );
+		$link_expedition = JRoute::_( 'index.php?option=com_konsaexp&controller=expedition&task=edit&cid[]='. $row->expedition_id );
 		?>
 		<tr class="<?php echo "row$k"; ?>">
 			<td>
@@ -61,26 +66,19 @@
 				<?php echo $checked; ?>
 			</td>
 			<td>
-				<a href="<?php echo $link; ?>"><?php echo $row->expedition_title; ?></a>
+				<a href="<?php echo $link; ?>"><?php echo $row->session_code; ?></a>
 			</td>
             <td align="center">
-				<a href="<?php echo $link_collector ?>"><?php echo $row->collector_full_name; ?></a>
+				<a href="<?php echo $link; ?>"><?php echo $row->session_title; ?></a>
 			</td>
             <td align="center">
-				<?php echo $row->year_begin; ?>
+				<?php echo $row->date; ?>
 			</td>
             <td align="center">
-				<div id="module-menu1" class="table-menu">
-			<ul id="menu" style="z-index:auto;">
-<li class="node" style="border: none;"><a href="#">Добавить...</a><ul>
-<li><a href="<?php echo JRoute::_( 'index.php?option=com_konsaexp&controller=phonogram&task=edit&cid[]=0&tpl=form_new&exp_id='. $row->id ); ?>" class="konsa-icon-16-phonogramms">Фонограмму</a></li>
-<li class="separator"><span></span></li>
-<li><a href="<?php echo JRoute::_( 'index.php?option=com_konsaexp&controller=document&task=edit&cid[]=0&exp_id='. $row->id ); ?>" class="konsa-icon-16-documents">Документ</a></li>
-<li class="separator"><span></span></li>
-<li><a href="index.php?option=com_config" class="konsa-icon-16-photos">Фото</a></li>
-<li class="separator"><span></span></li>
-</ul>
-</div>
+				<?php echo $row->place; ?>
+			</td>
+			            <td align="center">
+				<a href="<?php echo $link_expedition; ?>"><?php echo $row->expedition_id; ?></a>
 			</td>
 		</tr>
 		<?php
@@ -96,10 +94,10 @@
 	</table>
 </div>
 
-<input type="hidden" name="filter_order" value="<?php echo $this->lists['exp_order']; ?>" />
-<input type="hidden" name="filter_order_Dir" value="<?php echo $this->lists['exp_order_Dir']; ?>" />
+<input type="hidden" name="filter_order" value="<?php echo $this->lists['session_order']; ?>" />
+<input type="hidden" name="filter_order_Dir" value="<?php echo $this->lists['session_orderr_Dir']; ?>" />
 <input type="hidden" name="option" value="com_konsaexp" />
 <input type="hidden" name="task" value="" />
 <input type="hidden" name="boxchecked" value="0" />
-<input type="hidden" name="controller" value="expedition" />
+<input type="hidden" name="controller" value="session" />
 </form>

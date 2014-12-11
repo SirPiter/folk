@@ -56,7 +56,7 @@ if($controller = JRequest::getWord('controller')) {
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_DOCUMENTS'), 'index.php?option=com_konsaexp&controller=documents');
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_PHOTOS'), 'index.php?option=com_konsaexp&controller=photos');
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_TOWNS'), 'index.php?option=com_konsaexp&controller=towns');
-				$prefix	= 'Expeditions';
+				$prefix	= 'Sessions';
 				break;
 
 			case "collectors":

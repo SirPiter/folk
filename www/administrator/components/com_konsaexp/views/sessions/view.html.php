@@ -18,28 +18,31 @@ class SessionsViewSessions extends JView
 
 	function display($tpl = null)
 	{
-//		JToolBarHelper::title(   JText::_( 'SESSION_MANAGER' ), 'session' );
-		JToolBarHelper::title(   JText::_( 'COM_KONSAEXP_SESSION_MANAGER' ), 'session' );
-		JToolBarHelper::deleteList();
-		JToolBarHelper::editListX();
-		JToolBarHelper::addNewX();
-		JToolBarHelper::preferences( 'com_konsaexp' , '500', '700');
 
+		JToolBarHelper::title(   JText::_( 'COM_KONSAEXP_SESSION_MANAGER' ), 'session' );
+		JToolBarHelper::addNewX();
+		JToolBarHelper::editListX();
+		JToolBarHelper::deleteList();
+//		JToolBarHelper::preferences( 'com_konsaexp' , '500', '700');
+		
 		$document	= & JFactory::getDocument();
 		
 		// Get data from the model
 
 		$pagination =& $this->get('Pagination');
 		$keywords =& $this->get('keywords');
-		$collectors = & $this->get('CollectorsList');
-		$collector_id = & $this->get('CollectorId');
+		$collectors = & $this->get('CollectorsList'); // 
+		$collector_id = & $this->get('CollectorId');  //
+		
+		$towns	= & $this->get('TownsData');
 		$items =& $this->get('Data');
 
 		// push data into the template
 		$this->assignRef('items', $items);
 		$this->assignRef('pagination', $pagination);
 		$this->assignRef('keywords', $keywords);
-		
+		$this->assignRef('towns',		$towns);
+				
 		 $state =& $this->get( 'state' );
          $lists['exp_order_Dir'] = $state->get( 'exp_filter_order_Dir' );
          $lists['exp_order']     = $state->get( 'exp_filter_order' );
