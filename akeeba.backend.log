@@ -1,0 +1,8 @@
+DEBUG   |141208 22:17:47|Kettenrad :: Attempting to load from database (backend) [backend]
+DEBUG   |141208 22:17:47| -- Stored Akeeba Factory (backend) [backend] not found - hard reset
+DEBUG   |141208 22:17:50|
+DEBUG   |141208 22:18:13|Kettenrad :: Attempting to load from database (backend) [backend]
+DEBUG   |141208 22:18:13| -- Stored Akeeba Factory (backend) [backend] not found - hard reset
+DEBUG   |141211 21:34:04|Kettenrad :: Attempting to load from database (backend) [backend]
+DEBUG   |141211 21:34:04| -- Stored Akeeba Factory (backend) [backend] not found - hard reset
+DEBUG   |141211 21:34:07|
