@@ -96,12 +96,12 @@ class SessionsModelSession extends JModel
 	function store()
 	{
 		$row =& $this->getTable();
-		//print_r($row);die();
+//		print_r($row);die();
 
 		$data = JRequest::get( 'post' );
 		$data['comment'] = JRequest::getVar('comment', '', 'post', 'string', JREQUEST_ALLOWRAW);
 
-//print_r($data);
+	//print_r($data); die;
 
 		$datafiles = JRequest::get( 'files' );
 //print_r($datafiles);die();
@@ -110,7 +110,7 @@ class SessionsModelSession extends JModel
 			$this->setError($this->_db->getErrorMsg());
 			return false;
 		}
-
+		
 		if (!$row->bind($datafiles)) {
 			$this->setError($this->_db->getErrorMsg());
 			return false;
@@ -124,12 +124,13 @@ class SessionsModelSession extends JModel
 //print_r($row);die();
 		// Store the web link table to the database
 		if (!$row->store()) {
-			$this->setError( $row->_db->getErrorMsg() );
+			$this->setError( $this->_db->getErrorNum() );
+			print_r($row);die();
 			return false;
 		}
 
 //print_r($row); die;
-		foreach($data as $key => $value){
+/*		foreach($data as $key => $value){
 			
 //print_r($key);		//die;	
 
@@ -185,7 +186,7 @@ class SessionsModelSession extends JModel
 				$this->save_doc($doc_data);
 			}
 
-		}
+		} */
 
 		return true;
 	}

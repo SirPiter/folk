@@ -13,6 +13,11 @@ JHtml::_('behavior.framework');
 JHtml::_('behavior.modal');
 ?>
 
+<div class="alert">
+	<h3><?php echo JText::_('COM_ADMINTOOLS_COMMON_DEPRECATED_TITLE');?></h3>
+	<p><?php echo JText::_('COM_ADMINTOOLS_COMMON_DEPRECATED_BODY');?></p>
+</div>
+
 <?php if ($this->hasDefaultAdmin): ?>
 	<?php
 	$id = 42;

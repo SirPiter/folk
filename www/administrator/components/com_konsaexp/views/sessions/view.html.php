@@ -36,6 +36,9 @@ class SessionsViewSessions extends JView
 		
 		$towns	= & $this->get('TownsData');
 		$items =& $this->get('Data');
+		
+		
+		//print_r($this->items); die;
 
 		// push data into the template
 		$this->assignRef('items', $items);

@@ -83,6 +83,9 @@ $mysql5 = $this->isMySQL && (strpos($db->getVersion(), '5') === 0);
 		<?php echo JText::_('COM_ADMINTOOLS_CPANEL_ERR_CORRUPT_INFO') ?>
 	</p>
 	<p>
+		<?php echo JText::_('COM_ADMINTOOLS_CPANEL_ERR_CORRUPT_DONTPANIC') ?>
+	</p>
+	<p>
 		<?php echo JText::_('COM_ADMINTOOLS_CPANEL_ERR_CORRUPT_MOREINFO') ?>
 	</p>
 	<p>
@@ -100,6 +103,9 @@ $mysql5 = $this->isMySQL && (strpos($db->getVersion(), '5') === 0);
 	<h3><?php echo JText::_('COM_ADMINTOOLS_CPANEL_ERR_CORRUPT_HEAD') ?></h3>
 	<p>
 		<?php echo JText::_('COM_ADMINTOOLS_CPANEL_ERR_CORRUPT_IGNORED') ?>
+	</p>
+	<p>
+		<?php echo JText::_('COM_ADMINTOOLS_CPANEL_ERR_CORRUPT_DONTPANIC') ?>
 	</p>
 </div>
 <?php if (ADMINTOOLS_PRO && (version_compare(JVERSION, '2.5.19', 'lt') || (version_compare(JVERSION, '3.0.0', 'gt') && version_compare(JVERSION, '3.2.1', 'lt')))): ?>
@@ -171,6 +177,19 @@ $mysql5 = $this->isMySQL && (strpos($db->getVersion(), '5') === 0);
 		<a href="index.php?option=com_postinstall&eid=<?php echo $this->extension_id?>"
 		   class="btn btn-primary btn-large">
 			<?php echo JText::_('AKEEBA_CPANEL_PIM_BUTTON'); ?>
+		</a>
+	</div>
+<?php elseif(is_null($this->hasPostInstallationMessages)): ?>
+	<div class="alert alert-error">
+		<h3>
+			<?php echo JText::_('COM_ADMINTOOLS_CPANEL_PIM_ERROR_TITLE'); ?>
+		</h3>
+		<p>
+			<?php echo JText::_('COM_ADMINTOOLS_CPANEL_PIM_ERROR_DESC'); ?>
+		</p>
+		<a href="https://www.akeebabackup.com/documentation/troubleshooter/abpimerror.html"
+		   class="btn btn-primary btn-large">
+			<?php echo JText::_('COM_ADMINTOOLS_CPANEL_PIM_ERROR_BUTTON'); ?>
 		</a>
 	</div>
 <?php endif; ?>

@@ -12,25 +12,32 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 jimport( 'joomla.application.component.view' );
 
-class ExpeditionsViewExpedition extends JView
+class SessionsViewSession extends JView
 {
-
+	
+//	protected $form;
+//	protected $item;
+//	protected $state;
+	
+	/** Display the view */
 	function display($tpl = null)
 	{
 		$document	= & JFactory::getDocument();
 		$document->addStyleSheet('components/com_konsaexp/assets/albums.css');
 
-		$session		=& $this->get('Data');
-		$collectors		=& $this->get('CollectorsList');
-		$towns	=& $this->get('TownsList');
+		
+		// Initialiase variables.
+		$data		=& $this->get('Data');
+//		$collectors		=& $this->get('CollectorsList');
+	//	$towns			=& $this->get('TownsList');
 		$townswithregions	=& $this->get('ExtendedTownsList');
 		$phonograms		=& $this->get('Phonograms');
-		$docs		=& $this->get('Docs');		
+		$docs			=& $this->get('Docs');		
 		
 		$tab = JRequest::getVar('tab',  0, '');
 		$this->assignRef('tab',		$tab);
 
-		$isNew		= ($expedition->id < 1);
+		$isNew		= ($session->id < 1);
 
 		$text = $isNew ? JText::_( 'COM_KONSAEXP_NEW' ) : JText::_( 'COM_KONSAEXP_EDIT' );
 		JToolBarHelper::title(   JText::_( 'COM_KONSAEXP_SESSION' ).': <small><small>[ ' . $text.' ]</small></small>','sessionedit' );
@@ -47,9 +54,9 @@ class ExpeditionsViewExpedition extends JView
 // JToolBarHelper::addNew('item.add');
 		
 		// push data into the template
-		$this->assignRef('session',	$session);
-		$this->assignRef('collectors',	$collectors);
-		$this->assignRef('towns',		$towns);
+		$this->assignRef('data',	$data);
+	//	$this->assignRef('collectors',	$collectors);
+		//$this->assignRef('towns',		$towns);
 		$this->assignRef('townswithregions',	$townswithregions);
 		$this->assignRef('phonograms',	$phonograms);
 		$this->assignRef('docs',	$docs);

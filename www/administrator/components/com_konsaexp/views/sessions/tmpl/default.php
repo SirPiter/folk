@@ -1,6 +1,8 @@
 <?php defined('_JEXEC') or die('Restricted access'); ?>
 <div id="messages"></div>
 <form action="<?php echo JRoute::_( 'index.php' );?>" method="post" name="adminForm" id="adminForm">
+
+<?php // print_r($this->items); die; ?>
 <div id="editcell">
                 <table>
                         <tr>
@@ -31,7 +33,7 @@
 			</th>
             <th align="center">
 				<?php //echo JText::_( 'Session Theme' ); ?>
-                <?php echo JHTML::_( 'grid.sort', 'COM_KONSAEXP_SESSION_THEME', 'session_theme', $this->lists['session_order_Dir'], $this->lists['session_order']); ?>
+                <?php echo JHTML::_( 'grid.sort', 'COM_KONSAEXP_SESSION_TITLE', 'session_theme', $this->lists['session_order_Dir'], $this->lists['session_order']); ?>
 			</th>
             <th align="center">
 				<?php //echo JText::_( 'Date' ); ?>

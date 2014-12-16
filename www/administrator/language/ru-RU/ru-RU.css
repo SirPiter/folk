@@ -14,8 +14,8 @@ fieldset.panelform label,
 fieldset.adminform span.faux-label,
 div.current label, div.current span.faux-label {
 	min-width: 10%;
-	max-width: 95%;
-	width: 95%;
+	max-width: 30%;
+	width: 30%;
 	padding: 0 5px 0 0;
 }
 

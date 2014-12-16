@@ -107,7 +107,8 @@ function getExtendedTownsList()
 	function store()
 	{	
 		$row =& $this->getTable();
-
+	//	print_r($row);die();
+		
 		$data = JRequest::get( 'post' );
 		$data['comment'] = JRequest::getVar('comment', '', 'post', 'string', JREQUEST_ALLOWRAW);
 		$data['text'] = JRequest::getVar('text', '', 'post', 'string', JREQUEST_ALLOWRAW);

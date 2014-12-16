@@ -29,7 +29,7 @@ class TableSession extends JTable
 	var $added = null;
     
 	function TableSession(& $db) {
-		parent::__construct('#__konsa_exp_recording_sessions', 'id', $db);
+		parent::__construct('#__konsa_exp_sessions', 'id', $db);
 	}
 
 	function check(){

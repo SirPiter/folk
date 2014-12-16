@@ -86,7 +86,7 @@ class AtsystemFeatureAbstract
 	/**
 	 * Checks if a non logged in user is trying to access the administrator application
 	 *
-	 * @param bool $onlySubmit bool Return true only if the form is submitted
+	 * @param bool $onlySubmit bool Return true only if the login form is submitted
 	 *
 	 * @return bool
 	 */
@@ -106,61 +106,30 @@ class AtsystemFeatureAbstract
 			return false;
 		}
 
+		// If we have option=com_login&task=login then the user is submitting the login form. Otherwise Joomla! is
+		// just displaying the login form.
 		$input = JFactory::getApplication()->input;
 		$option = $input->getCmd('option', null);
 		$task = $input->getCmd('task', null);
+		$isPostingLoginForm = ($option == 'com_login') && ($task == 'login');
 
-		if (!(($option == 'com_login') && ($task == 'login')))
+		// If the user is submitting the login form we return depending on whether we are asked for posting access
+		// or not.
+		if ($isPostingLoginForm)
 		{
-			// Back-end login attempt
-			if ($onlySubmit)
-			{
-				return false;
-			}
-
-			return true;
+			return $onlySubmit;
 		}
 
-		// Check for malicious direct post without a valid token
-		// In this case, we "cheat" by pretending that it is a
-		// login attempt we need to filter. If it's a legitimate
-		// login request (username & password posted) we stop
-		// filtering so as to allow Joomla! to parse the login
-		// request.
-		JLoader::import('joomla.utiltiites.utility');
-		$token = null;
-
-		if (class_exists('JUtility'))
+		// This is a regular admin access attempt
+		if ($onlySubmit)
 		{
-			if (method_exists('JUtility', 'getToken'))
-			{
-				$token = JUtility::getToken();
-			}
+			// Since we were asked to only return true for login form posting and this is not the case we have to
+			// return false (the login form is not being posted)
+			return false;
 		}
 
-		if (is_null($token))
-		{
-			$token = JFactory::getSession()->getToken();
-		}
-
-		$token = JFactory::getApplication()->input->get($token, false, 'raw');
-
-		if (!$onlySubmit)
-		{
-			if (($token === false) && method_exists('JSession', 'checkToken'))
-			{
-				return !JSession::checkToken('request');
-			}
-
-			return $token === false;
-		}
-
-		if (($token === false) && method_exists('JSession', 'checkToken'))
-		{
-			return JSession::checkToken('request');
-		}
-
-		return $token !== false;
+		// In any other case we return true.
+		return true;
 	}
 
 	/**

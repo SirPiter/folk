@@ -66,7 +66,7 @@ class ArtistsModelArtist extends JModel
 	function store()
 	{
 		$row =& $this->getTable();
-
+		
 		$data = JRequest::get( 'post' );
 		$data['review'] = JRequest::getVar('review', '', 'post', 'string', JREQUEST_ALLOWRAW);
 		$datafiles = JRequest::get( 'files' );
@@ -87,7 +87,6 @@ class ArtistsModelArtist extends JModel
 			$this->setError($this->_db->getErrorMsg());
 			return false;
 		}
-
 		// Store the web link table to the database
 		if (!$row->store()) {
 			$this->setError( $row->getErrorMsg() );

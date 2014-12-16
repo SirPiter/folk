@@ -14,6 +14,7 @@ class AdmintoolsControllerMasterpw extends F0FController
 	public function __construct($config = array())
 	{
 		parent::__construct($config);
+
 		$this->modelName = 'masterpw';
 	}
 
@@ -23,6 +24,7 @@ class AdmintoolsControllerMasterpw extends F0FController
 		{
 			$task = 'browse';
 		}
+
 		parent::execute($task);
 	}
 
@@ -35,6 +37,7 @@ class AdmintoolsControllerMasterpw extends F0FController
 		$views = $this->input->getVar('views', array(), 'array', 2);
 
 		$restrictedViews = array();
+
 		foreach ($views as $view => $locked)
 		{
 			if ($locked == 1)

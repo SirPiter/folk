@@ -1,4 +1,17 @@
 <?php die() ?>
+Admin Tools 3.4.0
+================================================================================
++ Warning added when Joomla!'s com_postinstall component is broken (with instructions to fix it)
+~ Some features are now deprecated and will be removed in 2015 when we discontinue Joomla! 2.5 support: change super user ID, change db prefix, change db collation, two factor authentication
+~ Explain that the corrupt files message is not something to worry about when you have renamed files of the System - Admin Tools plugin (thank you, Jenny!)
+~ .htaccess Maker: URL rewrites to Joomla! work no matter what is the SEF URL extension (part after the last dot)
+# [MEDIUM] Two Factor Authentication under Joomla 2.5.x was not working properly
+# [MEDIUM] Logging out of Joomla! 3.2 when using secret URL parameter may raise security exception
+# [MEDIUM] Users could change the master password even if they didn't authenticate inside Admin Tools
+# [MEDIUM] The option "Disable editing backend users' properties" was not working when clicking on "Save & New"
+# [MEDIUM] The option "Disable editing backend users' properties" was not working when trying to edit your own profile
+# [LOW] Prevent javascript error in WAF configuration page with translated strings due a Joomla bug.
+
 Admin Tools 3.3.1
 ================================================================================
 + Self-check the installation. If files are missing or have been tampered with you will be notified about it.

@@ -128,21 +128,22 @@ function getTotal()
 		if ($keywords != "")
 			$where_clause[] = $this->get_where_clause_keywords($keywords);
 		if ($collector_id > 0) {
-			$where_clause[] = ' #__konsa_exp_sessions.chief_collector = '.(int) $collector_id;
+	//		$where_clause[] = ' #__konsa_exp_sessions.chief_collector = '.(int) $collector_id;
 		}
 
 		// Build the where clause of the content record query
 		$where_clause = (count($where_clause) ? ' WHERE '.implode(' AND ', $where_clause) : '');
 
-		$query = ' SELECT #__konsa_exp_sessions.*, #__konsa_exp_collectors.collector_full_name '
+		/* $query = ' SELECT #__konsa_exp_sessions.*, #__konsa_exp_collectors.collector_full_name '
 				. ' FROM #__konsa_exp_sessions '
-				.' LEFT JOIN #__konsa_exp_collectors ON #__konsa_exp_collectors.id = #__konsa_exp_sessions.chief_collector '
-			.$where_clause
-			.$this->_buildContentOrderBy()
-		;
+				.' LEFT JOIN #__konsa_exp_collectors ON #__konsa_exp_collectors.id = #__konsa_exp_sessions.chief_collector ' */
+		$query = ' SELECT #__konsa_exp_sessions.*  FROM #__konsa_exp_sessions ' ;
+		//	.$where_clause
+		//	.$this->_buildContentOrderBy()
+		//;
   	//		.' LEFT JOIN #__konsa_exp_format as f ON f.id = al.format_id '
 
-	//	print_r($query);//die();
+		//print_r($query);//die();
 
 		return $query;
 	}

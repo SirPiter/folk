@@ -76,6 +76,7 @@ class AdmintoolsDispatcher extends F0FDispatcher
 			}
 
 			// ========== Master PW check ==========
+			/** @var AdmintoolsModelMasterpw $model */
 			$model = F0FModel::getAnInstance('Masterpw', 'AdmintoolsModel');
 			if (!$model->accessAllowed($view))
 			{
