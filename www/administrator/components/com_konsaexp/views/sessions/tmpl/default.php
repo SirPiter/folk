@@ -77,7 +77,7 @@
 				<?php echo $row->date; ?>
 			</td>
             <td align="center">
-				<?php echo $row->place; ?>
+				<?php echo $row->town_name; ?>
 			</td>
 			            <td align="center">
 				<a href="<?php echo $link_expedition; ?>"><?php echo $row->expedition_id; ?></a>

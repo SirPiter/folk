@@ -38,7 +38,7 @@ class SessionsViewSessions extends JView
 		$items =& $this->get('Data');
 		
 		
-		//print_r($this->items); die;
+		//print_r($items); die;
 
 		// push data into the template
 		$this->assignRef('items', $items);

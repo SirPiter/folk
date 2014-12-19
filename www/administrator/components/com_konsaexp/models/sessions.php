@@ -120,6 +120,10 @@ function getTotal()
 	function _buildQuery()
 	{
 
+		
+		// Получаем объект запросов (JDatabaseQuery)
+		//$query = $this->_db->getQuery(true);
+		
 		$keywords = $this->getKeywords();
 		$collector_id = $this->getCollectorId();
 
@@ -134,16 +138,32 @@ function getTotal()
 		// Build the where clause of the content record query
 		$where_clause = (count($where_clause) ? ' WHERE '.implode(' AND ', $where_clause) : '');
 
-		/* $query = ' SELECT #__konsa_exp_sessions.*, #__konsa_exp_collectors.collector_full_name '
+		$query = ' SELECT #__konsa_exp_sessions.*, #__konsa_exp_towns.town_name '
 				. ' FROM #__konsa_exp_sessions '
-				.' LEFT JOIN #__konsa_exp_collectors ON #__konsa_exp_collectors.id = #__konsa_exp_sessions.chief_collector ' */
-		$query = ' SELECT #__konsa_exp_sessions.*  FROM #__konsa_exp_sessions ' ;
+				.' LEFT JOIN #__konsa_exp_towns ON #__konsa_exp_sessions.place_id = #__konsa_exp_towns.id ';
+		// $query = ' SELECT #__konsa_exp_sessions.*  FROM #__konsa_exp_sessions ' ;
+		
+		//Опреднляем таблицу
+/*		$query->select('*');
+		$query->from($this->_db->quoteName('#__konsa_exp_sessions'), 'sessions');
+		// Присоединяем #__towns
+		$query->select($this->_db->quoteName('towns.town_name'));
+		$query->leftJoin(
+				$this->_db->quoteName('#__konsa_exp_towns', 'towns')
+				. ' ON '
+				. $this->_db->quoteName('towns.id')
+				. ' = ' . $this->_db->quoteName('sessions.place_id')
+		);
+		*/
+		
+		//$query->join('LEFT OUTER', '#__konsa_exp_towns ON #__konsa_exp_sessions.place_id = #__konsa_exp_towns.id');
+		
 		//	.$where_clause
 		//	.$this->_buildContentOrderBy()
 		//;
   	//		.' LEFT JOIN #__konsa_exp_format as f ON f.id = al.format_id '
 
-		//print_r($query);//die();
+		//print_r($query); //die();
 
 		return $query;
 	}

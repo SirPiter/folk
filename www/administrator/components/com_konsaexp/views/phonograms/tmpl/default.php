@@ -84,11 +84,11 @@
 				} 	?>
 			</td> 
             <td>
-	<!--			<div id="audioplayer_<?php //echo $row->id; ?>">Для отображения плеера необходим Flash и javascript</div>  
+			<div id="audioplayer_<?php echo $row->id; ?>">Для отображения плеера необходим Flash и javascript</div>  
         		<script type="text/javascript">  
-				AudioPlayer.embed("audioplayer_<?php //echo $row->id; ?>", {soundFile: "http://music.sirpiter.ru/<?php // echo $row->soundfile; ?>"});  
+				AudioPlayer.embed("audioplayer_<?php echo $row->id; ?>", {soundFile: "<?php  echo 'folklab.ru/mp3/'. substr_replace($row->soundfile, 'mp3', -3); ?>"});  
 				</script> 
--->
+
 			</td> 
 
 		</tr>
