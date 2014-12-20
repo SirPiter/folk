@@ -27,18 +27,18 @@ class SessionsViewSession extends JView
 
 		
 		// Initialiase variables.
-		$data		=& $this->get('Data');
+		$data		=& $this->get('Data'); // Данные самой сессии записи
 //		$collectors		=& $this->get('CollectorsList');
 	//	$towns			=& $this->get('TownsList');
-		$townswithregions	=& $this->get('ExtendedTownsList');
-		$phonograms		=& $this->get('Phonograms');
-		$docs			=& $this->get('Docs');		
+		$townswithregions	=& $this->get('ExtendedTownsList'); // Список городов с регионами
+		$phonograms		=& $this->get('Phonograms'); // Фонограммы  этой сессии
+		$docs			=& $this->get('Docs');	// Документы этой сессии
+		$peoples		=& $this->get('Peoples');	// Участники этой сессии	
 		
 		$tab = JRequest::getVar('tab',  0, '');
 		$this->assignRef('tab',		$tab);
 
-		$isNew		= ($session->id < 1);
-
+		$isNew		= ($data->id < 1);
 		$text = $isNew ? JText::_( 'COM_KONSAEXP_NEW' ) : JText::_( 'COM_KONSAEXP_EDIT' );
 		JToolBarHelper::title(   JText::_( 'COM_KONSAEXP_SESSION' ).': <small><small>[ ' . $text.' ]</small></small>','sessionedit' );
 		JToolBarHelper::save();
@@ -60,6 +60,7 @@ class SessionsViewSession extends JView
 		$this->assignRef('townswithregions',	$townswithregions);
 		$this->assignRef('phonograms',	$phonograms);
 		$this->assignRef('docs',	$docs);
+		$this->assignRef('peoples',	$peoples);
 		
 		// JS
 		$document->addScript('components/com_konsaexp/assets/tracks.js');

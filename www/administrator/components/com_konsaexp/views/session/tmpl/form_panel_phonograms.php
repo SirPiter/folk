@@ -8,76 +8,80 @@
 defined('_JEXEC') or die('Restricted access'); 
 ?>
 
-<fieldset class="adminform">  <!-- Блок для основных данных сессии: название, код, краткие даты  -->
-<legend><?php echo JText::_( 'COM_KONSAEXP_MAIN' ); ?></legend>
-<table class="admintable" border=0>
-	<tr>   <!-- строка для кода сессии -->
-		<td width="100" align="right" class="key">
-			<label for="session_code">
-			<?php echo JText::_( 'COM_KONSAEXP_SESSION_CODE' ); ?>:
-			</label>
-		</td>
-		<td>
-			<input class="text_area" type="text" name="session_code" id="session_code" size="30" maxlength="100" value="<?php echo $this->data->session_code;?>" />
-		</td>
-	</tr>
-    <tr>   <!-- строка для темы  -->
-		<td width="100" align="right" class="key">
-			<label for="session_title">
-				<?php echo JText::_( 'COM_KONSAEXP_SESSION_TITLE' ); ?>:
-			</label>
-		</td>
-		<td>
-			<input class="text_area" type="text" name="session_title" id="session_title" size="87" maxlength="250" value="<?php echo $this->data->session_title;?>" />
-		</td>
-	</tr>
-	<tr>
-		<td width="100" align="right" class="key">
-			<label for="Begin date">
-			<?php echo JText::_( 'COM_KONSAEXP_SESSION_DATE' ); ?>:
-			</label>
-		</td>
-		<td width="140">
-			<?php echo JHTML::_('calendar', $this->data->date, 'date', 'date', '%Y-%m-%d',
-			array('class'=>'inputbox', 'size'=>'15',  'maxlength'=>'19',
-			'onclick'=> "return showCalendar('begin_date','%Y-%m-%d');",
-			'onfocus'=> "return showCalendar('begin_date','%Y-%m-%d');"));
-			?>
-		</td>
-	</tr>
-	<tr>
-		<td width="100" align="right" class="key">
-			<label for="session_place">
-				<?php echo JText::_( 'COM_KONSAEXP_SESSION_PLACE' ); ?>:
-			</label>
-		</td>
-		<td>
-			<select name="place_id" id="place_id">
-            <option value="0">--<? echo JText::_('COM_KONSAEXP_NONE'); ?>--</option>
-            <?php
-			for ($i=0, $n=count( $this->townswithregions );$i < $n; $i++)	{
-			$row = &$this->townswithregions[$i];
-			$selected = "";
-			if($row->id == $this->data->place_id) $selected = "selected";
-  			?>
-            <option <?php echo $selected;?> value="<?php echo $row->id;?>"><?php echo $row->town_name;?></option>
-            <?php  } ?>
-			</select>
-		</td>
+<fieldset class="adminform"> <!-- Блок для добавления фонограмм -->
+    <legend><?php echo JText::_( 'Expedition phonogram list' ); ?></legend>
+
+<br/>&nbsp;&nbsp;
+<input class="button" type="button" onclick="javascript:new_phonogram();" value="<? echo JText::_('Add new phonogram'); ?>"/>
+&nbsp;&nbsp;
+<input class="button" type="button" onclick="javascript:new_file();" value="<? echo JText::_('Add new file '); ?>"/>
+&nbsp;&nbsp;
+<input class="button" type="button" onclick="javascript:delete_selected_phonograms();" value="<? echo JText::_('Delete selected phonograms'); ?>"/>
+<br/><br/>
+<table class="adminlist" id="phonograms_table">
+
+	<thead>
+		<tr>
+			<th width="5">
+				<?php echo JText::_( 'COM_KONSAEXP_ID' ); ?>
+			</th>
+			<th width="20">
+				<input type="checkbox" name="toggle" value="" onclick="checkAll(<?php echo count( $this->phonograms ); ?>);" />
+			</th>	
+		
+         <th>
+				<?php echo JText::_( 'COM_KONSAEXP_PHONOGRAM_TITLE' ); ?>
+			</th>
+            <th width="20">
+				<?php echo JText::_( 'COM_KONSAEXP_PHONOGRAM_LINK' ); ?>
+			</th>
+            <th width="20">
+				<?php echo JText::_( 'COM_KONSAEXP_PHONOGRAM_EDIT' ); ?>
+			</th>
+            
+		</tr>
+	</thead>
+	<?php
+	
+	$k = 0;
+	for ($i=0, $n=count( $this->phonograms ); $i < $n; $i++)	{
+		$phonogram = &$this->phonograms[$i];
+		$checked 	= JHTML::_('grid.id',   $i, $phonogram->id );
+		$link_edit = JRoute::_( 'index.php?option=com_konsaexp&controller=phonogram&task=edit&cid[]=' . $phonogram->id );
+		$tick = JHTML::image("administrator/images/tick.png",JText::_('Yes'));
+		$tick_file = JHTML::image("administrator/images/tick.png",JText::_('Yes'),array("title" => $phonogram->filename));
+		$cross = JHTML::image("administrator/images/publish_x.png",JText::_('No'));
+		$link_open = JRoute::_( "..".DS.$phonogram->soundfile );
+
+		?>
+		<tr class="<?php echo "row$k"; ?>">
+			<td>
+				<?php echo $phonogram->id; ?>
+			</td>
+			<td>
+				<?php echo $checked; ?>
+			</td>
+            <td align="left"  style="padding-left:10px;">
+				<a href="<? echo $link_edit; ?>"><?php echo $phonogram->phonogram_title;?></a>
+			</td>
+            <td align="center">
+            <? if ($phonogram->soundfile) { ?>
+				<a href="<? echo $link_open; ?>"><img src="components/com_konsaexp/assets/images/music.png" title="<? echo JText::_( 'Open this phonogram' ); ?>" alt="<? echo JText::_( 'Open this phonogram' ); ?>" /></a>
+             <? } ?>   
+			</td>
+            <td align="center">
+				<a href="<? echo $link_edit; ?>"><img src="components/com_konsaexp/assets/images/icons/page_white_edit.png" title="<? echo JText::_( 'Edit this phonogram' ); ?>" alt="<? echo JText::_( 'Edit this phonogram' ); ?>" /></a>
+			</td>
 
 		</tr>
-	<tr>
-		<td width="100" align="right" class="key">
-			<label for="review">
-			<?php echo JText::_( 'COM_KONSAEXP_COMMENT' ); ?>:
-			</label>
-		</td>
-		<td>
-			<?php
-				$editor =& JFactory::getEditor();
-				echo $editor->display('comment', $this->data->comment, '450', '200', '60', '20', false);
-			?>
-		</td>
-	</tr>
-</table>
+		<?php
+		$k = 1 - $k;
+	}
+	?>
+	</table>    
+
+<br />&nbsp;&nbsp;
+  <input class="button" type="button" onclick="javascript:new_phonogram();" value="<? echo JText::_('Add new phonogram'); ?>"/>
+  <br />
+
 </fieldset>

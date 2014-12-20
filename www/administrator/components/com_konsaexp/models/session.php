@@ -244,6 +244,17 @@ class SessionsModelSession extends JModel
 		return $this->docs;
 	}
 
+	function getPeoples(){
+		if (empty( $this->peoples )){
+			$query = 	' SELECT * FROM #__konsa_exp_collectors '.
+					' WHERE session_id = ' . $this->_id .
+					' ORDER BY title ';
+			$this->_db->setQuery( $query );
+			$this->docs = $this->_db->loadObjectList();
+		}
+		return $this->docs;
+	}
+	
 	function save_phonogram($data)
 	{
 		$row =& $this->getTable('phonogram');
