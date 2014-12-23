@@ -80,7 +80,7 @@
 				<?php echo $row->town_name; ?>
 			</td>
 			            <td align="center">
-				<a href="<?php echo $link_expedition; ?>"><?php echo $row->expedition_id; ?></a>
+				<a href="<?php echo $link_expedition; ?>"><?php echo $row->expedition_title; ?></a>
 			</td>
 		</tr>
 		<?php

@@ -138,9 +138,18 @@ function getTotal()
 		// Build the where clause of the content record query
 		$where_clause = (count($where_clause) ? ' WHERE '.implode(' AND ', $where_clause) : '');
 
-		$query = ' SELECT #__konsa_exp_sessions.*, #__konsa_exp_towns.town_name '
-				. ' FROM #__konsa_exp_sessions '
-				.' LEFT JOIN #__konsa_exp_towns ON #__konsa_exp_sessions.place_id = #__konsa_exp_towns.id ';
+		$query = ' SELECT sessions.*, towns.town_name, expeditions.expedition_title '
+				. ' FROM #__konsa_exp_sessions as sessions'
+				.' LEFT JOIN #__konsa_exp_towns as towns ON sessions.place_id = towns.id ' 
+				.' LEFT JOIN #__konsa_exp_expeditions as expeditions ON sessions.expedition_id = expeditions.id '		;
+		
+	//	SELECT sessions.*, towns.town_name, expeditions.expedition_title
+	//	FROM arch25_konsa_exp_sessions as sessions
+	//	LEFT JOIN arch25_konsa_exp_towns as towns ON sessions.place_id = towns.id
+	//	LEFT JOIN arch25_konsa_exp_expeditions as expeditions ON sessions.expedition_id = expeditions.id
+		
+		
+		
 		// $query = ' SELECT #__konsa_exp_sessions.*  FROM #__konsa_exp_sessions ' ;
 		
 		//Опреднляем таблицу

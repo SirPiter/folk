@@ -111,6 +111,7 @@ class SessionsController extends JController{
 
 	function display()
 	{
+		//require_once JPATH_COMPONENT.'/helpers/helpers.php';
 		parent::display();
 	}
 }

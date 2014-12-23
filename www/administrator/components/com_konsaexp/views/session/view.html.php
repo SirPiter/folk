@@ -33,7 +33,12 @@ class SessionsViewSession extends JView
 		$townswithregions	=& $this->get('ExtendedTownsList'); // Список городов с регионами
 		$phonograms		=& $this->get('Phonograms'); // Фонограммы  этой сессии
 		$docs			=& $this->get('Docs');	// Документы этой сессии
-		$peoples		=& $this->get('Peoples');	// Участники этой сессии	
+		$peoples		=& $this->get('Peoples');	// Участники этой сессии
+//		$expeditions		=& KonsaExpHelper::getExpeditionsList('ExpeditionsList');	// Список экспедиций
+		$expeditions		=& $this->get('ExpeditionsList');
+		
+		//print_r($expeditions); die;
+		
 		
 		$tab = JRequest::getVar('tab',  0, '');
 		$this->assignRef('tab',		$tab);
@@ -61,6 +66,7 @@ class SessionsViewSession extends JView
 		$this->assignRef('phonograms',	$phonograms);
 		$this->assignRef('docs',	$docs);
 		$this->assignRef('peoples',	$peoples);
+		$this->assignRef('expeditions',	$expeditions);
 		
 		// JS
 		$document->addScript('components/com_konsaexp/assets/tracks.js');

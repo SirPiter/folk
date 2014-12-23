@@ -66,6 +66,27 @@ class SessionsModelSession extends JModel
 			}
 		return $this->_collectors_list;
 	}
+
+	function getExpeditionsList()
+	{
+		// Lets load the data if it doesn't already exist
+		if (empty( $this->_expeditions_list )){
+			$query = ' SELECT id,expedition_title FROM #__konsa_exp_expeditions '.
+					' ORDER BY expedition_title';
+			$this->_db->setQuery( $query );
+			$this->_expeditions_list = $this->_db->loadObjectList();
+			//print_r($query);  die;
+		}
+		return $this->_expeditions_list;
+	}
+	
+	function getExpeditionsListH()
+	{
+		$this->_expeditions_list = KonsaExpHelper::getExpeditionsList('ExpeditionsList');
+		
+		return $this->_expeditions_list;
+	}
+	
 	
 		function getTownsList()
 		{
@@ -130,19 +151,19 @@ class SessionsModelSession extends JModel
 		}
 
 //print_r($row); die;
-/*		foreach($data as $key => $value){
+		foreach($data as $key => $value){
 			
 //print_r($key);		//die;	
 
 			if(substr($key,0,6) == "place_")	{
-				$track_id = (int)substr($key,6);
+			/*	$track_id = (int)substr($key,6);
 				$track_data = array(
 								   "id" => $track_id ,
 								   "number" => $data["number_" . $track_id],
 								   "town_id" => $value
 								   );
-				$this->save_track($track_data);
-			} //les can�ons NOVES
+				$this->save_track($track_data);  */
+			} 
 			else if(substr($key,0,8) == "0_place_")	{
 				$track_id = (int)substr($key,8);
 				$track_data = array(
@@ -186,38 +207,8 @@ class SessionsModelSession extends JModel
 				$this->save_doc($doc_data);
 			}
 
-		} */
+		} 
 
-		return true;
-	}
-
-	function getTracks(){
-			if (empty( $this->tracks )){
-				$query = 	' SELECT * FROM #__konsa_exp_tracks '.
-							' WHERE session_id = ' . $this->_id .
-						 	' ORDER BY number, date ';
-				$this->_db->setQuery( $query );
-				$this->tracks = $this->_db->loadObjectList();
-			}
-		return $this->tracks;
-	}
-
-	function save_track($data)
-	{
-		$row =& $this->getTable('track');
-		$mainframe =& JFactory::getApplication();
-		if (!$row->bind($data)) {
-			$this->setError($this->_db->getErrorMsg());
-			return false;
-		}
-		if (!$row->check()) {
-			$this->setError($this->_db->getErrorMsg());
-			return false;
-		}
-		if (!$row->store()) {
-			$this->setError( $this->_db->getErrorMsg() );
-			return false;
-		}
 		return true;
 	}
 

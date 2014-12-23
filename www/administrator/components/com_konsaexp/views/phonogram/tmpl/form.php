@@ -11,11 +11,11 @@
 				<label for="ID"><?php echo JText::_( 'COM_KONSAEXP_PHONOGRAM' ); ?>:
 				</label>
 			</td>
-			<td width="687">ID: <?php echo $this->phonogram->id;?>,
+			<td width="687"> <!--  ID: <?php echo $this->phonogram->id;?>, -->
             &nbsp;&nbsp;
             <input class="text_area"  type="text" name="phonogram_title" id="phonogram_title" size="100" maxlength="200" value="<?php echo $this->phonogram->phonogram_title;?>" /></td>
 		  </tr>
-		<tr>
+<!-- 	<tr>
 			<td width="100" align="right" class="key">
 				<label for="Expedition ID">
 					<?php echo JText::_( 'COM_KONSAEXP_EXPEDITION' ); ?>:
@@ -25,7 +25,64 @@
             &nbsp;&nbsp;&nbsp;<?php echo $this->expedition[0]->expedition_title;?></td>
 		  </tr>
 		<tr>
-		  <td align="right" class="key"><label for="Collector ID"> <?php echo JText::_( 'COM_KONSAEXP_COLLECTOR' ); ?>: </label></td>
+ -->
+		<tr>
+		<td width="100" align="right" class="key">
+			<label for="phonogram_expedition">
+				<?php echo JText::_( 'COM_KONSAEXP_EXPEDITION' ); ?>:
+			</label>
+		</td>
+		<td>
+			<select name="expedition_id" id="expedition_id">
+            <option value="0">--<? echo JText::_('COM_KONSAEXP_NONE'); ?>--</option>
+            <?php
+			for ($i=0, $n=count( $this->expeditions );$i < $n; $i++)	{
+			$row = &$this->expeditions[$i];
+			$selected = "";
+			if($row->id == $this->phonogram->expedition_id) $selected = "selected";
+  			?>
+            <option <?php echo $selected;?> value="<?php echo $row->id;?>"><?php echo $row->expedition_title;?></option>
+            <?php  } ?>
+			</select>
+		</td>
+		</tr>
+		
+		<tr>
+		<td width="100" align="right" class="key">
+			<label for="phonogram_session">
+				<?php echo JText::_( 'COM_KONSAEXP_SESSION' ); ?>:
+			</label>
+		</td>
+		<td>
+			<select name="session_id" id="session_id">
+            <option value="0">--<? echo JText::_('COM_KONSAEXP_NONE'); ?>--</option>
+            <?php
+			for ($i=0, $n=count( $this->sessions );$i < $n; $i++)	{
+			$row = &$this->sessions[$i];
+			$selected = "";
+			if($row->id == $this->phonogram->session_id) $selected = "selected";
+  			?>
+            <option <?php echo $selected;?> value="<?php echo $row->id;?>"><?php echo $row->session_title;?></option>
+            <?php  } ?>
+			</select>
+		</td>
+		</tr>
+		
+		
+		
+<!-- 		<tr>
+			<td width="100" align="right" class="key">
+				<label for="Session ID">
+					<?php echo JText::_( 'COM_KONSAEXP_SESSION' ); ?>:
+				</label>
+			</td>
+			<td>ID: <?php echo $this->phonogram->session_id;?>, 
+            &nbsp;&nbsp;&nbsp;<?php echo $this->expedition[0]->session_title;?></td>
+		  </tr>
+		<tr>
+	 -->
+	
+		<td align="right" class="key"><label for="Collector ID"> <?php echo JText::_( 'COM_KONSAEXP_COLLECTOR' ); ?>: </label></td>
 		  <td><?php echo $this->phonogram->collector_id;?>
           	 <select name="collector_id" id="collector_id">
 			    <?php

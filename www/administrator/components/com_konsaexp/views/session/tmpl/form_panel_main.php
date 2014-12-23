@@ -66,7 +66,32 @@ defined('_JEXEC') or die('Restricted access');
 		</td>
 
 		</tr>
-	<tr>
+		<tr>
+		<td width="100" align="right" class="key">
+			<label for="session_expedition">
+				<?php echo JText::_( 'COM_KONSAEXP_SESSION_EXPEDITION' ); ?>:
+			</label>
+		</td>
+		<td>
+			<select name="expedition_id" id="expedition_id">
+            <option value="0">--<? echo JText::_('COM_KONSAEXP_NONE'); ?>--</option>
+            <?php
+			for ($i=0, $n=count( $this->expeditions );$i < $n; $i++)	{
+			$row = &$this->expeditions[$i];
+			$selected = "";
+			if($row->id == $this->data->expedition_id) $selected = "selected";
+  			?>
+            <option <?php echo $selected;?> value="<?php echo $row->id;?>"><?php echo $row->expedition_title;?></option>
+            <?php  } ?>
+			</select>
+		</td>
+
+		</tr>
+		
+		
+		
+		
+		<tr>
 		<td width="100" align="right" class="key">
 			<label for="review">
 			<?php echo JText::_( 'COM_KONSAEXP_COMMENT' ); ?>:

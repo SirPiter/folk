@@ -27,8 +27,9 @@ class PhonogramsViewPhonogram extends JView
 		$collectors	=& $this->get('CollectorsList');
 		$expedition	=& $this->get('Expedition');
 		$townswithregions	=& $this->get('ExtendedTownsList');
+		$expeditions	=& $this->get('ExpeditionsList');
+		$sessions	=& $this->get('SessionsList');
 
-		//cridem el CSS
 		$document	= & JFactory::getDocument();
 		$document->addStyleSheet('components/com_konsaexp/assets/albums.css');
 		
@@ -51,7 +52,9 @@ class PhonogramsViewPhonogram extends JView
 		$this->assignRef('collectors',	$collectors);
 		$this->assignRef('expedition',	$expedition);
 		$this->assignRef('townswithregions',	$townswithregions);
-
+		$this->assignRef('expeditions',	$expeditions);
+		$this->assignRef('sessions',	$sessions);
+		
 		
 		//$document->addScript('components/com_konsaexp/assets/s5_mp3_player.js');
 		$document->addScript('components/com_konsaexp/assets/audio-player/swfobject/swfobject.js');

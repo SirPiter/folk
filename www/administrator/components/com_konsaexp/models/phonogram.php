@@ -38,22 +38,26 @@ class PhonogramsModelPhonogram extends JModel
 	{
 		// Load the data
 		if (empty( $this->_data )) {
-			$query = ' SELECT * FROM #__konsa_exp_phonograms '.
-					'  WHERE id = '.$this->_id;
+			$query = ' SELECT phonograms.*, expeditions.expedition_title, sessions.session_title FROM #__konsa_exp_phonograms AS phonograms  '
+					.' LEFT JOIN #__konsa_exp_expeditions as expeditions ON phonograms.expedition_id = expeditions.id '
+					.' LEFT JOIN #__konsa_exp_sessions as sessions ON phonograms.session_id = sessions.id '
+					. '  WHERE phonograms.id = '.$this->_id;
 			$this->_db->setQuery( $query );
 			$this->_data = $this->_db->loadObject();
 		}
-		//print_r( $this->_data);die();
+		// print_r( $this->_data); //die();
 		if (!$this->_data) {
 			$this->_data = new stdClass();
 			$this->_data->id = 0;
 		}
+
 		return $this->_data;
+		
+		
 	}
 
-	function getTownsList()   //äîëæíû áûòü òîëüêî ãîðîäà, ÷åðåç êîòîðûå ïðîõîäèëà ýêñïåäèöèÿ
-		{                     // åñëè òàêèõ ãîðîäîâ íåò, òî âñå ãîðîäà
-			// Ïðîâåðêà íà íàëè÷èå äàííûõ â ïàìÿòè
+	function getTownsList()   
+		{    
 			if (empty( $this->_towns )){
 				$query = ' SELECT id,town_name FROM #__konsa_exp_towns '.
 						 ' ORDER BY town_name';
@@ -91,6 +95,32 @@ function getExtendedTownsList()
 	}
 
 
+	function getSessionsList()
+	{
+		// Lets load the data if it doesn't already exist
+		if (empty( $this->_sessions_list )){
+			$query = ' SELECT id,session_title FROM #__konsa_exp_sessions '.
+					' ORDER BY session_title';
+			$this->_db->setQuery( $query );
+			$this->_sessions_list = $this->_db->loadObjectList();
+			//print_r($query);  die;
+		}
+		return $this->_sessions_list;
+	}
+	
+	function getExpeditionsList()
+	{
+		// Lets load the data if it doesn't already exist
+		if (empty( $this->_expeditions_list )){
+			$query = ' SELECT id,expedition_title FROM #__konsa_exp_expeditions '.
+					' ORDER BY expedition_title';
+			$this->_db->setQuery( $query );
+			$this->_expeditions_list = $this->_db->loadObjectList();
+			//print_r($query);  die;
+		}
+		return $this->_expeditions_list;
+	}
+	
 	function getExpedition()
 		{
 			// Lets load the data if it doesn't already exist

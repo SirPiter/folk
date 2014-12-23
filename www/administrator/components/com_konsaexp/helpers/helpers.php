@@ -6,7 +6,7 @@
  * @copyright	2009 JoomlaMusicSolutions.com
  * @license		GPLv2
  */
-class MusColHelper{
+class KonsaExpHelper{
 	
 	function show_stars($points,$admin = false,$album_id = false,$ajax=false,$small=false){
 		$grey="";//"_".$points;
@@ -64,5 +64,21 @@ class MusColHelper{
 		//image.php?file=image2.jpg&width=200&height=100&corner_radius=20&corner_background=%23ff9900&corner_antialias=1&corner_position=inner&border_thickness=10&border_position=inside&border_color=%23ffffff&resizing_method=fit&image_alignment=center&jpeg_quality=100&background_color=%23000000
 		
 	}
+	
+	
+	function getExpeditionsList()
+	{
+		// Lets load the data if it doesn't already exist
+		if (empty( $this->_expeditions_list )){
+			$query = ' SELECT id,expedition_title FROM #__konsa_exp_expeditions '.
+					' ORDER BY expedition_title';
+			$this->_db->setQuery( $query );
+			$this->_expeditions_list = $this->_db->loadObjectList();
+			//print_r($query);  die;
+		}
+		return $this->_expeditions_list;
+	}
+	
+	
 	
 }

@@ -9,14 +9,16 @@ defined('_JEXEC') or die('Restricted access');
 ?>
 
 <fieldset class="adminform"> <!-- Блок для добавления фонограмм -->
-    <legend><?php echo JText::_( 'Expedition phonogram list' ); ?></legend>
+    <legend><?php echo JText::_( 'COM_KONSAEXP_SESSION_PHONOGRAM_LIST' ); ?></legend>
 
 <br/>&nbsp;&nbsp;
-<input class="button" type="button" onclick="javascript:new_phonogram();" value="<? echo JText::_('Add new phonogram'); ?>"/>
+<input class="button" type="button" onclick="javascript:new_phonogram();" value="<? echo JText::_('COM_KONSAEXP_ADD_NEW_PHONOGRAM'); ?>"/>
 &nbsp;&nbsp;
+<!--  
 <input class="button" type="button" onclick="javascript:new_file();" value="<? echo JText::_('Add new file '); ?>"/>
 &nbsp;&nbsp;
-<input class="button" type="button" onclick="javascript:delete_selected_phonograms();" value="<? echo JText::_('Delete selected phonograms'); ?>"/>
+ -->
+<input class="button" type="button" onclick="javascript:delete_selected_phonograms();" value="<? echo JText::_('COM_KONSAEXP_DELETE_SELECTED_PHONOGRAMS'); ?>"/>
 <br/><br/>
 <table class="adminlist" id="phonograms_table">
 
@@ -81,7 +83,7 @@ defined('_JEXEC') or die('Restricted access');
 	</table>    
 
 <br />&nbsp;&nbsp;
-  <input class="button" type="button" onclick="javascript:new_phonogram();" value="<? echo JText::_('Add new phonogram'); ?>"/>
+  <input class="button" type="button" onclick="javascript:new_phonogram();" value="<? echo JText::_('COM_KONSAEXP_ADD_NEW_PHONOGRAM'); ?>"/>
   <br />
 
 </fieldset>

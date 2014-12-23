@@ -15,9 +15,9 @@ echo $this->loadTemplate('panel_main');
 echo $pane->endPanel();
 
 // Вкладка участники
-echo $pane->startPanel( JText::_('COM_KONSAEXP_SESSION_PEOPLES'), 'panel_people' );
-echo $this->loadTemplate('panel_people');
-echo $pane->endPanel();
+//echo $pane->startPanel( JText::_('COM_KONSAEXP_SESSION_PEOPLES'), 'panel_people' );
+//echo $this->loadTemplate('panel_people');
+//echo $pane->endPanel();
 
 
 //Вкладка фонограммы
