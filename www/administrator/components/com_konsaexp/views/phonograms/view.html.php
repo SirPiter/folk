@@ -41,7 +41,8 @@ class PhonogramsViewPhonograms extends JView
 		
 		$document->addScript('components/com_konsaexp/assets/audio-player/swfobject/swfobject.js');
 		$document->addScript('components/com_konsaexp/assets/audio-player/audio-player.js');
-		$document->addScript('components/com_konsaexp/assets/audio-player/player.js'); 
+		$document->addScript('components/com_konsaexp/assets/audio-player/player.js');
+		$document->addScript('components/com_konsaexp/assets/audiojs/audiojs/audio.min.js');
 
 
 		parent::display($tpl);

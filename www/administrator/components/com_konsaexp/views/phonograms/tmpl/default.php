@@ -1,5 +1,20 @@
 <?php defined('_JEXEC') or die('Restricted access'); ?>
+    <script>
+      audiojs.events.ready(function() {
+        audiojs.createAll();
+      });
+    </script>
+
 <form action="index.php" method="post" name="adminForm">
+
+<!-- audiojs_.create(element, settings)  -->
+
+<script>
+  audiojs.events.ready(function() {
+    var as = audiojs.createAll();
+  });
+</script>
+
 <div id="editcell">
 
                 <table>
@@ -84,12 +99,34 @@
 				} 	?>
 			</td> 
             <td>
-			<div id="audioplayer_<?php echo $row->id; ?>">Для отображения плеера необходим Flash и javascript</div>  
+<!-- 			<div id="audioplayer_<?php echo $row->id; ?>">Для отображения плеера необходим Flash и javascript</div>  
         		<script type="text/javascript">  
 				AudioPlayer.embed("audioplayer_<?php echo $row->id; ?>", {soundFile: "<?php  echo 'folklab.ru/mp3/'. substr_replace($row->soundfile, 'mp3', -3); ?>"});  
 				</script> 
-
-			</td> 
+ <audio src="<?php  echo 'http://folklab.ru/mp3/'. substr_replace($row->soundfile, 'mp3', -3); ?>" preload="none"></audio>
+ 
+ -->
+ 
+ <?php 
+ $afile= substr_replace($row->soundfile, 'mp3', -3);
+ $afile=str_replace("library/audio/","library/mp3/",$afile);
+ $afile=urlencode($afile);
+ $afile=str_replace("+","%20",$afile);
+ $afile=str_replace("%2F","/",$afile);
+ //$afile= "http://folklab.ru/". $afile;
+ $afile= JURI::base(). '../'.$afile;
+ 
+//echo $afile;
+ 	//print_r(file_exists($afile));
+ $Headers = @get_headers($afile);
+ //print_r($Headers[0]);
+ 	if (strpos($Headers[0], '200')) {
+ 		//echo " Exist!";
+ 		echo '<audio src="'.$afile.'" preload="none"></audio>';
+ 		
+ 	}
+ 	?> 
+ 			</td> 
 
 		</tr>
 		<?php

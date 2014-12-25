@@ -70,3 +70,12 @@ div.icon-48-photo {	background: url(images/photo_48.png) no-repeat left; }
 	vertical-align: top;
 	width: 200px;
 }
+
+.audiojs {
+	width: 150px;
+	background: -moz-linear-gradient(center top , #025a8d 0%, #025a8d 50%, #025a8d 51%, #025a8d 100%) repeat scroll 0 0 #025a8d;
+	 height: 32px;
+}
+.audiojs  .scrubber {
+	display: none;
+}
