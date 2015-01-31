@@ -1,0 +1,137 @@
+@charset "utf-8";
+/* CSS Document */
+
+/** 
+ * @version		1.0.1
+ * @package		muscol
+ * @copyright	2009 JoomlaMusicSolutions.com
+ * @license		GPLv2
+ */
+
+ul.inicials, ul.inicials li {
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+padding-left:0px;
+padding-right:0px;
+margin-left:0px;
+}
+
+ul.inicials{
+display:inline-block;
+margin:0px;
+font-weight:bold;
+width:100%;
+/*border-bottom:1px solid #CCCCCC;*/
+padding-bottom:10px;
+background:url(images/bg_lletres.gif) repeat-x;
+width:645px;
+}
+ul.inicials li{
+float:left;
+width:23px;
+text-align:center;
+}
+
+ul.inicials li a,ul.inicials li a:visited{
+border-right:1px solid #424141;
+width:22px;
+display:block;
+height:19px;
+padding-top:2px;
+color:#313131;
+}
+ul.inicials li.right a,ul.inicials li.right a:visited,ul.inicials li.right a:hover{
+border-right:none;
+width:41px;
+}
+ul.inicials li a:hover{
+color:#FFFFFF;
+width:22px;
+display:block;
+}
+ul.inicials li.selected, ul.inicials li:hover{
+background:url(images/bg_lletre_over.gif) top left no-repeat;
+}
+ul.inicials li.selected a{
+color:#FFFFFF;
+}
+ul.inicials li.left{
+float:left;
+width:23px;
+padding-left:3px;
+background:url(images/left_inicials.gif) top left no-repeat;
+}
+ul.inicials li.left a,ul.inicials li.left a:visited{
+border-right:1px solid #424141;
+width:23px;
+display:block;
+height:19px;
+padding-top:2px;
+}
+ul.inicials li.left_selected, ul.inicials li.left:hover{
+float:left;
+width:23px;
+padding-left:3px;
+background:url(images/bg_left_selected.gif) top left no-repeat;
+}
+ul.inicials li.right_selected, ul.inicials li.right:hover{
+float:right;
+width:41px;
+padding-right:3px;
+background:url(images/bg_right_selected.gif) top right no-repeat;
+}
+ul.inicials li.right{
+float:left;
+padding-right:3px;
+width:41px;
+background:url(images/right_inicials.gif) top right no-repeat;
+}
+ul.inicials li.left_selected a,ul.inicials li.left_selected a:visited{
+
+color:#FFFFFF;
+float:left;
+width:23px;
+display:block;
+}
+ul.inicials li.right_selected a,ul.inicials li.right_selected a:visited{
+color:#FFFFFF;
+float:left;
+width:41px;
+display:block;
+}
+
+.searchalbums{
+	background: url(images/cdr.png) #eeeeee 5px 8px no-repeat;
+	border:1px solid #ddd;
+	padding:5px;
+	padding-left:28px;
+	margin-bottom:10px;
+}
+
+.searchsongs{
+	background: url(images/music.png) #eeeeee 5px 8px no-repeat;
+	border:1px solid #ddd;
+	padding:5px;
+	padding-left:28px;
+	margin-bottom:10px;
+}
+.pagination{
+	margin-bottom:10px;
+	text-align:right;
+}
+
+.searchexpeditions{
+	background: url(images/cdr.png) #eeeeee 5px 8px no-repeat;
+	border:1px solid #ddd;
+	padding:5px;
+	padding-left:28px;
+	margin-bottom:10px;
+}
+.searchcollectors{
+	background: url(images/music.png) #eeeeee 5px 8px no-repeat;
+	border:1px solid #ddd;
+	padding:5px;
+	padding-left:28px;
+	margin-bottom:10px;
+}

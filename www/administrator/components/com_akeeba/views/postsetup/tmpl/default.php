@@ -33,7 +33,7 @@ JS;
 JFactory::getDocument()->addScriptDeclaration($script);
 
 ?>
-<?php if(!version_compare(PHP_VERSION, '5.3.0', 'ge') && AEUtilComconfig::getValue('displayphpwarning', 1) ): ?>
+<?php if(!version_compare(PHP_VERSION, '5.3.0', 'ge') && \Akeeba\Engine\Util\Comconfig::getValue('displayphpwarning', 1) ): ?>
 <div class="alert">
 	<a class="close" data-dismiss="alert" href="#">×</a>
 	<p><strong><?php echo JText::_('COM_AKEEBA_CONFIG_LBL_OUTDATEDPHP_HEADER') ?></strong><br/>
@@ -85,16 +85,6 @@ JFactory::getDocument()->addScriptDeclaration($script);
 	</br>
 	<div class="postsetup-desc"><?php echo JText::_('AKEEBA_POSTSETUP_DESC_confwiz');?></div>
 	<br/>
-
-	<?php if($this->showangieupgrade): ?>
-	<label for="angieupgrade" class="postsetup-main">
-		<input type="checkbox" id="angieupgrade" name="angieupgrade" checked="checked" />
-		<?php echo JText::_('AKEEBA_POSTSETUP_LBL_ANGIEUPGRADE')?>
-	</label>
-	</br>
-	<div class="postsetup-desc"><?php echo JText::_('AKEEBA_POSTSETUP_DESC_ANGIEUPGRADE');?></div>
-	<br/>
-	<?php endif; ?>
 
 	<h3><?php echo JText::_('AKEEBA_POSTSETUP_LBL_MANDATORYINFO') ?></h3>
 

@@ -5,7 +5,7 @@
 	<fieldset class="adminform">
 		<legend><?php echo JText::_( 'COM_KONSAEXP_DOCUMENT_DETAILS' ); ?></legend>
 
-		<table class="admintable" border=0>
+		<table class="admintable">
 			<tr>
 			<td width="100" align="right" class="key">
 				<label for="greeting">

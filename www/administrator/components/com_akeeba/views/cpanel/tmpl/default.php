@@ -12,12 +12,17 @@
 // Protect from unauthorized access
 defined('_JEXEC') or die();
 
-AEPlatform::getInstance()->load_version_defines();
-$lang = JFactory::getLanguage();
-$icons_root = JURI::base().'components/com_akeeba/assets/images/';
+use Akeeba\Engine\Platform;
+use Akeeba\Engine\Factory;
+use Akeeba\Engine\Util\Comconfig;
 
-JHTML::_('behavior.framework');
+Platform::getInstance()->load_version_defines();
+$lang = JFactory::getLanguage();
+$icons_root = JUri::base().'components/com_akeeba/assets/images/';
+
+JHtml::_('behavior.framework');
 JHtml::_('behavior.modal');
+if (version_compare(JVERSION, '3.0.0', 'ge')) JHtml::_('formbehavior.chosen');
 
 $script = <<<JS
 
@@ -48,6 +53,22 @@ JS;
 JFactory::getDocument()->addScriptDeclaration($script,'text/javascript');
 
 ?>
+<div id="fastcheckNotice" class="alert alert-danger" style="display: none">
+	<h3><?php echo JText::_('COM_AKEEBA_CPANEL_ERR_CORRUPT_HEAD') ?></h3>
+	<p>
+		<?php echo JText::_('COM_AKEEBA_CPANEL_ERR_CORRUPT_INFO') ?>
+	</p>
+	<p>
+		<?php echo JText::_('COM_AKEEBA_CPANEL_ERR_CORRUPT_MOREINFO') ?>
+	</p>
+	<p>
+		<a href="index.php?option=com_akeeba&view=checkfiles" class="btn btn-large btn-primary">
+			<?php echo JText::_('COM_AKEEBA_CPANEL_CORRUPT_RUNFILES') ?>
+		</a>
+	</p>
+</div>
+
+<div id="restOfCPanel">
 
 <?php if (AKEEBA_PRO && (version_compare(JVERSION, '2.5.19', 'lt') || (version_compare(JVERSION, '3.0.0', 'gt') && version_compare(JVERSION, '3.2.1', 'lt')))):?>
 <div class="alert alert-error">
@@ -99,7 +120,7 @@ JFactory::getDocument()->addScriptDeclaration($script,'text/javascript');
 	}
 </script>
 
-<?php if(!version_compare(PHP_VERSION, '5.3.0', 'ge') && AEUtilComconfig::getValue('displayphpwarning', 1)): ?>
+<?php if(!version_compare(PHP_VERSION, '5.3.0', 'ge') && Comconfig::getValue('displayphpwarning', 1)): ?>
 <div class="alert">
 	<a class="close" data-dismiss="alert" href="#">×</a>
 	<p><strong><?php echo JText::_('COM_AKEEBA_CONFIG_LBL_OUTDATEDPHP_HEADER') ?></strong><br/>
@@ -139,6 +160,19 @@ JFactory::getDocument()->addScriptDeclaration($script,'text/javascript');
 		<?php echo JText::_('AKEEBA_CPANEL_PIM_BUTTON'); ?>
 	</a>
 </div>
+<?php elseif(is_null($this->hasPostInstallationMessages)): ?>
+	<div class="alert alert-error">
+		<h3>
+			<?php echo JText::_('AKEEBA_CPANEL_PIM_ERROR_TITLE'); ?>
+		</h3>
+		<p>
+			<?php echo JText::_('AKEEBA_CPANEL_PIM_ERROR_DESC'); ?>
+		</p>
+		<a href="https://www.akeebabackup.com/documentation/troubleshooter/abpimerror.html"
+		   class="btn btn-primary btn-large">
+			<?php echo JText::_('AKEEBA_CPANEL_PIM_ERROR_BUTTON'); ?>
+		</a>
+	</div>
 <?php endif; ?>
 
 <div id="cpanel" class="row-fluid">
@@ -151,7 +185,7 @@ JFactory::getDocument()->addScriptDeclaration($script,'text/javascript');
 			<label>
 				<?php echo JText::_('CPANEL_PROFILE_TITLE'); ?>: #<?php echo $this->profileid; ?>
 			</label>
-			<?php echo JHTML::_('select.genericlist', $this->profilelist, 'profileid', 'onchange="document.forms.adminForm.submit()"', 'value', 'text', $this->profileid); ?>
+			<?php echo JHTML::_('select.genericlist', $this->profilelist, 'profileid', 'onchange="document.forms.adminForm.submit()" class="advancedSelect"', 'value', 'text', $this->profileid); ?>
 			<button class="btn" onclick="this.form.submit(); return false;">
 				<i class="icon-retweet"></i>
 				<?php echo JText::_('CPANEL_PROFILE_BUTTON'); ?>
@@ -173,7 +207,7 @@ JFactory::getDocument()->addScriptDeclaration($script,'text/javascript');
 
 		<div class="icon">
 			<a href="index.php?option=com_akeeba&view=schedule">
-				<div class="ak-icon ak-icon-schedule">&nbsp;</div>
+				<div class="ak-icon ak-icon-scheduling">&nbsp;</div>
 				<span><?php echo JText::_('AKEEBA_SCHEDULE'); ?></span>
 			</a>
 		</div>
@@ -187,7 +221,7 @@ JFactory::getDocument()->addScriptDeclaration($script,'text/javascript');
 				<span><?php echo JText::_('CPANEL_LABEL_COMPONENTCONFIG'); ?></span>
 			</a>
 			<?php else: ?>
-			<a href="index.php?option=com_config&view=component&component=com_akeeba&path=&return=<?php echo base64_encode(JURI::getInstance()->toString()) ?>">
+			<a href="index.php?option=com_config&view=component&component=com_akeeba&path=&return=<?php echo base64_encode(JUri::getInstance()->toString()) ?>">
 				<div class="ak-icon ak-icon-componentparams">&nbsp;</div>
 				<span><?php echo JText::_('CPANEL_LABEL_COMPONENTCONFIG'); ?></span>
 			</a>
@@ -232,14 +266,12 @@ JFactory::getDocument()->addScriptDeclaration($script,'text/javascript');
 		<div>
 			<?php echo $this->statuscell ?>
 
-			<?php $quirks = AEUtilQuirks::get_quirks(); ?>
+			<?php $quirks = Factory::getConfigurationChecks()->getDetailedStatus(); ?>
 			<?php if(!empty($quirks)): ?>
-			<h4 class="ui-widget-header ui-corner-tl">
-				<?php echo JText::_('CPANEL_LABEL_STATUSDETAILS'); ?>
-			</h4>
-			<div class="ui-widget-content ui-corner-br">
+			<div>
 				<?php echo $this->detailscell ?>
 			</div>
+			<hr/>
 			<?php endif; ?>
 
 			<?php if(!defined('AKEEBA_PRO')) { $show_donation = 1; } else { $show_donation = (AKEEBA_PRO != 1); } ?>
@@ -296,6 +328,8 @@ JFactory::getDocument()->addScriptDeclaration($script,'text/javascript');
 	</div>
 </div>
 
+</div>
+
 <?php
 if($this->statsIframe)
 {
@@ -318,7 +352,21 @@ if($this->statsIframe)
 						$('#updateNotice').html(data);
 					}
 				}
-			})
+			});
+
+			$.ajax('index.php?option=com_akeeba&view=cpanel&task=fastcheck&tmpl=component', {
+				success: function (msg, textStatus, jqXHR)
+				{
+					// Get rid of junk before and after data
+					var match = msg.match(/###([\s\S]*?)###/);
+					data = match[1];
+
+					if (data == 'false')
+					{
+						$('#fastcheckNotice').show('fast');
+					}
+				}
+			});
 		});
 	})(akeeba.jQuery);
 </script>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0" >
+	<name>FolkExp</name>
+	<license>GPLv2. Private software</license>
+	<author>SirPiter</author>
+	<authorEmail>sirpiter@ya.ru</authorEmail>
+	<authorUrl>http://www.sirpiter.ru</authorUrl>
+	<creationDate>March 2015</creationDate>
+	<copyright>2009 - 2015, sirpiter.ru</copyright>
+	<version>2.5.14</version>
+	<description>
+		Follor Expedition DataBase for Joomla!
+	</description>
+	<installfile></installfile>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">install/install.mysql.utf8.sql</file>
+			<file driver="mysql">install/install.mysql.sql</file>
+		</sql>
+	</install>
+
+	<uninstall>
+	</uninstall>
+
+    <files folder="site">
+		<folder>helpers</folder>
+		<folder>assets</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+		<filename>folkexp.php</filename>
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+    </files>
+	
+	<languages>
+		<language tag="ru-RU">ru-RU.com_folkexp.ini</language>
+   	</languages>
+
+	<administration>
+	
+		<!-- Administration Menu Section -->
+		<menu img="components/com_folkexp/assets/images/konsaexp_48.png" link="option=com_folkexp">Expedition Archive</menu>
+		<submenu>
+		  <menu img="components/com_folkexp/assets/images/vkonsaexp_48.png"  link="option=com_folkexp">Albums</menu>
+		  <menu img="components/com_folkexp/assets/images/user_gray.png"  link="option=com_folkexp&amp;controller=artists">Artists</menu>
+		  <menu img="components/com_folkexp/assets/images/type.png"  link="option=com_folkexp&amp;controller=songs">Songs</menu>
+		  <menu img="components/com_folkexp/assets/images/cdr.png"  link="option=com_folkexp&amp;controller=formats">Formats</menu>
+		  <menu img="components/com_folkexp/assets/images/sitemap.png"  link="option=com_folkexp&amp;controller=genres">Genres</menu>
+		  <menu img="components/com_folkexp/assets/images/music.png"  link="option=com_folkexp&amp;controller=types">Types</menu>
+		  <menu img="components/com_folkexp/assets/images/tag_blue.png"  link="option=com_folkexp&amp;controller=tags">Tags</menu>
+		  <menu img="components/com_folkexp/assets/images/comment.png"  link="option=com_folkexp&amp;controller=comments">Comments</menu>
+		  <menu img="components/com_folkexp/assets/images/star.png"  link="option=com_folkexp&amp;controller=ratings">Ratings</menu>
+		</submenu>
+
+	    <files folder="admin">
+		    <folder>assets</folder>
+		    <folder>helpers</folder>
+		    <folder>controllers</folder>
+		    <folder>install</folder>
+		    <folder>models</folder>
+		    <folder>tables</folder>
+		    <folder>language</folder>
+		    <folder>media</folder>
+		    <folder>views</folder>
+									
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>folkexp.php</filename>
+	    </files>
+
+ 	</administration>
+
+	<params />
+
+</install>

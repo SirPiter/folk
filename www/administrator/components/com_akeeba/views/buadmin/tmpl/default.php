@@ -13,8 +13,17 @@ defined('_JEXEC') or die();
 JHtml::_('behavior.framework');
 JHtml::_('behavior.calendar');
 JHtml::_('behavior.modal');
+if (version_compare(JVERSION, '3.0.0', 'ge'))
+{
+	JHtml::_('bootstrap.popover', '.akeebaCommentPopover', array(
+		'animation'	=> true,
+		'html'		=> true,
+		'title'		=> JText::_('STATS_LABEL_COMMENT'),
+		'placement'	=> 'bottom'
+	));
+}
 
-$dateFormat = AEUtilComconfig::getValue('dateformat', '');
+$dateFormat = \Akeeba\Engine\Util\Comconfig::getValue('dateformat', '');
 $dateFormat = trim($dateFormat);
 $dateFormat = !empty($dateFormat) ? $dateFormat : JText::_('DATE_FORMAT_LC4');
 
@@ -45,7 +54,7 @@ function format_filesize($number, $decimals = 2, $force_unit = false, $dec_char 
 }
 
 // Load a mapping of backup types to textual representation
-$scripting = AEUtilScripting::loadScripting();
+$scripting = \Akeeba\Engine\Factory::getEngineParamsProvider()->loadScripting();
 $backup_types = array();
 foreach ($scripting['scripts'] as $key => $data)
 {
@@ -348,7 +357,7 @@ ENDHTML;
 		if (($record['meta'] == 'ok') && isset($record['backupid']) && !empty($record['backupid']))
 		{
 			$viewLogTag = $record['tag'] . '.' . $record['backupid'];
-			$viewLogUrl = JURI::base() . 'index.php?option=com_akeeba&view=log&tag=' . $viewLogTag . '&profileid=' . $record['profile_id'];
+			$viewLogUrl = JUri::base() . 'index.php?option=com_akeeba&view=log&tag=' . $viewLogTag . '&profileid=' . $record['profile_id'];
 			$viewLogLabel = JText::_('VIEWLOG');
 			$filename_col .= '<br><a class="btn btn-mini" href="' . $viewLogUrl . '">' .
 				'<span class="icon icon-list-alt"></span>' . $viewLogLabel . '</a>';
@@ -356,9 +365,18 @@ ENDHTML;
 
 		// Link for Show Comments lightbox
 		$info_link = "";
+
 		if (!empty($record['comment']))
 		{
-			$info_link = JHTML::_('tooltip', strip_tags($this->escape($record['comment']))) . '&ensp;';
+			if (version_compare(JVERSION, '3.0.0', 'lt'))
+			{
+				$info_link = JHTML::_('tooltip', strip_tags($this->escape($record['comment']))) . '&ensp;';
+			}
+			else
+			{
+				$info_link = "<span class=\"icon icon-info-sign akeebaCommentPopover\" rel=\"popover\" data-content=\"" .
+					$this->escape($record['comment']) ."\"></span>";
+			}
 		}
 
 		// Label class based on status
@@ -380,7 +398,7 @@ ENDHTML;
 				break;
 		}
 
-		$edit_link = JURI::base() . 'index.php?option=com_akeeba&view=buadmin&task=showcomment&id=' . $record['id'];
+		$edit_link = JUri::base() . 'index.php?option=com_akeeba&view=buadmin&task=showcomment&id=' . $record['id'];
 
 		if (empty($record['description']))
 		{

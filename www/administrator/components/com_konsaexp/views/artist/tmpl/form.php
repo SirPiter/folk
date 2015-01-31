@@ -1,11 +1,11 @@
 <?php defined('_JEXEC') or die('Restricted access'); ?>
 <?php JHTML::_('behavior.calendar'); ?>
 <form action="index.php" method="post" name="adminForm" id="adminForm" enctype="multipart/form-data">
-<div class="col100">
+<div class="width-60 fltlft">
 	<fieldset class="adminform">
 		<legend><?php echo JText::_( 'COM_KONSAEXP_DOCUMENT_DETAILS' ); ?></legend>
 
-		<table class="admintable" border=0>
+		<table class="admintable">
 			<tr>
 			<td width="100" align="right" class="key">
 				<label for="greeting">
@@ -225,14 +225,14 @@
 <td>
 
 
-	<param name="mycalendar" type="calendar" default="5-10-2008" label="Select a date" description="" format="%d-%m-%Y" /
+	<param name="mycalendar" type="calendar" default="5-10-2008" label="Select a date" description="" format="%d-%m-%Y" />
 </td>
 <td></td>
 		</tr>
 
   </table>
 
-  <table class="admintable" border=0>
+  <table class="admintable" >
 
 
         <tr>
@@ -288,8 +288,20 @@
 		</tr>
 
 	</table>
+
 	</fieldset>
 </div>
+	
+<div class="width-40 fltrt">
+	<?php echo JHtml::_('sliders.start','content-sliders-'.$this->item->id, array('useCookie'=>1)); ?>
+
+			<?php echo $this->loadTemplate('sessions'); ?>
+			<?php //echo $this->loadTemplate('phonogramms'); ?>
+			<?php //echo $this->loadTemplate('parameters'); ?>
+			<?php //echo $this->loadTemplate('metadata'); ?>
+
+		<?php echo JHtml::_('sliders.end'); ?>
+</div>		
 <div class="clr"></div>
 
 <input type="hidden" name="option" value="com_konsaexp" />

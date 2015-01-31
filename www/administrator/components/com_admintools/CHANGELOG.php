@@ -1,4 +1,19 @@
 <?php die() ?>
+Admin Tools 3.4.3
+================================================================================
+! Work around BROKEN Apache installations when you are using BOTH .htaccess files (.htaccess Maker OR Joomla! htaccess.txt contents) AND administrator password protection. If you were affected by this issue PLEASE ASK YOUR HOST TO FIX THEIR SERVERS per the release notes of this version!
+# [LOW] The obsolete pro.php / core.php files of the system plugin were not removed automatically
+
+Admin Tools 3.4.2
+================================================================================
+! Language files were not being installed
+
+Admin Tools 3.4.1
+================================================================================
+~ Less intrusive display of the file integrity check results
+# [MEDIUM] Password protect administrator directory no longer works correctly due to changes in PHP's crypt() method
+# [MEDIUM] Removed .htaccess line causing issues with some hosts
+
 Admin Tools 3.4.0
 ================================================================================
 + Warning added when Joomla!'s com_postinstall component is broken (with instructions to fix it)

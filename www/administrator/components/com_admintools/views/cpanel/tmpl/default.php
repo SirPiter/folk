@@ -1,7 +1,7 @@
 <?php
 /**
  * @package   AdminTools
- * @copyright Copyright (c)2010-2014 Nicholas K. Dionysopoulos
+ * @copyright Copyright (c)2010-2015 Nicholas K. Dionysopoulos
  * @license   GNU General Public License version 3, or later
  * @version   $Id$
  */
@@ -92,22 +92,10 @@ $mysql5 = $this->isMySQL && (strpos($db->getVersion(), '5') === 0);
 		<a href="index.php?option=com_admintools&view=checkfiles" class="btn btn-large btn-primary">
 			<?php echo JText::_('COM_ADMINTOOLS_CPANEL_CORRUPT_RUNFILES') ?>
 		</a>
-		<a href="#" onclick="ignoreCorrupt();" class="btn btn-danger">
-			<?php echo JText::_('COM_ADMINTOOLS_CPANEL_CORRUPT_IGNORE') ?>
-		</a>
 	</p>
 </div>
 
 <div id="restOfCPanel">
-<div id="fastcheckNotice2" class="alert alert-danger" style="display: none">
-	<h3><?php echo JText::_('COM_ADMINTOOLS_CPANEL_ERR_CORRUPT_HEAD') ?></h3>
-	<p>
-		<?php echo JText::_('COM_ADMINTOOLS_CPANEL_ERR_CORRUPT_IGNORED') ?>
-	</p>
-	<p>
-		<?php echo JText::_('COM_ADMINTOOLS_CPANEL_ERR_CORRUPT_DONTPANIC') ?>
-	</p>
-</div>
 <?php if (ADMINTOOLS_PRO && (version_compare(JVERSION, '2.5.19', 'lt') || (version_compare(JVERSION, '3.0.0', 'gt') && version_compare(JVERSION, '3.2.1', 'lt')))): ?>
 	<div class="alert alert-error">
 		<?php echo JText::_('COM_ADMINTOOLS_CPANEL_ERR_OLDJOOMLANOUPDATES'); ?>
@@ -626,18 +614,9 @@ if($this->statsIframe)
 					if (data == 'false')
 					{
 						$('#fastcheckNotice').show('fast');
-						$('#fastcheckNotice2').show('fast');
-						$('#restOfCPanel').hide('fast');
 					}
 				}
 			});
 		});
 	})(akeeba.jQuery);
-
-	function ignoreCorrupt()
-	{
-		akeeba.jQuery('#fastcheckNotice').hide('fast');
-		akeeba.jQuery('#fastcheckNotice2').show('fast');
-		akeeba.jQuery('#restOfCPanel').show('fast');
-	}
 </script>

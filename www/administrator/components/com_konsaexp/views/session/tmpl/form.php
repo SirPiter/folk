@@ -14,17 +14,20 @@ echo $pane->startPanel( JText::_('COM_KONSAEXP_SESSION_DETAILS'), 'panel_main' )
 echo $this->loadTemplate('panel_main'); 
 echo $pane->endPanel();
 
-// Вкладка участники
-//echo $pane->startPanel( JText::_('COM_KONSAEXP_SESSION_PEOPLES'), 'panel_people' );
-//echo $this->loadTemplate('panel_people');
-//echo $pane->endPanel();
-
-
 //Вкладка фонограммы
 echo $pane->startPanel( JText::_('COM_KONSAEXP_SESSION_PHONOGRAMS'), 'panel_phonograms' );
 echo $this->loadTemplate('panel_phonograms');
 echo $pane->endPanel();
 
+// Вкладка исполнители
+echo $pane->startPanel( JText::_('COM_KONSAEXP_SESSION_ARTISTS'), 'panel_artists' );
+echo $this->loadTemplate('panel_artists');
+echo $pane->endPanel();
+
+// Вкладка участники
+echo $pane->startPanel( JText::_('COM_KONSAEXP_SESSION_PEOPLES'), 'panel_people' );
+echo $this->loadTemplate('panel_people');
+echo $pane->endPanel();
 
 echo $pane->endPane( 'pane' );
 

@@ -71,6 +71,8 @@ class ArtistsModelArtist extends JModel
 		$data['review'] = JRequest::getVar('review', '', 'post', 'string', JREQUEST_ALLOWRAW);
 		$datafiles = JRequest::get( 'files' );
 
+		//print_r($data); die;
+		
 		// Bind the form fields to the album table
 		if (!$row->bind($data)) {
 			$this->setError($this->_db->getErrorMsg());
@@ -92,10 +94,62 @@ class ArtistsModelArtist extends JModel
 			$this->setError( $row->getErrorMsg() );
 			return false;
 		}
-
+		//print_r($data);
+// Сохранение списков		
+		foreach($data as $key => $value){
+				
+			//print_r($value);		
+		
+			if(substr($key,0,8) == "session_")	{
+				$session_id = (int)substr($key,6);
+				$session_data = array(
+						"artist_id" => $data[id] ,
+						"session_id" => $value
+				);
+				die;
+				$this->save_session($session_data);
+			} //les can�ons NOVES
+			else if(substr($key,0,10) == "0_session_")	{
+				$session_id = (int)substr($key,8);
+				$session_data = array(
+						"artist_id" => $data[id] ,
+						"session_id" => $value
+				);
+				if($value != "" && $data[id] != "") // nomes guardem si hi ha nom...
+//					print_r($session_data); die;
+					$this->save_session($session_data);
+			}
+		}
+		//die;
 		return true;
 	}
 
+
+	function save_session($data)
+	{
+		$row =& $this->getTable('Artisttosession');
+		$mainframe =& JFactory::getApplication();
+		//print_r($row); die;
+		if (!$row->bind($data)) {
+			$this->setError($this->_db->getErrorMsg());
+			return false;
+		}
+		if (!$row->check()) {
+			$this->setError($this->_db->getErrorMsg());
+			return false;
+		}
+		if (!$row->store()) {
+			//print_r($row); $mainframe->close();
+			$this->setError( $this->_db->getErrorMsg() );
+			return false;
+		}
+		return true;
+	}
+	
+	
+	
+	
+	
 	function delete()
 	{
 		
@@ -128,4 +182,30 @@ class ArtistsModelArtist extends JModel
 
 	}
 
+	function getLinkedSessions()
+	{
+		// Lets load the data if it doesn't already exist
+		if (empty( $this->_linkedsessions )){
+			$query = 'SELECT S.*,  A2S.* FROM #__konsa_exp_artists_to_sessions as A2S'.
+				' LEFT JOIN #__konsa_exp_sessions as S ON S.id = A2S.session_id '.
+				' WHERE artist_id='.$this->_id;
+			$this->_db->setQuery( $query );
+			$this->_linkedsessions = $this->_db->loadObjectList();
+			//print_r($this->_linkedsessions); die;
+		}
+		
+		return $this->_linkedsessions;
+	}
+
+	function getSessionsList()
+	{
+		if (empty( $this->_sessions_list )){
+			$query = ' SELECT id,session_title FROM #__konsa_exp_sessions '.
+					' ORDER BY session_title';
+			$this->_db->setQuery( $query );
+			$this->_sessions_list = $this->_db->loadAssocList();
+		}
+		return $this->_sessions_list;
+	}
+	
 }

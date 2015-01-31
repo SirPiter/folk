@@ -597,6 +597,21 @@ function parse_config_gui_data(data, rootnode)
 									{$(this).val(old);}
 								}
 							});
+							// Enable popovers
+							engine_config_container.find('[rel="popover"]').popover({
+								trigger: 'manual',
+								animate: false,
+								html: true,
+								placement: 'bottom',
+								template: '<div class="popover akeeba-bootstrap-popover" onmouseover="akeeba.jQuery(this).mouseleave(function() {akeeba.jQuery(this).hide(); });"><div class="arrow"></div><div class="popover-inner"><h3 class="popover-title"></h3><div class="popover-content"><p></p></div></div></div>'
+							})
+								.click(function(e) {
+									e.preventDefault();
+								})
+								.mouseenter(function(e) {
+									akeeba.jQuery('div.popover').remove();
+									akeeba.jQuery(this).popover('show');
+								});
 						});
 
 						// Add a configuration show/hide button
@@ -1070,12 +1085,15 @@ function backup_start()
         }
 
 		// Initialise Piecon
-		Piecon.setOptions({
-			color: '#333333',
-			background: '#e0e0e0',
-			shadow: '#000000',
-			fallback: 'force'
-		});
+		try {
+			Piecon.setOptions({
+				color: '#333333',
+				background: '#e0e0e0',
+				shadow: '#000000',
+				fallback: 'force'
+			});
+		} catch (e)
+		{};
 
 		// Initialize steps
 		render_backup_steps('');
@@ -1119,14 +1137,17 @@ function backup_step(data)
 			'width':			data.Progress+'%'
 		});
 
-		if (data.Progress >= 100)
-		{
-			Piecon.setProgress(99);
+		try {
+			if (data.Progress >= 100)
+			{
+				Piecon.setProgress(99);
+			}
+			else
+			{
+				Piecon.setProgress(data.Progress);
+			}
 		}
-		else
-		{
-			Piecon.setProgress(data.Progress);
-		}
+		catch (e) {}
 
 		// Update step/substep display
 		$('#backup-step').html(data.Step);

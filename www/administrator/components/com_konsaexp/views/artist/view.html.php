@@ -20,11 +20,16 @@ class ArtistsViewArtist extends JView
 		//cridem el CSS
 		$document	= & JFactory::getDocument();
 		$document->addStyleSheet('components/com_konsaexp/assets/albums.css');
+		
 
-		$artist		=& $this->get('Data');
-		$related		=& $this->get('ArtistsData');
-		$towns	=& $this->get('TownsData');
-
+		$artist	 =& $this->get('Data');
+		$related =& $this->get('ArtistsData');
+		$towns	 =& $this->get('TownsData');
+		$linkedsessions=& $this->get('LinkedSessions');
+		
+		//print_r($linkedsessions); die;
+		$sessionslist=& $this->get('SessionsList');
+		
 		$isNew		= ($artist->id < 1);
 
 		$text = $isNew ? JText::_( 'COM_KONSAEXP_NEW' ) : JText::_( 'COM_KONSAEXP_EDIT' );
@@ -42,7 +47,24 @@ class ArtistsViewArtist extends JView
 		$this->assignRef('artist',		$artist);
 		$this->assignRef('related',		$related);
 		$this->assignRef('towns',		$towns);
-
+		$this->assignRef('linkedsessions',		$linkedsessions);
+				
+		//Список всех сессий записи
+		$lists['sessions'] = "<option value=''>-- ".JText::_( 'COM_KONSAEXP_SELECT_SESSION' )." --</option>";
+		
+		for($i = 0; $i < count($sessionslist); $i++){
+			
+			$lists['sessions'] .= "<option value='".$sessionslist[$i]["id"]."'>".$sessionslist[$i]["session_title"]."</option>";
+		}
+		// $lists['sessions'] = "<select name='sessions' id='sessions'>".$lists['sessions']."</select>";
+		
+		//print_r($lists['sessions']);
+		
+		$this->assignRef('lists', $lists);
+		
+		// JS
+		$document->addScript('components/com_konsaexp/assets/artist.js');
+		
 		parent::display($tpl);
 	}
 }

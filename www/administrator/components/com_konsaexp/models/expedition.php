@@ -143,7 +143,7 @@ function getCollectorsList()
 //print_r($row); die;
 		foreach($data as $key => $value){
 			
-//print_r($key);		//die;	
+//print_r($value);			
 
 			if(substr($key,0,6) == "place_")	{
 				$track_id = (int)substr($key,6);
@@ -153,7 +153,7 @@ function getCollectorsList()
 								   "town_id" => $value
 								   );
 				$this->save_track($track_data);
-			} //les cançons NOVES
+			} //les canï¿½ons NOVES
 			else if(substr($key,0,8) == "0_place_")	{
 				$track_id = (int)substr($key,8);
 				$track_data = array(
@@ -173,7 +173,7 @@ function getCollectorsList()
 								   "phonogram_title" => $value
 								   );
 				$this->save_phonogram($phonogram_data);
-			} //les cançons NOVES
+			} //les canï¿½ons NOVES
 			else if(substr($key,0,18) == "0_phonogram_title_")	{
 				$phonogram_id = (int)substr($key,18);
 				$phonogram_data = array(
@@ -196,9 +196,9 @@ function getCollectorsList()
 				if($value != "") // nomes guardem si hi ha nom...
 				$this->save_doc($doc_data);
 			}
-
+			
 		}
-
+	//	die;
 		return true;
 	}
 
@@ -517,7 +517,7 @@ function getArtistsData()
 		}
 		//print_r($row);die();
 
-		//les cançons
+		//les canï¿½ons
 		foreach($data as $key => $value){
 			if(substr($key,0,5) == "song_")	{
 				$song_id = (int)substr($key,5);
@@ -531,7 +531,7 @@ function getArtistsData()
 								   "name" => $value
 								   );
 				$this->save_song($song_data);
-			} //les cançons NOVES
+			} //les canï¿½ons NOVES
 			else if(substr($key,0,7) == "0_song_")	{
 				$song_id = (int)substr($key,7);
 				$song_data = array(
