@@ -20,8 +20,8 @@ class ArtistsViewArtist extends JView
 		//cridem el CSS
 		$document	= & JFactory::getDocument();
 		$document->addStyleSheet('components/com_konsaexp/assets/albums.css');
+		$user		= JFactory::getUser();
 		
-
 		$artist	 =& $this->get('Data');
 		$related =& $this->get('ArtistsData');
 		$towns	 =& $this->get('TownsData');
@@ -48,7 +48,8 @@ class ArtistsViewArtist extends JView
 		$this->assignRef('related',		$related);
 		$this->assignRef('towns',		$towns);
 		$this->assignRef('linkedsessions',		$linkedsessions);
-				
+		$this->assignRef('user',		$user);
+		
 		//Список всех сессий записи
 		$lists['sessions'] = "<option value=''>-- ".JText::_( 'COM_KONSAEXP_SELECT_SESSION' )." --</option>";
 		

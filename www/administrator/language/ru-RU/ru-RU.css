@@ -14,10 +14,19 @@ fieldset.panelform label,
 fieldset.adminform span.faux-label,
 div.current label, div.current span.faux-label {
 	min-width: 10%;
-	max-width: 30%;
+	max-width: 15%;
 	width: 30%;
 	padding: 0 5px 0 0;
 }
+
+fieldset.adminform ul li label {
+	min-width: 10%;
+	max-width: 15%;
+	width: 30%;
+	margin-right: 10px;
+    text-align: right;
+}
+
 
 div.current fieldset.radio label {
 	width: 95px;

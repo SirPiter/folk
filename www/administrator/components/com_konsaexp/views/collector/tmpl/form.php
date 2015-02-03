@@ -225,14 +225,14 @@
 <td>
 
 
-	<param name="mycalendar" type="calendar" default="5-10-2008" label="Select a date" description="" format="%d-%m-%Y" /
+	<param name="mycalendar" type="calendar" default="5-10-2008" label="Select a date" description="" format="%d-%m-%Y" />
 </td>
 <td></td>
 		</tr>
 
   </table>
 
-  <table class="admintable" border=0>
+  <table class="admintable">
 
 
         <tr>

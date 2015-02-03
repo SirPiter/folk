@@ -25,7 +25,7 @@ class JConfig {
 	public $ftp_pass = '';
 	public $ftp_root = '';
 	public $ftp_enable = '0';
-	public $offset = 'Europe/Moscow';
+	public $offset = 'Europe/Kaliningrad';
 	public $offset_user = 'UTC';
 	public $mailer = 'mail';
 	public $mailfrom = 'sirpiter@mail.ru';

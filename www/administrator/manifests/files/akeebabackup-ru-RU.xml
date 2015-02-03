@@ -3,10 +3,10 @@
     <name><![CDATA[akeebabackup - ru-RU]]></name>
     <author><![CDATA[AkeebaBackup.com]]></author>
     <authorurl>http://www.akeebabackup.com</authorurl>
-	<copyright>Copyright (C)2014 AkeebaBackup.com. All rights reserved.</copyright>
+	<copyright>Copyright (C)2015 AkeebaBackup.com. All rights reserved.</copyright>
 	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
-    <version>/Users/nicholas/Projects/akeeba/abcore/build/..</version>
-    <creationDate>29 Jul 2014</creationDate>
+    <version>/Users/nikosdion/Projects/akeeba/backup/build/..</version>
+    <creationDate>11 Jan 2015</creationDate>
     <description><![CDATA[Russian (Russia) translation file for Akeeba Backup]]></description>
 	<fileset>
 		<files folder="backend" target="administrator/language/ru-RU">

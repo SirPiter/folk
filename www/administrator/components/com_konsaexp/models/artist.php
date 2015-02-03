@@ -71,7 +71,7 @@ class ArtistsModelArtist extends JModel
 		$data['review'] = JRequest::getVar('review', '', 'post', 'string', JREQUEST_ALLOWRAW);
 		$datafiles = JRequest::get( 'files' );
 
-		//print_r($data); die;
+//		print_r($data); die;
 		
 		// Bind the form fields to the album table
 		if (!$row->bind($data)) {

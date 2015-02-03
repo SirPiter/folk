@@ -62,7 +62,7 @@
 				<?php echo $checked; ?>
 			</td>
 			<td>
-				<a href="<?php echo $link; ?>"><?php echo $row->artist_full_name; ?></a>
+				<a href="<?php echo $link; ?>"><?php echo $row->artist_lastname." ".$row->artist_name." ".$row->artist_secondname; ?></a>
 			</td>
       <td align="center">
 				<?php echo $row->birth_date; ?>
