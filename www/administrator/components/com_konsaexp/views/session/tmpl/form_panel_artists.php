@@ -39,7 +39,10 @@ defined('_JEXEC') or die('Restricted access');
                 <?php echo JHTML::_( 'grid.sort', 'COM_KONSAEXP_SESSION_ARTIST', 'artist_name', $this->lists['sessions_order_Dir'], $this->lists['sessions_order']); ?>
 
 			</th>
-     <th>
+     		<th>
+                <?php echo JText::_( 'COM_KONSAEXP_BIRTH_DATE'); ?>
+			</th>
+			<th>
 				<?php // echo JText::_( 'Town' ); ?>
                 <?php echo JHTML::_( 'grid.sort', 'COM_KONSAEXP_SESSION_ATRIST_TOWN', 'town_name', $this->lists['sessions_order_Dir'], $this->lists['sessions_order']); ?>
                 
@@ -49,8 +52,8 @@ defined('_JEXEC') or die('Restricted access');
 	</thead>
 	<?php
 	$k = 0;
-	for ($i=0, $n=count( $this->items ); $i < $n; $i++)	{
-		$row = &$this->items[$i];
+	for ($i=0, $n=count( $this->artists_of_session ); $i < $n; $i++)	{
+		$row = &$this->artists_of_session[$i];
 		$checked 	= JHTML::_('grid.id',   $i, $row->id );
 		$link 		= JRoute::_( 'index.php?option=com_konsaexp&controller=artist&task=edit&cid[]='. $row->id );
 		?>
@@ -62,7 +65,10 @@ defined('_JEXEC') or die('Restricted access');
 				<?php echo $checked; ?>
 			</td>
 			<td>
-				<a href="<?php echo $link; ?>"><?php echo $row->artist_full_name; ?></a>
+				<a href="<?php echo $link; ?>"><?php echo $row->artist_lastname." ".$row->artist_name." ".$row->artist_secondname; ?></a>
+			</td>
+			<td align="center">
+				<?php echo $row->birth_date; ?>
 			</td>
 			<td align="center">
 				<?php echo $row->town_name; ?>

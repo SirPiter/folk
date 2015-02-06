@@ -39,26 +39,15 @@ function new_artist_session(){
 	
 	newCell.innerHTML = '<select name="0_session_' + new_sessions+'" id="0_session_' + new_sessions+'" ">'+document.getElementById("select1").value+'</select> <input type="hidden" name="0_sessiontheme_' + new_sessions+'" id="0_sessiontheme_' + new_sessions+'" value="" />';
 	newCell = newRow.insertCell(2);
-//	newCell = newRow.insertCell(3);
-//	newCell.innerHTML = '<select name="0_session_' + new_sessions+'" id="0_session_' + new_sessions+'" ">'+select_session+'</select> <input type="hidden" name="0_placename_' + new_sessions+'" id="0_placename_' + new_sessions+'" value="" />';
-//	newCell.innerHTML = '<select name="0_place_' + new_tracks+'" id="0_place_' + new_tracks+'" ">'+select_town+'</select> <input type="hidden" name="0_placename_' + new_tracks+'" id="0_placename_' + new_tracks+'" value="" />';
-	
-//	newCell = newRow.insertCell(4);
-//	newCell = newRow.insertCell(5);
 
 }
 
 
-function changeText(fff){
-
-alert (fff.text); //.value="fff";
-
-}
-
-function delete_selected_tracks(){
-	
-	document.adminForm.controller.value = "track";
-	document.adminForm.task.value = "remove";
+function delete_selected_sessions(){
+	Alert('DELETE');
+	document.adminForm.controller.value = "artist";
+	document.adminForm.task.value = "cancel";
+	//Alert(document.adminForm.controller.value+" : "+document.adminForm.task.value);
 	document.adminForm.submit();
 }
 

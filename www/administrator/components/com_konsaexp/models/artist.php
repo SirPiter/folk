@@ -147,6 +147,23 @@ class ArtistsModelArtist extends JModel
 	}
 	
 	
+	function delete_session()
+	{
+	
+		$cids = JRequest::getVar( 'cid', array(0), 'post', 'array' );
+	print_r($cids); die;
+		$row =& $this->getTable('Artisttosession');
+	
+		if (count( $cids )) {
+			foreach($cids as $cid) {
+				if (!$row->delete( $cid )) {
+					$this->setError( $row->getErrorMsg() );
+					return false;
+				}
+			}
+		}
+		return true;
+	}
 	
 	
 	
@@ -207,5 +224,8 @@ class ArtistsModelArtist extends JModel
 		}
 		return $this->_sessions_list;
 	}
+
+	
+	
 	
 }

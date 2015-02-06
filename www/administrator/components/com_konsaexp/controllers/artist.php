@@ -20,6 +20,7 @@ class ArtistsControllerArtist extends ArtistsController
 		// Register Extra tasks
 		$this->registerTask( 'add'  , 	'edit' );
 		$this->registerTask( 'apply',	'save' );
+		$this->registerTask( 'remove_session',	'remove_session' );
 	}
 
 	function edit()
@@ -34,7 +35,6 @@ class ArtistsControllerArtist extends ArtistsController
 	function save()
 	{
 		$model = $this->getModel('artist');
-
 		if ($model->store($post)) {
 			$msg = JText::_( 'COM_KONSAEXP_ARTIST_SAVED' );
 		} else {
@@ -61,7 +61,7 @@ class ArtistsControllerArtist extends ArtistsController
 
 	function remove()
 	{
-		$model = $this->getModel('collector');
+		$model = $this->getModel('artist');
 		if(!$model->delete()) {
 			$msg = JText::_( 'Error: One or More Collectors Could not be Deleted' );
 		} else {
@@ -76,4 +76,18 @@ class ArtistsControllerArtist extends ArtistsController
 		$msg = JText::_( 'COM_KONSAEXP_OPERATION_CANCELED' );
 		$this->setRedirect( 'index.php?option=com_konsaexp&controller=artists', $msg );
 	}
+	
+	function remove_session()
+	{
+		print_r("RemoveS"); die;
+		$model = $this->getModel('artisttosession');
+		if(!$model->delete_session()) {
+			$msg = JText::_( 'Error: One or More Collectors Could not be Deleted' );
+		} else {
+			$msg = JText::_( 'COM_KONSAEXP_ARTISTS_DELETED' );
+		}
+
+		$this->setRedirect( 'index.php?option=com_konsaexp&controller=artist', $msg );
+	}
+		
 }

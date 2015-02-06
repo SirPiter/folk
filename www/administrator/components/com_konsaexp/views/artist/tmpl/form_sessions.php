@@ -52,7 +52,9 @@ echo JHtml::_('sliders.panel',JText::_('COM_KONSAEXP_FIELDSET_ARTIST_SESSIONS_LI
 			</td>
             <td align="center">
 				<a href="<? //echo $link_edit; ?>"><img src="components/com_konsaexp/assets/images/icons/page_white_edit.png" title="<? echo JText::_( 'Edit this phonogram' ); ?>" alt="<? echo JText::_( 'Edit this phonogram' ); ?>" /></a>
-			</td>
+				<img src="components/com_konsaexp/assets/images/icons/cancel.png" title="<? echo JText::_( 'Delete this session' ); ?>" alt="<? echo JText::_( 'Delete this session' ); ?>" 
+				onclick="javascript:delete_selected_sessions();"/>
+				</td>
 		</tr>
 		<?php
 		$k = 1 - $k;

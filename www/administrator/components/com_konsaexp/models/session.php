@@ -567,4 +567,36 @@ function getArtistsData()
 		return true;
 	}
 
+	// Получаем список артистов, участвующих в сессии
+	function getArtistOfSession()
+	{
+		// Lets load the data if it doesn't already exist
+		if (empty( $this->_artists_of_session )){
+			$query = 'SELECT A.*, T.town_name, A2S.* FROM #__konsa_exp_artists_to_sessions as A2S'.
+					' LEFT JOIN #__konsa_exp_artists as A ON A.id = A2S.artist_id '.
+					' LEFT JOIN arch25_konsa_exp_towns as T ON A.place = T.id '.
+					' WHERE session_id='.$this->_id;
+			$this->_db->setQuery( $query );
+			$this->_artists_of_session = $this->_db->loadObjectList();
+			//print_r($this->_artists_of_session); die;
+		}
+	
+		return $this->_artists_of_session;
+	}
+	
+	// Получаем полный список артистов
+	function getArtistsList()
+	{
+		if (empty( $this->_sessions_list )){
+			$query = ' SELECT id,session_title FROM #__konsa_exp_sessions '.
+					' ORDER BY session_title';
+			$this->_db->setQuery( $query );
+			$this->_artists_list = $this->_db->loadAssocList();
+		}
+		return $this->_artists_list;
+	}
+	
+	
+	
+	
 }

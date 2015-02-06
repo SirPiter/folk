@@ -13,7 +13,13 @@ JHtml::_('behavior.keepalive');
 <div class="width-60 fltlft">
 	<fieldset class="adminform">
 		<legend><?php echo JText::_( 'COM_KONSAEXP_DOCUMENT_DETAILS' ); ?></legend>
-
+			<?php
+			if($this->artist->image != "") {?>  <p style="float: right; margin-bottom:0;">
+			<img style="max-height:180px;" src="../images/artists/<?php echo $this->artist->image;?>"/>
+			</p>
+			<?php } ?>
+			
+		
 			<ul class="adminformlist">
 				<li>
 				<label for="lastname"><?php echo JText::_( 'COM_KONSAEXP_LASTNAME' ); ?>:</label>
@@ -78,28 +84,15 @@ JHtml::_('behavior.keepalive');
 					<label for="greeting"><?php echo JText::_( 'COM_KONSAEXP_CLASSIFICATION_NAME' ); ?>:</label>
 					<input class="text_area" type="text" name="class_name" id="class_name" size="32" maxlength="250" value="<?php echo $this->artist->class_name;?>" />
 				</li>		
+				<li>
+					<label for="Photo"><?php echo JText::_( 'COM_KONSAEXP_IMAGE_FOR_ARTIST' ); ?>:</label>
+					<input class="text_area" type="text" name="image" id="image" size="32" maxlength="250" value="<?php echo $this->artist->image;?>" />
+					&nbsp <input type="file" name="artist_image_file" size="45"/>
+				</li>
 			</ul>
 			<div class="clr"></div>
-	</fieldset>
-	
-	<fieldset class="adminform">
-		<legend><?php echo JText::_( 'COM_KONSAEXP_OTHERS_INFO' ); ?></legend>
-
-		<ul class="adminformlist">
-			<li>
-				<label for="Photo"><?php echo JText::_( 'COM_KONSAEXP_IMAGE_FOR_ARTIST' ); ?>:</label>
-				<input class="text_area" type="text" name="image" id="image" size="64" maxlength="250" value="<?php echo $this->artist->image;?>" />
-				&nbsp <input type="file" name="artist_image_file" size="45"/>
-			</li>
-		</ul>
-			<?php
-			if($this->artist->image != "") {?>  <p style="float: right">
-			<img style="max-height:300px;" src="../images/artists/<?php echo $this->artist->image;?>"/>
-			</p>
-			<?php } ?>
-	    <div class="clr"></div>
 			<label for="review"><?php echo JText::_( 'COM_KONSAEXP_COMMENT' ); ?>:</label>
-	    <div class="clr"></div>
+	    	<div class="clr"></div>
 	        <?php
 			$editor =& JFactory::getEditor();
 			echo $editor->display('comment', $this->artist->comment, '100%', '200', '60', '20', false);

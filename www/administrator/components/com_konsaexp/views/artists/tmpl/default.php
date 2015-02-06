@@ -53,6 +53,7 @@
 		$row = &$this->items[$i];
 		$checked 	= JHTML::_('grid.id',   $i, $row->id );
 		$link 		= JRoute::_( 'index.php?option=com_konsaexp&controller=artist&task=edit&cid[]='. $row->id );
+		$fullname = $row->artist_lastname." ".$row->artist_name." ".$row->artist_secondname;
 		?>
 		<tr class="<?php echo "row$k"; ?>">
 			<td>
@@ -62,7 +63,7 @@
 				<?php echo $checked; ?>
 			</td>
 			<td>
-				<a href="<?php echo $link; ?>"><?php echo $row->artist_lastname." ".$row->artist_name." ".$row->artist_secondname; ?></a>
+				<?php echo JHTML::_('link', $link, $fullname, array('class'=>'art-link')); ?>
 			</td>
       <td align="center">
 				<?php echo $row->birth_date; ?>
@@ -77,7 +78,6 @@
 		</tr>
 		<?php
 		$k = 1 - $k;
-		
 	}
 	?>
     <tfoot>

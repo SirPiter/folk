@@ -22,13 +22,13 @@ echo JHtml::_('sliders.panel',JText::_('COM_KONSAEXP_META'), 'meta-details');
         </li>
         <li>
 	        <label for="createdate"><?php echo JText::_( 'COM_KONSAEXP_CREATEDATE' ); ?>:</label>
-	         <span style="float: left; margin: 5px 5px 5px 0px; width: auto;"><?php echo JHTML::_('date', $this->artist->modified, JText::_('DATE_FORMAT_LC3'));?></span>
+	         <span style="float: left; margin: 5px 5px 5px 0px; width: auto;"><?php echo JHTML::_('date', $this->artist->created, JText::_('DATE_FORMAT_LC3'));?></span>
         </li>
         <li>
 	        <label for="modified_date"><?php echo JText::_( 'COM_KONSAEXP_MODIFIED_DATE' ); ?>:</label>
-            <span style="float: left; margin: 5px 5px 5px 0px; width: auto;"><?php echo JHTML::_('date', now , JText::_('DATE_FORMAT_LC2'));?></span>
-            <input  type="hidden" name="modified_by" value="<?php echo $this->user->id;?>" />
-            <input  type="hidden" name="modified" id="modified" value="<?php echo JHTML::_('date', now, "YYYY-MM-DD HH:MM:S" );?>" />
+	        <span style="float: left; margin: 5px 5px 5px 0px; width: auto;"><?php echo JHTML::_('date', $this->artist->modified, JText::_('DATE_FORMAT_LC3'));?></span>
+	        <input  type="hidden" name="modified_by" value="<?php echo $this->user->id;?>" />
+            <input  type="hidden" name="modified" id="modified" value="<?php echo JHTML::_('date', now, "Y-m-d H:i:s" );?>" />
         </li>
         
     </ul>

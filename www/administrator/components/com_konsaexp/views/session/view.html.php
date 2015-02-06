@@ -36,6 +36,8 @@ class SessionsViewSession extends JView
 		$peoples		=& $this->get('Peoples');	// Участники этой сессии
 //		$expeditions		=& KonsaExpHelper::getExpeditionsList('ExpeditionsList');	// Список экспедиций
 		$expeditions		=& $this->get('ExpeditionsList');
+		$artists		=& $this->get('ArtistsList');
+		$artists_of_session		=& $this->get('ArtistOfSession');
 		
 		//print_r($expeditions); die;
 		
@@ -67,7 +69,8 @@ class SessionsViewSession extends JView
 		$this->assignRef('docs',	$docs);
 		$this->assignRef('peoples',	$peoples);
 		$this->assignRef('expeditions',	$expeditions);
-		
+		$this->assignRef('artists',	$artists); // Весь список артистов 
+		$this->assignRef('artists_of_session',	$artists_of_session); // Список артистов участвующих в сессии
 		// JS
 		$document->addScript('components/com_konsaexp/assets/tracks.js');
 
