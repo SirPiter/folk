@@ -6,7 +6,7 @@
  * @copyright	2009 sirpiter.ru
  * @license		GPLv2
  * 
- * Описание таблицы экспедиций ___muscol_expeditions
+ * Описание таблицы экспедиций __expeditions
  */
 
 // No direct access

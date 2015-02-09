@@ -29,10 +29,18 @@ div.icon-48-comment {	background: url(images/comment_48.png) no-repeat left; }
 div.icon-48-rating {	background: url(images/star_48.png) no-repeat left; }
 div.icon-48-collector {	background: url(images/vcard_48.png) no-repeat left; }
 div.icon-48-collectoredit {	background: url(images/vcard_edit_48.png) no-repeat left; }
+div.icon-48-artistedit {	background: url(images/vcard_edit_48.png) no-repeat left; }
 div.icon-48-expedition {	background: url(images/map_48.png) no-repeat left; }
+div.icon-48-expeditionedit {	background: url(images/map_48.png) no-repeat left; }
+div.icon-48-session {	background: url(images/sessions_64.png) no-repeat left; }
+div.icon-48-sessionedit {	background: url(images/cass_54.png) no-repeat left; }
 div.icon-48-town {	background: url(images/home_48.png) no-repeat left; }
 div.icon-48-townedit {	background: url(images/home_48_edit.png) no-repeat left; }
 div.icon-48-photo {	background: url(images/photo_48.png) no-repeat left; }
+div.icon-48-phonogram {	background: url(images/phonograms.png) no-repeat left; }
+div.icon-48-document {	background: url(images/docs.png) no-repeat left; }
+div.icon-48-documentedit {	background: url(images/docs_48.png) no-repeat left; }
+div.icon-48-trackedit {	background: url(images/kompas.png) no-repeat left; }
 
 .konsa-icon-16-phonogramms {
 	background-image: url("/administrator/components/com_konsaexp/media/icons/small/types_16.png");
@@ -78,4 +86,9 @@ div.icon-48-photo {	background: url(images/photo_48.png) no-repeat left; }
 }
 .audiojs  .scrubber {
 	display: none;
+}
+
+fieldset.adminform legend {
+    padding-left: 3px;
+    padding-right: 3px;
 }

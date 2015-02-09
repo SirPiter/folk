@@ -106,7 +106,7 @@ class ArtistsModelArtist extends JModel
 						"artist_id" => $data[id] ,
 						"session_id" => $value
 				);
-				die;
+				//die;
 				$this->save_session($session_data);
 			} //les can�ons NOVES
 			else if(substr($key,0,10) == "0_session_")	{
@@ -151,10 +151,19 @@ class ArtistsModelArtist extends JModel
 	{
 	
 		$cids = JRequest::getVar( 'cid', array(0), 'post', 'array' );
-	print_r($cids); die;
+		$sessionid = JRequest::getVar( 'sessionid', int);//, 'post', 'array' );
+		
+	//print_r($session_id);
 		$row =& $this->getTable('Artisttosession');
 	
-		if (count( $cids )) {
+		if($sessionid>0) {
+			//print_r("Session:".$session_id); die;
+			if (!$row->delete( $sessionid )) {
+				$this->setError( $row->getErrorMsg() );
+				return false;
+			}		
+		} else if (count( $cids )) {
+		//	print_r($cids); die;
 			foreach($cids as $cid) {
 				if (!$row->delete( $cid )) {
 					$this->setError( $row->getErrorMsg() );

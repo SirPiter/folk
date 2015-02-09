@@ -17,7 +17,7 @@ echo $pane->startPanel( JText::_('COM_KONSAEXP_EXPEDITION_DETAILS'), 'panel1' );
 	    	<tr>   <!-- строка для темы экспедиции -->
 			<td width="100" align="right" class="key">
 				<label for="expedition_title">
-					<?php echo JText::_( 'Expedition title' ); ?>:
+					<?php echo JText::_( 'COM_KONSAEXP_EXPEDITION_TITLE' ); ?>:
 				</label>
 			</td>
 
@@ -28,12 +28,12 @@ echo $pane->startPanel( JText::_('COM_KONSAEXP_EXPEDITION_DETAILS'), 'panel1' );
        		<tr>   <!-- строка для руководителя экспедиции -->
 	       <td width="100" align="right" class="key">
 				<label for="chief_collector">
-					<?php echo JText::_( 'Chief Collector' ); ?>:
+					<?php echo JText::_( 'COM_KONSAEXP_EXPEDITION_CHIEF' ); ?>:
 				</label>
 			</td>
 		<td colspan="3">
 		<select name="chief_collector" id="chief_collector">
-             <option value="0">--<? echo JText::_('None'); ?>--</option>
+             <option value="0">--<? echo JText::_('COM_KONSAEXP_NONE'); ?>--</option>
             <?php
 			for ($i=0, $n=count( $this->collectors );$i < $n; $i++)	{
 			$row = &$this->collectors[$i];
@@ -48,7 +48,7 @@ echo $pane->startPanel( JText::_('COM_KONSAEXP_EXPEDITION_DETAILS'), 'panel1' );
 			<tr>    <!-- строка для даты начала экспедиции (месяц, год) -->
 			<td width="100" align="right" class="key">
 				<label for="short_begin">
-					<?php echo JText::_( 'Start date' ); ?>:
+					<?php echo JText::_( 'COM_KONSAEXP_EXPEDITION_START_DATE' ); ?>:
 				</label>
 			</td>
 		  <td width="140">
@@ -64,7 +64,7 @@ echo $pane->startPanel( JText::_('COM_KONSAEXP_EXPEDITION_DETAILS'), 'panel1' );
 			</select></td>
 		  <td width="100" align="right" class="key">
           <label for="short_end">
-					<?php echo JText::_( 'End date' ); ?>:
+					<?php echo JText::_( 'COM_KONSAEXP_EXPEDITION_END_DATE' ); ?>:
 				</label></td>
 		  <td width="398"><input class="text_area" type="text" name="year_end" id="year_end" size="4" maxlength="10" value="<?php echo $this->expedition->year_end;?>" />
 			<select name="month_end" id="month_end">
@@ -83,13 +83,13 @@ echo $pane->startPanel( JText::_('COM_KONSAEXP_EXPEDITION_DETAILS'), 'panel1' );
     </fieldset>
 
   <fieldset class="adminform"> <!-- Блок для дополнительных данных экспедиции: точные даты, комментарий  -->
-    <legend><?php echo JText::_( 'Optional' ); ?></legend>
+    <legend><?php echo JText::_( 'COM_KONSAEXP_OPTIONAL' ); ?></legend>
 	  <table class="admintable" border=0>
         
    		  <tr>
 			  <td width="100" align="right" class="key">
 				<label for="Begin date">
-					<?php echo JText::_( 'Begin date' ); ?>:
+					<?php echo JText::_( 'COM_KONSAEXP_EXPEDITION_BEGIN_DATE' ); ?>:
 				</label>
 			</td>
 			<td width="140">
@@ -101,7 +101,7 @@ echo $pane->startPanel( JText::_('COM_KONSAEXP_EXPEDITION_DETAILS'), 'panel1' );
 			</td>
 			<td width="100" align="right" class="key">
             	<label for="End date">
-					<?php echo JText::_( 'End date' ); ?>:
+					<?php echo JText::_( 'COM_KONSAEXP_EXPEDITION_END_DATE' ); ?>:
 				</label>
 			</td>
 			<td width="396">
@@ -117,7 +117,7 @@ echo $pane->startPanel( JText::_('COM_KONSAEXP_EXPEDITION_DETAILS'), 'panel1' );
 		  <tr>
 			  <td width="100" align="right" class="key">
 				  <label for="review">
-					  <?php echo JText::_( 'Comment' ); ?>:
+					  <?php echo JText::_( 'COM_KONSAEXP_COMMENT' ); ?>:
 				  </label>
 			  </td>
 			<td colspan="3">
@@ -135,11 +135,11 @@ echo $pane->startPanel( JText::_('COM_KONSAEXP_EXPEDITION_DETAILS'), 'panel1' );
 <?php
 echo $pane->endPanel();
 if($this->expedition->id){
-	echo $pane->startPanel( JText::_('Tracks'), 'panel2' );
+	echo $pane->startPanel( JText::_('COM_KONSAEXP_EXPEDITION_TRACKS'), 'panel2' );
 ?>
 
 <?php
-$select_town='<option selected disabled>--'.JText::_('None')."--</option>";
+$select_town='<option selected disabled>--'.JText::_('COM_KONSAEXP_NONE')."--</option>";
 	for ($i=0, $n=count( $this->townswithregions );$i < $n; $i++)	{
 	$row = &$this->townswithregions[$i]; 
 $select_town=$select_town.' <option value="'.$row->id.'">'.$row->town_name.', '.$row->region_name.'</option>';
@@ -149,12 +149,12 @@ $select_town=$select_town.' <option value="'.$row->id.'">'.$row->town_name.', '.
 var select_town='<?php echo $select_town ?>';
 </script>
 <fieldset class="adminform"> <!-- Блок для маршрута экспедиции -->
-    <legend><?php echo JText::_( 'Expedition tracks' ); ?></legend>
+    <legend><?php echo JText::_( 'COM_KONSAEXP_EXPEDITION_TRACKS' ); ?></legend>
 
 <br/>&nbsp;&nbsp;
-<input class="button" type="button" onclick="javascript:new_track();" value="<? echo JText::_('Add new track'); ?>"/>
+<input class="button" type="button" onclick="javascript:new_track();" value="<? echo JText::_('COM_KONSAEXP_ADD_NEW_TRACK'); ?>"/>
 &nbsp;&nbsp;
-<input class="button" type="button" onclick="javascript:delete_selected_tracks();" value="<? echo JText::_('Delete selected tracks'); ?>"/>
+<input class="button" type="button" onclick="javascript:delete_selected_tracks();" value="<? echo JText::_('COM_KONSAEXP_DELETE_SELECTED_TRACKS'); ?>"/>
 <br/><br/>
 
 <table class="adminlist" id="tracks_table">
@@ -169,16 +169,16 @@ var select_town='<?php echo $select_town ?>';
 			</th>	
 		
          <th width="40">
-				<?php echo JText::_( 'Number' ); ?>
+				<?php echo JText::_( 'COM_KONSAEXP_TRACK_NUMBER' ); ?>
 			</th>
             <th>
-				<?php echo JText::_( 'Town' ); ?>
+				<?php echo JText::_( 'COM_KONSAEXP_TOWN' ); ?>
 			</th>
             <th width="100">
-				<?php echo JText::_( 'Visiting date' ); ?>
+				<?php echo JText::_( 'COM_KONSAEXP_TRACK_VISITING_DATE' ); ?>
 			</th>
             <th width="20">
-				<?php echo JText::_( 'Edit' ); ?>
+				<?php echo JText::_( 'COM_KONSAEXP_EDIT' ); ?>
 			</th>
             
 		</tr>
@@ -218,7 +218,7 @@ var select_town='<?php echo $select_town ?>';
 				<? echo $track->date; ?>
 			</td>
             <td align="center">
-				<a href="<? echo $link_edit; ?>"><img src="components/com_konsaexp/assets/images/icons/page_white_edit.png" title="<? echo JText::_( 'Edit this track' ); ?>" alt="<? echo JText::_( 'Edit this track' ); ?>" /></a>
+				<a href="<? echo $link_edit; ?>"><img src="components/com_konsaexp/assets/images/icons/page_white_edit.png" title="<? echo JText::_( 'COM_KONSAEXP_EDIT_TRACK' ); ?>" alt="<? echo JText::_( 'COM_KONSAEXP_EDIT_TRACK' ); ?>" /></a>
 			</td>
 
 		</tr>
@@ -229,22 +229,22 @@ var select_town='<?php echo $select_town ?>';
 	</table>    
 
 <br />&nbsp;&nbsp;
-  <input class="button" type="button" onclick="javascript:new_track();" value="<? echo JText::_('Add new track'); ?>"/>
+  <input class="button" type="button" onclick="javascript:new_track();" value="<? echo JText::_('COM_KONSAEXP_ADD_NEW_TRACK'); ?>"/>
   <br />
 </fieldset>
 <?php
 	echo $pane->endPanel();
-    echo $pane->startPanel( JText::_('Phonograms'), 'panel3' ); // Закладка для добавления фонограмм
+    echo $pane->startPanel( JText::_('COM_KONSAEXP_PHONOGRAMS'), 'panel3' ); // Закладка для добавления фонограмм
 	?>
 	<fieldset class="adminform"> <!-- Блок для добавления фонограмм -->
-    <legend><?php echo JText::_( 'Expedition phonogram list' ); ?></legend>
+    <legend><?php echo JText::_( 'COM_KONSAEXP_EXPEDITION_PHONOGRAM_LIST' ); ?></legend>
 
 <br/>&nbsp;&nbsp;
-<input class="button" type="button" onclick="javascript:new_phonogram();" value="<? echo JText::_('Add new phonogram'); ?>"/>
+<input class="button" type="button" onclick="javascript:new_phonogram();" value="<? echo JText::_('COM_KONSAEXP_ADD_NEW_PHONOGRAM'); ?>"/>
 &nbsp;&nbsp;
-<input class="button" type="button" onclick="javascript:new_file();" value="<? echo JText::_('Add new file '); ?>"/>
-&nbsp;&nbsp;
-<input class="button" type="button" onclick="javascript:delete_selected_phonograms();" value="<? echo JText::_('Delete selected phonograms'); ?>"/>
+<!-- <input class="button" type="button" onclick="javascript:new_file();" value="<? echo JText::_('Add new file '); ?>"/>
+&nbsp;&nbsp;  -->
+<input class="button" type="button" onclick="javascript:delete_selected_phonograms();" value="<? echo JText::_('COM_KONSAEXP_DELETE_SELECTED_PHONOGRAMS'); ?>"/>
 <br/><br/>
 <table class="adminlist" id="phonograms_table">
 
@@ -258,19 +258,19 @@ var select_town='<?php echo $select_town ?>';
 			</th>	
 		
          <th>
-				<?php echo JText::_( 'Phonogram title' ); ?>
+				<?php echo JText::_( 'COM_KONSAEXP_PHONOGRAM_TITLE' ); ?>
 			</th>
             <th>
-				<?php echo JText::_( 'Record place' ); ?>
+				<?php echo JText::_( 'COM_KONSAEXP_RECORD_PLACE' ); ?>
 			</th>
             <th width="100">
-				<?php echo JText::_( 'Record date' ); ?>
+				<?php echo JText::_( 'COM_KONSAEXP_RECORD_DATE' ); ?>
 			</th>
             <th width="20">
-				<?php echo JText::_( 'Link' ); ?>
+				<?php echo JText::_( 'COM_KONSAEXP_PHONOGRAM_LINK' ); ?>
 			</th>
             <th width="20">
-				<?php echo JText::_( 'Edit' ); ?>
+				<?php echo JText::_( 'COM_KONSAEXP_EDIT' ); ?>
 			</th>
             
 		</tr>
@@ -313,11 +313,11 @@ var select_town='<?php echo $select_town ?>';
 			</td>
             <td align="center">
             <? if ($phonogram->soundfile) { ?>
-				<a href="<? echo $link_open; ?>"><img src="components/com_konsaexp/assets/images/music.png" title="<? echo JText::_( 'Open this phonogram' ); ?>" alt="<? echo JText::_( 'Open this phonogram' ); ?>" /></a>
+				<a href="<? echo $link_open; ?>"><img src="components/com_konsaexp/assets/images/music.png" title="<? echo JText::_( 'COM_KONSAEXP_OPEN_PHONOGRAM' ); ?>" alt="<? echo JText::_( 'COM_KONSAEXP_OPEN_PHONOGRAM' ); ?>" /></a>
              <? } ?>   
 			</td>
             <td align="center">
-				<a href="<? echo $link_edit; ?>"><img src="components/com_konsaexp/assets/images/icons/page_white_edit.png" title="<? echo JText::_( 'Edit this phonogram' ); ?>" alt="<? echo JText::_( 'Edit this phonogram' ); ?>" /></a>
+				<a href="<? echo $link_edit; ?>"><img src="components/com_konsaexp/assets/images/icons/page_white_edit.png" title="<? echo JText::_( 'COM_KONSAEXP_EDIT_PHONOGRAM' ); ?>" alt="<? echo JText::_( 'COM_KONSAEXP_EDIT_PHONOGRAM' ); ?>" /></a>
 			</td>
 
 		</tr>
@@ -328,7 +328,7 @@ var select_town='<?php echo $select_town ?>';
 	</table>    
 
 <br />&nbsp;&nbsp;
-  <input class="button" type="button" onclick="javascript:new_phonogram();" value="<? echo JText::_('Add new phonogram'); ?>"/>
+  <input class="button" type="button" onclick="javascript:new_phonogram();" value="<? echo JText::_('COM_KONSAEXP_ADD_NEW_PHONOGRAM'); ?>"/>
   <br />
 
 </fieldset>
@@ -352,14 +352,14 @@ var select_town='<?php echo $select_town ?>';
 -->
 
 	<fieldset class="adminform"> <!-- Блок для добавления документов -->
-    <legend><?php echo JText::_( 'Expedition document list' ); ?></legend>
+    <legend><?php echo JText::_( 'COM_KONSAEXP_EXPEDITION_DOCUMENT_LIST' ); ?></legend>
 
 <br/>&nbsp;&nbsp;
-<input class="button" type="button" onclick="javascript:new_doc();" value="<? echo JText::_('Add new document'); ?>"/>
+<input class="button" type="button" onclick="javascript:new_doc();" value="<? echo JText::_('COM_KONSAEXP_ADD_NEW_DOCUMENT'); ?>"/>
 &nbsp;&nbsp;
-<input class="button" type="button" onclick="javascript:new_file();" value="<? echo JText::_('Add new file '); ?>"/>
-&nbsp;&nbsp;
-<input class="button" type="button" onclick="javascript:delete_selected_docs();" value="<? echo JText::_('Delete selected documents'); ?>"/>
+<!-- <input class="button" type="button" onclick="javascript:new_file();" value="<? echo JText::_('Add new file '); ?>"/>
+&nbsp;&nbsp; -->
+<input class="button" type="button" onclick="javascript:delete_selected_docs();" value="<? echo JText::_('COM_KONSAEXP_DELETE_SELECTED_DOCUMENTS'); ?>"/>
 <br/><br/>
 <?php print_r($docs); ?>
 <table class="adminlist" id="docs_table">
@@ -374,13 +374,13 @@ var select_town='<?php echo $select_town ?>';
 			</th>	
 		
          <th>
-				<?php echo JText::_( 'Document title' ); ?>
+				<?php echo JText::_( 'COM_KONSAEXP_DOCUMENT_TITLE' ); ?>
 			</th>
             <th width="20">
-				<?php echo JText::_( 'Link' ); ?>
+				<?php echo JText::_( 'COM_KONSAEXP_DOCUMENT_LINK' ); ?>
 			</th>
             <th width="20">
-				<?php echo JText::_( 'Edit' ); ?>
+				<?php echo JText::_( 'COM_KONSAEXP_EDIT' ); ?>
 			</th>
             
 		</tr>
@@ -411,11 +411,11 @@ var select_town='<?php echo $select_town ?>';
                 
             <td align="center">
             <? if ($doc->soundfile) { ?>
-				<a href="<? echo $link_open; ?>"><img src="components/com_konsaexp/assets/images/music.png" title="<? echo JText::_( 'Open this phonogram' ); ?>" alt="<? echo JText::_( 'Open this phonogram' ); ?>" /></a>
+				<a href="<? echo $link_open; ?>"><img src="components/com_konsaexp/assets/images/music.png" title="<? echo JText::_( 'COM_KONSAEXP_OPEN_DOCUMENT' ); ?>" alt="<? echo JText::_( 'COM_KONSAEXP_OPEN_DOCUMENT' ); ?>" /></a>
              <? } ?>   
 			</td>
             <td align="center">
-				<a href="<? echo $link_edit; ?>"><img src="components/com_konsaexp/assets/images/icons/page_white_edit.png" title="<? echo JText::_( 'Edit this phonogram' ); ?>" alt="<? echo JText::_( 'Edit this phonogram' ); ?>" /></a>
+				<a href="<? echo $link_edit; ?>"><img src="components/com_konsaexp/assets/images/icons/page_white_edit.png" title="<? echo JText::_( 'COM_KONSAEXP_EDIT_DOCUMENT' ); ?>" alt="<? echo JText::_( 'COM_KONSAEXP_EDIT_DOCUMENT' ); ?>" /></a>
 			</td>
 
 		</tr>
@@ -426,7 +426,7 @@ var select_town='<?php echo $select_town ?>';
 	</table>    
 
 <br />&nbsp;&nbsp;
-  <input class="button" type="button" onclick="javascript:new_phonogram();" value="<? echo JText::_('Add new document'); ?>"/>
+  <input class="button" type="button" onclick="javascript:new_phonogram();" value="<? echo JText::_('COM_KONSAEXP_ADD_NEW_DOCUMENT'); ?>"/>
   <br />
 
 </fieldset>

@@ -1,10 +1,10 @@
 <?php
 
 /**
- * @version		1.0.1
- * @package		muscol
- * @copyright	2009 JoomlaMusicSolutions.com
- * @license		GPLv2
+ * @version	2.5.15
+ * @package	konsaexp
+ * @copyright	2015
+ * @license	GPLv2
  */
 
 // No direct access
@@ -29,8 +29,8 @@ class TracksViewTrack extends JView
 		
 		$isNew		= ($track->id < 1);
 
-		$text = $isNew ? JText::_( 'New' ) : JText::_( 'Edit' );
-		JToolBarHelper::title(   JText::_( 'Track' ).': <small><small>[ ' . $text.' ]</small></small>','type' );
+		$text = $isNew ? JText::_( 'COM_KONSAEXP_NEW' ) : JText::_( 'COM_KONSAEXP_EDIT' );
+		JToolBarHelper::title(   JText::_( 'COM_KONSAEXP_EXPEDITION_TRACK' ).': <small><small>[ ' . $text.' ]</small></small>','trackedit' );
 		JToolBarHelper::save();
 		JToolBarHelper::apply();
 		if ($isNew)  {

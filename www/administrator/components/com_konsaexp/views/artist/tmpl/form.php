@@ -1,13 +1,19 @@
 <?php defined('_JEXEC') or die('Restricted access'); ?>
 <?php 
-jimport('joomla.application.component.view');
+//jimport('joomla.application.component.view');
+
 
 JHTML::_('behavior.calendar'); 
 // Load the tooltip behavior.
-JHtml::_('behavior.tooltip');
-JHtml::_('behavior.formvalidation');
-JHtml::_('behavior.keepalive');
+//JHtml::_('behavior.tooltip');
+//JHtml::_('behavior.formvalidation');
+//JHtml::_('behavior.keepalive');
 ?>
+<?php 		//cridem el CSS
+		$document	= & JFactory::getDocument();
+		$document->addStyleSheet('components/com_konsaexp/assets/albums.css');
+		?>
+
 
 <form action="index.php" method="post" name="adminForm" id="adminForm" enctype="multipart/form-data">
 <div class="width-60 fltlft">

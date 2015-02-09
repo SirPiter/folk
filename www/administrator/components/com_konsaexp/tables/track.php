@@ -1,11 +1,12 @@
 <?php
 
-/** 
- * @version		1.5.0
- * @package		muscol
- * @copyright	2009 JoomlaMusicSolutions.com
- * @license		GPLv2
+/**
+ * @version	2.5.0
+ * @package	konsaexp
+ * @copyright	2012
+ * @license	GPLv2
  */
+
 
 // No direct access
 

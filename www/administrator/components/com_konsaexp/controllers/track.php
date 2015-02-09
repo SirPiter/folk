@@ -79,7 +79,7 @@ class TracksControllerTrack extends TracksController{
 	{
 		$expedition_id = JRequest::getVar('expedition_id'); // song id
 
-		$msg = JText::_( 'Operation Cancelled' );
+		$msg = JText::_( 'COM_KONSAEXP_OPERATION_CANCELED' );
 		$link = 'index.php?option=com_konsaexp&controller=expedition&task=edit&tab=1&cid[]=' . $expedition_id;
 		$this->setRedirect( $link, $msg );
 	}

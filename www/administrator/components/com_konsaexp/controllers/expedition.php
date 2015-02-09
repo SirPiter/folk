@@ -36,9 +36,9 @@ class ExpeditionsControllerExpedition extends ExpeditionsController
 		$model = $this->getModel('expedition');
 
 		if ($model->store($post)) {
-			$msg = JText::_( 'Expedition Saved!' );
+			$msg = JText::_( 'COM_KONSAEXP_EXPEDITION_SAVED' );
 		} else {
-			$msg = JText::_( 'Error Saving Expedition' );
+			$msg = JText::_( 'COM_KONSAEXP_EXPEDITION_NOT_SAVED' );
 		}
 
 		$task = JRequest::getCmd( 'task' );
@@ -64,9 +64,9 @@ class ExpeditionsControllerExpedition extends ExpeditionsController
 	{
 		$model = $this->getModel('expedition');
 		if(!$model->delete()) {
-			$msg = JText::_( 'Error: One or More Expeditions Could not be Deleted' );
+			$msg = JText::_( 'COM_KONSAEXP_EXPEDITION_NOT_DELETED' );
 		} else {
-			$msg = JText::_( 'Expedition(s) Deleted' );
+			$msg = JText::_( 'COM_KONSAEXP_EXPEDITION_NOT_DELETED' );
 		}
 
 		$this->setRedirect( 'index.php?option=com_konsaexp&controller=expedition', $msg );
@@ -74,7 +74,7 @@ class ExpeditionsControllerExpedition extends ExpeditionsController
 
 	function cancel()
 	{
-		$msg = JText::_( 'Operation Cancelled' );
+		$msg = JText::_( 'COM_KONSAEXP_OPERATION_CANCELED' );
 		$this->setRedirect( 'index.php?option=com_konsaexp&controller=expedition', $msg );
 	}
 }

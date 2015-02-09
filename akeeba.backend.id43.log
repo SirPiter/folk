@@ -1,0 +1,1070 @@
+DEBUG   |150209 20:38:11|*** Batching successive steps (nesting level 1)
+DEBUG   |150209 20:38:11|====== Starting Step number 1 ======
+DEBUG   |150209 20:38:11|Kettenrad :: BREAKING STEP BEFORE SWITCHING DOMAIN
+DEBUG   |150209 20:38:11|Akeeba\Engine\Core\Domain\Init :: New instance
+DEBUG   |150209 20:38:11|----- Finished operation 1 ------
+DEBUG   |150209 20:38:11|Successful Smart algorithm on Akeeba\Engine\Core\Domain\Init
+DEBUG   |150209 20:38:11|====== Finished Step number 1 ======
+DEBUG   |150209 20:38:11|*** Engine steps batching: Break flag detected.
+DEBUG   |150209 20:38:11|*** Batching of engine steps finished. I will now return control to the caller.
+DEBUG   |150209 20:38:11|Sleeping for 1812.0560646057 msec, using usleep()
+DEBUG   |150209 20:38:13|Saving Kettenrad instance backend
+DEBUG   |150209 20:38:14|Kettenrad :: Attempting to load from database (backend) [backend.id43]
+DEBUG   |150209 20:38:14| -- Loaded stored Akeeba Factory (backend) [backend.id43]
+DEBUG   |150209 20:38:14|====== Starting Step number 2 ======
+INFO    |150209 20:38:14|--------------------------------------------------------------------------------
+INFO    |150209 20:38:14|Akeeba Backup 4.1.2 (2015-02-03)
+INFO    |150209 20:38:14|Got backup?
+INFO    |150209 20:38:14|--------------------------------------------------------------------------------
+INFO    |150209 20:38:14|--- System Information ---
+INFO    |150209 20:38:14|PHP Version        :5.3.13
+INFO    |150209 20:38:14|PHP OS             :WINNT
+INFO    |150209 20:38:14|PHP SAPI           :apache2handler
+INFO    |150209 20:38:14|OS Version         :Windows NT
+INFO    |150209 20:38:14|DB Version         :5.5.25
+INFO    |150209 20:38:14|Web Server         :Apache/2.2.22 (Win32) mod_ssl/2.2.22 OpenSSL/1.0.1c PHP/5.3.13
+INFO    |150209 20:38:14|Joomla! version    :2.5.28
+INFO    |150209 20:38:14|Mozilla/5.0 (Windows NT 6.1; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0
+INFO    |150209 20:38:14|Safe mode          :
+INFO    |150209 20:38:14|Display errors     :
+INFO    |150209 20:38:14|Error reporting    :E_ERROR | E_WARNING | E_PARSE | E_CORE_ERROR | E_CORE_WARNING | E_COMPILE_ERROR | E_COMPILE_WARNING | E_USER_ERROR | E_USER_WARNING | E_USER_NOTICE
+INFO    |150209 20:38:14|Error display      :off
+INFO    |150209 20:38:14|Disabled functions :
+INFO    |150209 20:38:14|open_basedir restr.:
+INFO    |150209 20:38:14|Max. exec. time    :0
+INFO    |150209 20:38:14|Memory limit       :512M
+INFO    |150209 20:38:14|Current mem. usage :17088104
+INFO    |150209 20:38:14|GZIP Compression   : available (good)
+INFO    |150209 20:38:14|JPATH_BASE         :<root>\administrator
+INFO    |150209 20:38:14|JPATH_SITE         :<root>
+INFO    |150209 20:38:14|JPATH_ROOT         :<root>
+INFO    |150209 20:38:14|JPATH_CACHE        :<root>/cache
+INFO    |150209 20:38:14|Computed root      :<root>
+INFO    |150209 20:38:14|Output directory   :W:\home\folk
+INFO    |150209 20:38:14|Part size (bytes)  :0
+INFO    |150209 20:38:14|--------------------------------------------------------------------------------
+INFO    |150209 20:38:14|Akeeba Backup has detected the following potential problems:
+INFO    |150209 20:38:14|- 401 выбран формат ZIP (low)
+INFO    |150209 20:38:14|You probably do not have to worry about them, but you should be aware of them.
+INFO    |150209 20:38:14|--------------------------------------------------------------------------------
+INFO    |150209 20:38:14|Loaded profile #2
+DEBUG   |150209 20:38:14|Archive template name: site-[HOST]-[DATE]-[TIME]-SQL
+DEBUG   |150209 20:38:14|Expanded template name: site-folk-20150209-193814-SQL
+DEBUG   |150209 20:38:14|Backup type is now set to 'dbonly'
+DEBUG   |150209 20:38:14|----- Finished operation 1 ------
+DEBUG   |150209 20:38:14|----- Finished operation 2 ------
+DEBUG   |150209 20:38:14|Successful Smart algorithm on Akeeba\Engine\Core\Domain\Init
+DEBUG   |150209 20:38:14|Kettenrad :: Domain 'init' has finished.
+DEBUG   |150209 20:38:14|====== Finished Step number 2 ======
+DEBUG   |150209 20:38:14|*** Engine steps batching: Break flag detected.
+DEBUG   |150209 20:38:14|*** Batching of engine steps finished. I will now return control to the caller.
+DEBUG   |150209 20:38:14|Sleeping for 1853.3592224121 msec, using usleep()
+DEBUG   |150209 20:38:16|Saving Kettenrad instance backend
+DEBUG   |150209 20:38:18|Kettenrad :: Attempting to load from database (backend) [backend.id43]
+DEBUG   |150209 20:38:18| -- Loaded stored Akeeba Factory (backend) [backend.id43]
+DEBUG   |150209 20:38:18|====== Starting Step number 3 ======
+DEBUG   |150209 20:38:18|Kettenrad :: BREAKING STEP BEFORE SWITCHING DOMAIN
+DEBUG   |150209 20:38:18|Akeeba\Engine\Core\Domain\Db :: New instance
+DEBUG   |150209 20:38:18|Akeeba\Engine\Core\Domain\Db :: Preparing instance
+DEBUG   |150209 20:38:18|Fetching filter data from database
+DEBUG   |150209 20:38:18|Loading filters
+DEBUG   |150209 20:38:18|-- Loading filter Directories
+DEBUG   |150209 20:38:18|-- Loading filter Extradirs
+DEBUG   |150209 20:38:18|-- Loading filter Files
+DEBUG   |150209 20:38:18|-- Loading filter Incremental
+DEBUG   |150209 20:38:18|-- Loading filter Multidb
+DEBUG   |150209 20:38:18|-- Loading filter Regexdirectories
+DEBUG   |150209 20:38:18|-- Loading filter Regexfiles
+DEBUG   |150209 20:38:18|-- Loading filter Regexskipdirs
+DEBUG   |150209 20:38:18|-- Loading filter Regexskipfiles
+DEBUG   |150209 20:38:18|-- Loading filter Regextabledata
+DEBUG   |150209 20:38:18|-- Loading filter Regextables
+DEBUG   |150209 20:38:18|-- Loading filter Skipdirs
+DEBUG   |150209 20:38:18|-- Loading filter Skipfiles
+DEBUG   |150209 20:38:18|-- Loading filter Tabledata
+DEBUG   |150209 20:38:18|-- Loading filter Tables
+DEBUG   |150209 20:38:19|-- Loading filter Excludefiles
+DEBUG   |150209 20:38:19|-- Loading filter Excludefolders
+DEBUG   |150209 20:38:19|-- Loading filter Excludetabledata
+DEBUG   |150209 20:38:19|-- Loading filter Joomlaskipdirs
+DEBUG   |150209 20:38:19|-- Loading filter Joomlaskipfiles
+DEBUG   |150209 20:38:19|-- Loading filter Libraries
+DEBUG   |150209 20:38:19|-- Loading filter Sitedb
+DEBUG   |150209 20:38:19|-- Loading filter Siteroot
+DEBUG   |150209 20:38:19|-- Loading filter SRPData
+DEBUG   |150209 20:38:19|-- Loading filter SRPDirectories
+DEBUG   |150209 20:38:19|-- Loading filter SRPFiles
+DEBUG   |150209 20:38:19|-- Loading filter SRPSkipData
+DEBUG   |150209 20:38:19|-- Loading filter SRPSkipFiles
+DEBUG   |150209 20:38:19|-- Loading filter Systemcachefiles
+DEBUG   |150209 20:38:19|Loading optional filters
+DEBUG   |150209 20:38:19|-- Loading optional filter Stack\StackFinder
+DEBUG   |150209 20:38:19|Akeeba\Engine\Core\Domain\Db :: Adding only main database
+DEBUG   |150209 20:38:19|----- Finished operation 1 ------
+DEBUG   |150209 20:38:19|Successful Smart algorithm on Akeeba\Engine\Core\Domain\Db
+DEBUG   |150209 20:38:19|====== Finished Step number 3 ======
+DEBUG   |150209 20:38:19|*** Engine steps batching: Break flag detected.
+DEBUG   |150209 20:38:19|*** Batching of engine steps finished. I will now return control to the caller.
+DEBUG   |150209 20:38:19|Sleeping for 779.90102767944 msec, using usleep()
+DEBUG   |150209 20:38:20|Saving Kettenrad instance backend
+DEBUG   |150209 20:38:22|Kettenrad :: Attempting to load from database (backend) [backend.id43]
+DEBUG   |150209 20:38:22| -- Loaded stored Akeeba Factory (backend) [backend.id43]
+DEBUG   |150209 20:38:22|====== Starting Step number 4 ======
+DEBUG   |150209 20:38:22|Akeeba\Engine\Core\Domain\Db :: Iterating next database
+DEBUG   |150209 20:38:22|Akeeba\Engine\Dump\Native :: New instance
+DEBUG   |150209 20:38:22|Akeeba\Engine\Dump\Native :: Processing parameters
+DEBUG   |150209 20:38:22|Akeeba\Engine\Dump\Native :: Instanciating new native database dump engine \Akeeba\Engine\Dump\Native\Mysql
+DEBUG   |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: New instance
+DEBUG   |150209 20:38:22|Akeeba\Engine\Dump\Base :: Processing parameters
+DEBUG   |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Finding tables to include in the backup set
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_admintools_acl (internal name #__admintools_acl)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_admintools_adminiplist (internal name #__admintools_adminiplist)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_admintools_badwords (internal name #__admintools_badwords)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_admintools_cookies (internal name #__admintools_cookies)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_admintools_customperms (internal name #__admintools_customperms)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_admintools_filescache (internal name #__admintools_filescache)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_admintools_ipautoban (internal name #__admintools_ipautoban)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_admintools_ipautobanhistory (internal name #__admintools_ipautobanhistory)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_admintools_ipblock (internal name #__admintools_ipblock)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_admintools_log (internal name #__admintools_log)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_admintools_profiles (internal name #__admintools_profiles)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_admintools_redirects (internal name #__admintools_redirects)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_admintools_scanalerts (internal name #__admintools_scanalerts)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_admintools_scans (internal name #__admintools_scans)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_admintools_storage (internal name #__admintools_storage)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_admintools_wafexceptions (internal name #__admintools_wafexceptions)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_admintools_waftemplates (internal name #__admintools_waftemplates)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_ak_profiles (internal name #__ak_profiles)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_ak_stats (internal name #__ak_stats)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_ak_storage (internal name #__ak_storage)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_akeeba_common (internal name #__akeeba_common)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_assets (internal name #__assets)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_associations (internal name #__associations)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_banner_clients (internal name #__banner_clients)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_banner_tracks (internal name #__banner_tracks)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_banners (internal name #__banners)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_categories (internal name #__categories)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_contact_details (internal name #__contact_details)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_content (internal name #__content)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_content_frontpage (internal name #__content_frontpage)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_content_rating (internal name #__content_rating)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_core_log_searches (internal name #__core_log_searches)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_cust_addmoney (internal name #__cust_addmoney)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_cust_money (internal name #__cust_money)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_custfsp_alb (internal name #__custfsp_alb)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_custfsp_cart (internal name #__custfsp_cart)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_custfsp_cat (internal name #__custfsp_cat)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_custfsp_cmt (internal name #__custfsp_cmt)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_custfsp_el (internal name #__custfsp_el)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_custfsp_ext (internal name #__custfsp_ext)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_custfsp_files (internal name #__custfsp_files)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_custfsp_form (internal name #__custfsp_form)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_custfsp_fvr (internal name #__custfsp_fvr)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_custfsp_rat (internal name #__custfsp_rat)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_custfsp_ratcmt (internal name #__custfsp_ratcmt)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_custfsp_set (internal name #__custfsp_set)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_custfsp_spr (internal name #__custfsp_spr)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_custfsp_tags (internal name #__custfsp_tags)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_custfsp_users (internal name #__custfsp_users)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_extensions (internal name #__extensions)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_finder_filters (internal name #__finder_filters)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_finder_links (internal name #__finder_links)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_finder_links_terms0 (internal name #__finder_links_terms0)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_finder_links_terms1 (internal name #__finder_links_terms1)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_finder_links_terms2 (internal name #__finder_links_terms2)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_finder_links_terms3 (internal name #__finder_links_terms3)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_finder_links_terms4 (internal name #__finder_links_terms4)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_finder_links_terms5 (internal name #__finder_links_terms5)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_finder_links_terms6 (internal name #__finder_links_terms6)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_finder_links_terms7 (internal name #__finder_links_terms7)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_finder_links_terms8 (internal name #__finder_links_terms8)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_finder_links_terms9 (internal name #__finder_links_terms9)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_finder_links_termsa (internal name #__finder_links_termsa)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_finder_links_termsb (internal name #__finder_links_termsb)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_finder_links_termsc (internal name #__finder_links_termsc)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_finder_links_termsd (internal name #__finder_links_termsd)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_finder_links_termse (internal name #__finder_links_termse)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_finder_links_termsf (internal name #__finder_links_termsf)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_finder_taxonomy (internal name #__finder_taxonomy)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_finder_taxonomy_map (internal name #__finder_taxonomy_map)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_finder_terms (internal name #__finder_terms)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_finder_terms_common (internal name #__finder_terms_common)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_finder_tokens (internal name #__finder_tokens)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_finder_tokens_aggregate (internal name #__finder_tokens_aggregate)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_finder_types (internal name #__finder_types)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_konsa_exp_artists (internal name #__konsa_exp_artists)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_konsa_exp_artists_to_phonograms (internal name #__konsa_exp_artists_to_phonograms)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_konsa_exp_artists_to_sessions (internal name #__konsa_exp_artists_to_sessions)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_konsa_exp_collectors (internal name #__konsa_exp_collectors)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_konsa_exp_documents (internal name #__konsa_exp_documents)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_konsa_exp_expeditions (internal name #__konsa_exp_expeditions)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_konsa_exp_phonograms (internal name #__konsa_exp_phonograms)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_konsa_exp_photos (internal name #__konsa_exp_photos)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_konsa_exp_regions (internal name #__konsa_exp_regions)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_konsa_exp_sessions (internal name #__konsa_exp_sessions)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_konsa_exp_towns (internal name #__konsa_exp_towns)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_konsa_exp_tracks (internal name #__konsa_exp_tracks)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_kunena_aliases (internal name #__kunena_aliases)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_kunena_announcement (internal name #__kunena_announcement)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_kunena_attachments (internal name #__kunena_attachments)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_kunena_categories (internal name #__kunena_categories)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_kunena_configuration (internal name #__kunena_configuration)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_kunena_keywords (internal name #__kunena_keywords)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_kunena_keywords_map (internal name #__kunena_keywords_map)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_kunena_messages (internal name #__kunena_messages)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_kunena_messages_text (internal name #__kunena_messages_text)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_kunena_polls (internal name #__kunena_polls)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_kunena_polls_options (internal name #__kunena_polls_options)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_kunena_polls_users (internal name #__kunena_polls_users)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_kunena_ranks (internal name #__kunena_ranks)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_kunena_sessions (internal name #__kunena_sessions)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_kunena_smileys (internal name #__kunena_smileys)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_kunena_thankyou (internal name #__kunena_thankyou)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_kunena_topics (internal name #__kunena_topics)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_kunena_user_categories (internal name #__kunena_user_categories)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_kunena_user_read (internal name #__kunena_user_read)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_kunena_user_topics (internal name #__kunena_user_topics)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_kunena_users (internal name #__kunena_users)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_kunena_users_banned (internal name #__kunena_users_banned)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_kunena_version (internal name #__kunena_version)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_languages (internal name #__languages)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_menu (internal name #__menu)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_menu_types (internal name #__menu_types)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_messages (internal name #__messages)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_messages_cfg (internal name #__messages_cfg)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_modules (internal name #__modules)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_modules_menu (internal name #__modules_menu)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_newsfeeds (internal name #__newsfeeds)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_overrider (internal name #__overrider)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_redirect_links (internal name #__redirect_links)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_schemas (internal name #__schemas)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_session (internal name #__session)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_template_styles (internal name #__template_styles)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_update_categories (internal name #__update_categories)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_update_sites (internal name #__update_sites)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_update_sites_extensions (internal name #__update_sites_extensions)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_updates (internal name #__updates)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_user_notes (internal name #__user_notes)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_user_profiles (internal name #__user_profiles)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_user_usergroup_map (internal name #__user_usergroup_map)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_usergroups (internal name #__usergroups)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_users (internal name #__users)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_viewlevels (internal name #__viewlevels)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_weblinks (internal name #__weblinks)
+INFO    |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Adding arch25_wf_profiles (internal name #__wf_profiles)
+DEBUG   |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Starting CREATE TABLE and dependency scanning
+DEBUG   |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Got database connection
+DEBUG   |150209 20:38:22|Akeeba\Engine\Dump\Native\Mysql :: Got SHOW TABLES
+DEBUG   |150209 20:38:23|Akeeba\Engine\Dump\Native\Mysql :: Got table list
+DEBUG   |150209 20:38:23|Akeeba\Engine\Dump\Native\Mysql :: Processed dependencies
+DEBUG   |150209 20:38:23|Akeeba\Engine\Dump\Base :: Getting temporary file
+DEBUG   |150209 20:38:23|Akeeba\Engine\Dump\Base :: Temporary file is W:/home/folk/af9e29b7.sql
+DEBUG   |150209 20:38:23|AkeebaDomainDBBackup :: SQL temp file is W:/home/folk/af9e29b7.sql
+DEBUG   |150209 20:38:23|AkeebaDomainDBBackup :: SQL file location in archive is W:/home/folk/site-folk-20150209-193814-SQL.sql
+DEBUG   |150209 20:38:23|AkeebaDomainDBBackup :: Deleting leftover files, if any
+DEBUG   |150209 20:38:23|Akeeba\Engine\Dump\Base :: Initializing algorithm for first run
+DEBUG   |150209 20:38:23|----- Finished operation 1 ------
+DEBUG   |150209 20:38:23|Rows on #__admintools_acl : 0
+DEBUG   |150209 20:38:23|Writing data dump preamble for #__admintools_acl
+DEBUG   |150209 20:38:23|Done dumping #__admintools_acl
+DEBUG   |150209 20:38:23|Writing data dump epilogue for #__admintools_acl
+DEBUG   |150209 20:38:23|----- Finished operation 2 ------
+DEBUG   |150209 20:38:23|Rows on #__admintools_adminiplist : 0
+DEBUG   |150209 20:38:23|Writing data dump preamble for #__admintools_adminiplist
+DEBUG   |150209 20:38:23|Done dumping #__admintools_adminiplist
+DEBUG   |150209 20:38:23|Writing data dump epilogue for #__admintools_adminiplist
+DEBUG   |150209 20:38:23|----- Finished operation 3 ------
+DEBUG   |150209 20:38:23|Rows on #__admintools_badwords : 0
+DEBUG   |150209 20:38:23|Writing data dump preamble for #__admintools_badwords
+DEBUG   |150209 20:38:23|Done dumping #__admintools_badwords
+DEBUG   |150209 20:38:23|Writing data dump epilogue for #__admintools_badwords
+DEBUG   |150209 20:38:23|----- Finished operation 4 ------
+DEBUG   |150209 20:38:23|Rows on #__admintools_cookies : 0
+DEBUG   |150209 20:38:23|Writing data dump preamble for #__admintools_cookies
+DEBUG   |150209 20:38:23|Done dumping #__admintools_cookies
+DEBUG   |150209 20:38:23|Writing data dump epilogue for #__admintools_cookies
+DEBUG   |150209 20:38:23|----- Finished operation 5 ------
+DEBUG   |150209 20:38:23|Rows on #__admintools_customperms : 0
+DEBUG   |150209 20:38:23|Writing data dump preamble for #__admintools_customperms
+DEBUG   |150209 20:38:23|Done dumping #__admintools_customperms
+DEBUG   |150209 20:38:23|Writing data dump epilogue for #__admintools_customperms
+DEBUG   |150209 20:38:23|----- Finished operation 6 ------
+DEBUG   |150209 20:38:23|Rows on #__admintools_filescache : 0
+DEBUG   |150209 20:38:23|Writing data dump preamble for #__admintools_filescache
+DEBUG   |150209 20:38:23|Done dumping #__admintools_filescache
+DEBUG   |150209 20:38:23|Writing data dump epilogue for #__admintools_filescache
+DEBUG   |150209 20:38:23|----- Finished operation 7 ------
+DEBUG   |150209 20:38:23|Rows on #__admintools_ipautoban : 0
+DEBUG   |150209 20:38:23|Writing data dump preamble for #__admintools_ipautoban
+DEBUG   |150209 20:38:23|Done dumping #__admintools_ipautoban
+DEBUG   |150209 20:38:23|Writing data dump epilogue for #__admintools_ipautoban
+DEBUG   |150209 20:38:23|----- Finished operation 8 ------
+DEBUG   |150209 20:38:23|Rows on #__admintools_ipautobanhistory : 0
+DEBUG   |150209 20:38:23|Writing data dump preamble for #__admintools_ipautobanhistory
+DEBUG   |150209 20:38:23|Done dumping #__admintools_ipautobanhistory
+DEBUG   |150209 20:38:23|Writing data dump epilogue for #__admintools_ipautobanhistory
+DEBUG   |150209 20:38:23|----- Finished operation 9 ------
+DEBUG   |150209 20:38:23|Rows on #__admintools_ipblock : 0
+DEBUG   |150209 20:38:23|Writing data dump preamble for #__admintools_ipblock
+DEBUG   |150209 20:38:23|Done dumping #__admintools_ipblock
+DEBUG   |150209 20:38:23|Writing data dump epilogue for #__admintools_ipblock
+DEBUG   |150209 20:38:23|----- Finished operation 10 ------
+DEBUG   |150209 20:38:23|Rows on #__admintools_log : 0
+DEBUG   |150209 20:38:23|Writing data dump preamble for #__admintools_log
+DEBUG   |150209 20:38:23|Done dumping #__admintools_log
+DEBUG   |150209 20:38:23|Writing data dump epilogue for #__admintools_log
+DEBUG   |150209 20:38:23|----- Finished operation 11 ------
+DEBUG   |150209 20:38:23|Rows on #__admintools_profiles : 1
+DEBUG   |150209 20:38:23|Writing data dump preamble for #__admintools_profiles
+INFO    |150209 20:38:23|Beginning dump of #__admintools_profiles
+DEBUG   |150209 20:38:23|Done dumping #__admintools_profiles
+DEBUG   |150209 20:38:23|Writing data dump epilogue for #__admintools_profiles
+DEBUG   |150209 20:38:23|----- Finished operation 12 ------
+DEBUG   |150209 20:38:23|Rows on #__admintools_redirects : 0
+DEBUG   |150209 20:38:23|Writing data dump preamble for #__admintools_redirects
+DEBUG   |150209 20:38:24|Done dumping #__admintools_redirects
+DEBUG   |150209 20:38:24|Writing data dump epilogue for #__admintools_redirects
+DEBUG   |150209 20:38:24|----- Finished operation 13 ------
+DEBUG   |150209 20:38:24|Rows on #__admintools_scanalerts : 0
+DEBUG   |150209 20:38:24|Writing data dump preamble for #__admintools_scanalerts
+DEBUG   |150209 20:38:24|Done dumping #__admintools_scanalerts
+DEBUG   |150209 20:38:24|Writing data dump epilogue for #__admintools_scanalerts
+DEBUG   |150209 20:38:24|----- Finished operation 14 ------
+DEBUG   |150209 20:38:24|Rows on #__admintools_scans : 0
+DEBUG   |150209 20:38:24|Writing data dump preamble for #__admintools_scans
+DEBUG   |150209 20:38:24|Done dumping #__admintools_scans
+DEBUG   |150209 20:38:24|Writing data dump epilogue for #__admintools_scans
+DEBUG   |150209 20:38:24|----- Finished operation 15 ------
+DEBUG   |150209 20:38:24|Rows on #__admintools_storage : 2
+DEBUG   |150209 20:38:24|Writing data dump preamble for #__admintools_storage
+INFO    |150209 20:38:24|Beginning dump of #__admintools_storage
+DEBUG   |150209 20:38:24|Done dumping #__admintools_storage
+DEBUG   |150209 20:38:24|Writing data dump epilogue for #__admintools_storage
+DEBUG   |150209 20:38:24|----- Finished operation 16 ------
+DEBUG   |150209 20:38:24|Rows on #__admintools_wafexceptions : 0
+DEBUG   |150209 20:38:24|Writing data dump preamble for #__admintools_wafexceptions
+DEBUG   |150209 20:38:24|Done dumping #__admintools_wafexceptions
+DEBUG   |150209 20:38:24|Writing data dump epilogue for #__admintools_wafexceptions
+DEBUG   |150209 20:38:24|----- Finished operation 17 ------
+DEBUG   |150209 20:38:24|Rows on #__admintools_waftemplates : 2
+DEBUG   |150209 20:38:24|Writing data dump preamble for #__admintools_waftemplates
+INFO    |150209 20:38:24|Beginning dump of #__admintools_waftemplates
+DEBUG   |150209 20:38:24|Done dumping #__admintools_waftemplates
+DEBUG   |150209 20:38:24|Writing data dump epilogue for #__admintools_waftemplates
+DEBUG   |150209 20:38:24|----- Finished operation 18 ------
+DEBUG   |150209 20:38:24|Rows on #__ak_profiles : 2
+DEBUG   |150209 20:38:24|Writing data dump preamble for #__ak_profiles
+INFO    |150209 20:38:24|Beginning dump of #__ak_profiles
+DEBUG   |150209 20:38:24|Done dumping #__ak_profiles
+DEBUG   |150209 20:38:24|Writing data dump epilogue for #__ak_profiles
+DEBUG   |150209 20:38:24|----- Finished operation 19 ------
+DEBUG   |150209 20:38:24|Rows on #__ak_stats : 43
+DEBUG   |150209 20:38:24|Writing data dump preamble for #__ak_stats
+INFO    |150209 20:38:24|Beginning dump of #__ak_stats
+DEBUG   |150209 20:38:24|Done dumping #__ak_stats
+DEBUG   |150209 20:38:24|Writing data dump epilogue for #__ak_stats
+DEBUG   |150209 20:38:24|----- Finished operation 20 ------
+DEBUG   |150209 20:38:24|Rows on #__ak_storage : 0
+DEBUG   |150209 20:38:24|Writing data dump preamble for #__ak_storage
+DEBUG   |150209 20:38:24|Done dumping #__ak_storage
+DEBUG   |150209 20:38:24|Writing data dump epilogue for #__ak_storage
+DEBUG   |150209 20:38:24|----- Finished operation 21 ------
+DEBUG   |150209 20:38:24|Rows on #__akeeba_common : 3
+DEBUG   |150209 20:38:24|Writing data dump preamble for #__akeeba_common
+INFO    |150209 20:38:24|Beginning dump of #__akeeba_common
+DEBUG   |150209 20:38:24|Done dumping #__akeeba_common
+DEBUG   |150209 20:38:24|Writing data dump epilogue for #__akeeba_common
+DEBUG   |150209 20:38:24|----- Finished operation 22 ------
+DEBUG   |150209 20:38:24|Rows on #__assets : 42
+DEBUG   |150209 20:38:24|Writing data dump preamble for #__assets
+INFO    |150209 20:38:24|Beginning dump of #__assets
+DEBUG   |150209 20:38:24|Done dumping #__assets
+DEBUG   |150209 20:38:24|Writing data dump epilogue for #__assets
+DEBUG   |150209 20:38:24|----- Finished operation 23 ------
+DEBUG   |150209 20:38:24|Rows on #__associations : 0
+DEBUG   |150209 20:38:24|Writing data dump preamble for #__associations
+DEBUG   |150209 20:38:24|Done dumping #__associations
+DEBUG   |150209 20:38:24|Writing data dump epilogue for #__associations
+DEBUG   |150209 20:38:24|----- Finished operation 24 ------
+DEBUG   |150209 20:38:24|Rows on #__banner_clients : 0
+DEBUG   |150209 20:38:24|Writing data dump preamble for #__banner_clients
+DEBUG   |150209 20:38:24|Done dumping #__banner_clients
+DEBUG   |150209 20:38:24|Writing data dump epilogue for #__banner_clients
+DEBUG   |150209 20:38:24|----- Finished operation 25 ------
+DEBUG   |150209 20:38:24|Rows on #__banner_tracks : 0
+DEBUG   |150209 20:38:24|Writing data dump preamble for #__banner_tracks
+DEBUG   |150209 20:38:25|Done dumping #__banner_tracks
+DEBUG   |150209 20:38:25|Writing data dump epilogue for #__banner_tracks
+DEBUG   |150209 20:38:25|----- Finished operation 26 ------
+DEBUG   |150209 20:38:25|Rows on #__banners : 0
+DEBUG   |150209 20:38:25|Writing data dump preamble for #__banners
+DEBUG   |150209 20:38:25|Done dumping #__banners
+DEBUG   |150209 20:38:25|Writing data dump epilogue for #__banners
+DEBUG   |150209 20:38:25|----- Finished operation 27 ------
+DEBUG   |150209 20:38:25|Rows on #__categories : 7
+DEBUG   |150209 20:38:25|Writing data dump preamble for #__categories
+INFO    |150209 20:38:25|Beginning dump of #__categories
+DEBUG   |150209 20:38:25|Done dumping #__categories
+DEBUG   |150209 20:38:25|Writing data dump epilogue for #__categories
+DEBUG   |150209 20:38:25|----- Finished operation 28 ------
+DEBUG   |150209 20:38:25|Rows on #__contact_details : 0
+DEBUG   |150209 20:38:25|Writing data dump preamble for #__contact_details
+DEBUG   |150209 20:38:25|Done dumping #__contact_details
+DEBUG   |150209 20:38:25|Writing data dump epilogue for #__contact_details
+DEBUG   |150209 20:38:25|----- Finished operation 29 ------
+DEBUG   |150209 20:38:25|Rows on #__content : 0
+DEBUG   |150209 20:38:25|Writing data dump preamble for #__content
+DEBUG   |150209 20:38:25|Done dumping #__content
+DEBUG   |150209 20:38:25|Writing data dump epilogue for #__content
+DEBUG   |150209 20:38:25|----- Finished operation 30 ------
+DEBUG   |150209 20:38:25|Rows on #__content_frontpage : 0
+DEBUG   |150209 20:38:25|Writing data dump preamble for #__content_frontpage
+DEBUG   |150209 20:38:25|Done dumping #__content_frontpage
+DEBUG   |150209 20:38:25|Writing data dump epilogue for #__content_frontpage
+DEBUG   |150209 20:38:25|----- Finished operation 31 ------
+DEBUG   |150209 20:38:25|Rows on #__content_rating : 0
+DEBUG   |150209 20:38:25|Writing data dump preamble for #__content_rating
+DEBUG   |150209 20:38:25|Done dumping #__content_rating
+DEBUG   |150209 20:38:25|Writing data dump epilogue for #__content_rating
+DEBUG   |150209 20:38:25|----- Finished operation 32 ------
+DEBUG   |150209 20:38:25|Rows on #__core_log_searches : 0
+DEBUG   |150209 20:38:25|Writing data dump preamble for #__core_log_searches
+DEBUG   |150209 20:38:25|Done dumping #__core_log_searches
+DEBUG   |150209 20:38:25|Writing data dump epilogue for #__core_log_searches
+DEBUG   |150209 20:38:25|----- Finished operation 33 ------
+DEBUG   |150209 20:38:25|Rows on #__cust_addmoney : 0
+DEBUG   |150209 20:38:25|Writing data dump preamble for #__cust_addmoney
+DEBUG   |150209 20:38:25|Done dumping #__cust_addmoney
+DEBUG   |150209 20:38:25|Writing data dump epilogue for #__cust_addmoney
+DEBUG   |150209 20:38:25|----- Finished operation 34 ------
+DEBUG   |150209 20:38:25|Rows on #__cust_money : 0
+DEBUG   |150209 20:38:25|Writing data dump preamble for #__cust_money
+DEBUG   |150209 20:38:25|Done dumping #__cust_money
+DEBUG   |150209 20:38:25|Writing data dump epilogue for #__cust_money
+DEBUG   |150209 20:38:25|----- Finished operation 35 ------
+DEBUG   |150209 20:38:25|Rows on #__custfsp_alb : 0
+DEBUG   |150209 20:38:25|Writing data dump preamble for #__custfsp_alb
+DEBUG   |150209 20:38:25|Done dumping #__custfsp_alb
+DEBUG   |150209 20:38:25|Writing data dump epilogue for #__custfsp_alb
+DEBUG   |150209 20:38:25|----- Finished operation 36 ------
+DEBUG   |150209 20:38:25|Rows on #__custfsp_cart : 0
+DEBUG   |150209 20:38:25|Writing data dump preamble for #__custfsp_cart
+DEBUG   |150209 20:38:25|Done dumping #__custfsp_cart
+DEBUG   |150209 20:38:25|Writing data dump epilogue for #__custfsp_cart
+DEBUG   |150209 20:38:25|----- Finished operation 37 ------
+DEBUG   |150209 20:38:25|Rows on #__custfsp_cat : 1
+DEBUG   |150209 20:38:25|Writing data dump preamble for #__custfsp_cat
+INFO    |150209 20:38:25|Beginning dump of #__custfsp_cat
+DEBUG   |150209 20:38:25|Done dumping #__custfsp_cat
+DEBUG   |150209 20:38:25|Writing data dump epilogue for #__custfsp_cat
+DEBUG   |150209 20:38:25|----- Finished operation 38 ------
+DEBUG   |150209 20:38:25|Rows on #__custfsp_cmt : 0
+DEBUG   |150209 20:38:25|Writing data dump preamble for #__custfsp_cmt
+DEBUG   |150209 20:38:26|Done dumping #__custfsp_cmt
+DEBUG   |150209 20:38:26|Writing data dump epilogue for #__custfsp_cmt
+DEBUG   |150209 20:38:26|----- Finished operation 39 ------
+DEBUG   |150209 20:38:26|Rows on #__custfsp_el : 0
+DEBUG   |150209 20:38:26|Writing data dump preamble for #__custfsp_el
+DEBUG   |150209 20:38:26|Done dumping #__custfsp_el
+DEBUG   |150209 20:38:26|Writing data dump epilogue for #__custfsp_el
+DEBUG   |150209 20:38:26|----- Finished operation 40 ------
+DEBUG   |150209 20:38:26|Rows on #__custfsp_ext : 4
+DEBUG   |150209 20:38:26|Writing data dump preamble for #__custfsp_ext
+INFO    |150209 20:38:26|Beginning dump of #__custfsp_ext
+DEBUG   |150209 20:38:26|Done dumping #__custfsp_ext
+DEBUG   |150209 20:38:26|Writing data dump epilogue for #__custfsp_ext
+DEBUG   |150209 20:38:26|----- Finished operation 41 ------
+DEBUG   |150209 20:38:26|Rows on #__custfsp_files : 0
+DEBUG   |150209 20:38:26|Writing data dump preamble for #__custfsp_files
+DEBUG   |150209 20:38:26|Done dumping #__custfsp_files
+DEBUG   |150209 20:38:26|Writing data dump epilogue for #__custfsp_files
+DEBUG   |150209 20:38:26|----- Finished operation 42 ------
+DEBUG   |150209 20:38:26|Rows on #__custfsp_form : 0
+DEBUG   |150209 20:38:26|Writing data dump preamble for #__custfsp_form
+DEBUG   |150209 20:38:26|Done dumping #__custfsp_form
+DEBUG   |150209 20:38:26|Writing data dump epilogue for #__custfsp_form
+DEBUG   |150209 20:38:26|----- Finished operation 43 ------
+DEBUG   |150209 20:38:26|Rows on #__custfsp_fvr : 0
+DEBUG   |150209 20:38:26|Writing data dump preamble for #__custfsp_fvr
+DEBUG   |150209 20:38:26|Done dumping #__custfsp_fvr
+DEBUG   |150209 20:38:26|Writing data dump epilogue for #__custfsp_fvr
+DEBUG   |150209 20:38:26|----- Finished operation 44 ------
+DEBUG   |150209 20:38:26|Rows on #__custfsp_rat : 0
+DEBUG   |150209 20:38:26|Writing data dump preamble for #__custfsp_rat
+DEBUG   |150209 20:38:26|Done dumping #__custfsp_rat
+DEBUG   |150209 20:38:26|Writing data dump epilogue for #__custfsp_rat
+DEBUG   |150209 20:38:26|----- Finished operation 45 ------
+DEBUG   |150209 20:38:26|Rows on #__custfsp_ratcmt : 0
+DEBUG   |150209 20:38:26|Writing data dump preamble for #__custfsp_ratcmt
+DEBUG   |150209 20:38:26|Done dumping #__custfsp_ratcmt
+DEBUG   |150209 20:38:26|Writing data dump epilogue for #__custfsp_ratcmt
+DEBUG   |150209 20:38:26|----- Finished operation 46 ------
+DEBUG   |150209 20:38:26|Rows on #__custfsp_set : 69
+DEBUG   |150209 20:38:26|Writing data dump preamble for #__custfsp_set
+INFO    |150209 20:38:26|Beginning dump of #__custfsp_set
+DEBUG   |150209 20:38:26|Done dumping #__custfsp_set
+DEBUG   |150209 20:38:26|Writing data dump epilogue for #__custfsp_set
+DEBUG   |150209 20:38:26|----- Finished operation 47 ------
+DEBUG   |150209 20:38:26|Rows on #__custfsp_spr : 0
+DEBUG   |150209 20:38:26|Writing data dump preamble for #__custfsp_spr
+DEBUG   |150209 20:38:26|Done dumping #__custfsp_spr
+DEBUG   |150209 20:38:26|Writing data dump epilogue for #__custfsp_spr
+DEBUG   |150209 20:38:26|----- Finished operation 48 ------
+DEBUG   |150209 20:38:26|Rows on #__custfsp_tags : 0
+DEBUG   |150209 20:38:26|Writing data dump preamble for #__custfsp_tags
+DEBUG   |150209 20:38:26|Done dumping #__custfsp_tags
+DEBUG   |150209 20:38:26|Writing data dump epilogue for #__custfsp_tags
+DEBUG   |150209 20:38:26|----- Finished operation 49 ------
+DEBUG   |150209 20:38:26|Rows on #__custfsp_users : 0
+DEBUG   |150209 20:38:26|Writing data dump preamble for #__custfsp_users
+DEBUG   |150209 20:38:26|Done dumping #__custfsp_users
+DEBUG   |150209 20:38:26|Writing data dump epilogue for #__custfsp_users
+DEBUG   |150209 20:38:26|----- Finished operation 50 ------
+DEBUG   |150209 20:38:26|Rows on #__extensions : 168
+DEBUG   |150209 20:38:26|Writing data dump preamble for #__extensions
+INFO    |150209 20:38:26|Beginning dump of #__extensions
+DEBUG   |150209 20:38:27|Writing 182895 bytes to the dump file
+DEBUG   |150209 20:38:27|Done dumping #__extensions
+DEBUG   |150209 20:38:27|Writing data dump epilogue for #__extensions
+DEBUG   |150209 20:38:27|----- Finished operation 51 ------
+DEBUG   |150209 20:38:27|Rows on #__finder_filters : 0
+DEBUG   |150209 20:38:27|Writing data dump preamble for #__finder_filters
+DEBUG   |150209 20:38:27|Done dumping #__finder_filters
+DEBUG   |150209 20:38:27|Writing data dump epilogue for #__finder_filters
+DEBUG   |150209 20:38:27|----- Finished operation 52 ------
+INFO    |150209 20:38:27|Skipping dumping data of #__finder_links
+DEBUG   |150209 20:38:27|Done dumping #__finder_links
+DEBUG   |150209 20:38:27|----- Finished operation 53 ------
+INFO    |150209 20:38:27|Skipping dumping data of #__finder_links_terms0
+DEBUG   |150209 20:38:27|Done dumping #__finder_links_terms0
+DEBUG   |150209 20:38:27|----- Finished operation 54 ------
+INFO    |150209 20:38:27|Skipping dumping data of #__finder_links_terms1
+DEBUG   |150209 20:38:27|Done dumping #__finder_links_terms1
+DEBUG   |150209 20:38:27|----- Finished operation 55 ------
+INFO    |150209 20:38:27|Skipping dumping data of #__finder_links_terms2
+DEBUG   |150209 20:38:27|Done dumping #__finder_links_terms2
+DEBUG   |150209 20:38:27|----- Finished operation 56 ------
+INFO    |150209 20:38:27|Skipping dumping data of #__finder_links_terms3
+DEBUG   |150209 20:38:27|Done dumping #__finder_links_terms3
+DEBUG   |150209 20:38:27|----- Finished operation 57 ------
+INFO    |150209 20:38:27|Skipping dumping data of #__finder_links_terms4
+DEBUG   |150209 20:38:27|Done dumping #__finder_links_terms4
+DEBUG   |150209 20:38:27|----- Finished operation 58 ------
+INFO    |150209 20:38:27|Skipping dumping data of #__finder_links_terms5
+DEBUG   |150209 20:38:27|Done dumping #__finder_links_terms5
+DEBUG   |150209 20:38:27|----- Finished operation 59 ------
+INFO    |150209 20:38:27|Skipping dumping data of #__finder_links_terms6
+DEBUG   |150209 20:38:27|Done dumping #__finder_links_terms6
+DEBUG   |150209 20:38:27|----- Finished operation 60 ------
+INFO    |150209 20:38:27|Skipping dumping data of #__finder_links_terms7
+DEBUG   |150209 20:38:27|Done dumping #__finder_links_terms7
+DEBUG   |150209 20:38:27|----- Finished operation 61 ------
+INFO    |150209 20:38:27|Skipping dumping data of #__finder_links_terms8
+DEBUG   |150209 20:38:27|Done dumping #__finder_links_terms8
+DEBUG   |150209 20:38:27|----- Finished operation 62 ------
+INFO    |150209 20:38:27|Skipping dumping data of #__finder_links_terms9
+DEBUG   |150209 20:38:27|Done dumping #__finder_links_terms9
+DEBUG   |150209 20:38:27|----- Finished operation 63 ------
+INFO    |150209 20:38:27|Skipping dumping data of #__finder_links_termsa
+DEBUG   |150209 20:38:27|Done dumping #__finder_links_termsa
+DEBUG   |150209 20:38:27|----- Finished operation 64 ------
+INFO    |150209 20:38:27|Skipping dumping data of #__finder_links_termsb
+DEBUG   |150209 20:38:27|Done dumping #__finder_links_termsb
+DEBUG   |150209 20:38:27|----- Finished operation 65 ------
+INFO    |150209 20:38:27|Skipping dumping data of #__finder_links_termsc
+DEBUG   |150209 20:38:27|Done dumping #__finder_links_termsc
+DEBUG   |150209 20:38:27|----- Finished operation 66 ------
+INFO    |150209 20:38:27|Skipping dumping data of #__finder_links_termsd
+DEBUG   |150209 20:38:27|Done dumping #__finder_links_termsd
+DEBUG   |150209 20:38:27|----- Finished operation 67 ------
+INFO    |150209 20:38:27|Skipping dumping data of #__finder_links_termse
+DEBUG   |150209 20:38:27|Done dumping #__finder_links_termse
+DEBUG   |150209 20:38:27|----- Finished operation 68 ------
+INFO    |150209 20:38:27|Skipping dumping data of #__finder_links_termsf
+DEBUG   |150209 20:38:27|Done dumping #__finder_links_termsf
+DEBUG   |150209 20:38:27|----- Finished operation 69 ------
+INFO    |150209 20:38:27|Skipping dumping data of #__finder_taxonomy
+DEBUG   |150209 20:38:27|Done dumping #__finder_taxonomy
+DEBUG   |150209 20:38:27|----- Finished operation 70 ------
+INFO    |150209 20:38:27|Skipping dumping data of #__finder_taxonomy_map
+DEBUG   |150209 20:38:27|Done dumping #__finder_taxonomy_map
+DEBUG   |150209 20:38:27|----- Finished operation 71 ------
+INFO    |150209 20:38:27|Skipping dumping data of #__finder_terms
+DEBUG   |150209 20:38:27|Done dumping #__finder_terms
+DEBUG   |150209 20:38:27|----- Finished operation 72 ------
+DEBUG   |150209 20:38:27|Rows on #__finder_terms_common : 115
+DEBUG   |150209 20:38:27|Writing data dump preamble for #__finder_terms_common
+INFO    |150209 20:38:27|Beginning dump of #__finder_terms_common
+DEBUG   |150209 20:38:27|Done dumping #__finder_terms_common
+DEBUG   |150209 20:38:27|Writing data dump epilogue for #__finder_terms_common
+DEBUG   |150209 20:38:27|----- Finished operation 73 ------
+INFO    |150209 20:38:27|Skipping dumping data of #__finder_tokens
+DEBUG   |150209 20:38:27|Done dumping #__finder_tokens
+DEBUG   |150209 20:38:27|----- Finished operation 74 ------
+INFO    |150209 20:38:27|Skipping dumping data of #__finder_tokens_aggregate
+DEBUG   |150209 20:38:27|Done dumping #__finder_tokens_aggregate
+DEBUG   |150209 20:38:27|----- Finished operation 75 ------
+DEBUG   |150209 20:38:27|Rows on #__finder_types : 5
+DEBUG   |150209 20:38:27|Writing data dump preamble for #__finder_types
+INFO    |150209 20:38:27|Beginning dump of #__finder_types
+DEBUG   |150209 20:38:27|Done dumping #__finder_types
+DEBUG   |150209 20:38:27|Writing data dump epilogue for #__finder_types
+DEBUG   |150209 20:38:27|----- Finished operation 76 ------
+DEBUG   |150209 20:38:27|Rows on #__konsa_exp_artists : 1
+DEBUG   |150209 20:38:27|Writing data dump preamble for #__konsa_exp_artists
+INFO    |150209 20:38:27|Beginning dump of #__konsa_exp_artists
+DEBUG   |150209 20:38:27|Done dumping #__konsa_exp_artists
+DEBUG   |150209 20:38:27|Writing data dump epilogue for #__konsa_exp_artists
+DEBUG   |150209 20:38:27|----- Finished operation 77 ------
+DEBUG   |150209 20:38:27|Rows on #__konsa_exp_artists_to_sessions : 5
+DEBUG   |150209 20:38:27|Writing data dump preamble for #__konsa_exp_artists_to_sessions
+INFO    |150209 20:38:27|Beginning dump of #__konsa_exp_artists_to_sessions
+DEBUG   |150209 20:38:27|Done dumping #__konsa_exp_artists_to_sessions
+DEBUG   |150209 20:38:27|Writing data dump epilogue for #__konsa_exp_artists_to_sessions
+DEBUG   |150209 20:38:27|----- Finished operation 78 ------
+DEBUG   |150209 20:38:27|Rows on #__konsa_exp_collectors : 20
+DEBUG   |150209 20:38:27|Writing data dump preamble for #__konsa_exp_collectors
+INFO    |150209 20:38:27|Beginning dump of #__konsa_exp_collectors
+DEBUG   |150209 20:38:27|Done dumping #__konsa_exp_collectors
+DEBUG   |150209 20:38:27|Writing data dump epilogue for #__konsa_exp_collectors
+DEBUG   |150209 20:38:27|----- Finished operation 79 ------
+DEBUG   |150209 20:38:27|Rows on #__konsa_exp_documents : 6
+DEBUG   |150209 20:38:27|Writing data dump preamble for #__konsa_exp_documents
+INFO    |150209 20:38:27|Beginning dump of #__konsa_exp_documents
+DEBUG   |150209 20:38:27|Done dumping #__konsa_exp_documents
+DEBUG   |150209 20:38:27|Writing data dump epilogue for #__konsa_exp_documents
+DEBUG   |150209 20:38:27|----- Finished operation 80 ------
+DEBUG   |150209 20:38:27|Rows on #__konsa_exp_expeditions : 63
+DEBUG   |150209 20:38:27|Writing data dump preamble for #__konsa_exp_expeditions
+INFO    |150209 20:38:27|Beginning dump of #__konsa_exp_expeditions
+DEBUG   |150209 20:38:27|Done dumping #__konsa_exp_expeditions
+DEBUG   |150209 20:38:27|Writing data dump epilogue for #__konsa_exp_expeditions
+DEBUG   |150209 20:38:27|----- Finished operation 81 ------
+DEBUG   |150209 20:38:27|Rows on #__konsa_exp_phonograms : 3532
+DEBUG   |150209 20:38:27|Writing data dump preamble for #__konsa_exp_phonograms
+INFO    |150209 20:38:27|Beginning dump of #__konsa_exp_phonograms
+DEBUG   |150209 20:38:27|Writing 236280 bytes to the dump file
+DEBUG   |150209 20:38:28|Writing 261885 bytes to the dump file
+DEBUG   |150209 20:38:28|----- Finished operation 82 ------
+INFO    |150209 20:38:28|Continuing dump of #__konsa_exp_phonograms from record #1000 using auto_increment column id and value 1015
+DEBUG   |150209 20:38:28|Writing 147295 bytes to the dump file
+DEBUG   |150209 20:38:28|Writing 261793 bytes to the dump file
+DEBUG   |150209 20:38:28|----- Finished operation 83 ------
+INFO    |150209 20:38:28|Continuing dump of #__konsa_exp_phonograms from record #2000 using auto_increment column id and value 2015
+DEBUG   |150209 20:38:28|Writing 198519 bytes to the dump file
+DEBUG   |150209 20:38:29|Writing 261837 bytes to the dump file
+DEBUG   |150209 20:38:29|----- Finished operation 84 ------
+INFO    |150209 20:38:29|Continuing dump of #__konsa_exp_phonograms from record #3000 using auto_increment column id and value 3015
+DEBUG   |150209 20:38:29|Writing 168780 bytes to the dump file
+DEBUG   |150209 20:38:29|Writing 261421 bytes to the dump file
+DEBUG   |150209 20:38:29|Done dumping #__konsa_exp_phonograms
+DEBUG   |150209 20:38:29|Writing data dump epilogue for #__konsa_exp_phonograms
+DEBUG   |150209 20:38:29|----- Finished operation 85 ------
+DEBUG   |150209 20:38:29|Rows on #__konsa_exp_artists_to_phonograms : 0
+DEBUG   |150209 20:38:29|Writing data dump preamble for #__konsa_exp_artists_to_phonograms
+DEBUG   |150209 20:38:29|Done dumping #__konsa_exp_artists_to_phonograms
+DEBUG   |150209 20:38:29|Writing data dump epilogue for #__konsa_exp_artists_to_phonograms
+DEBUG   |150209 20:38:29|----- Finished operation 86 ------
+DEBUG   |150209 20:38:29|Rows on #__konsa_exp_photos : 1
+DEBUG   |150209 20:38:29|Writing data dump preamble for #__konsa_exp_photos
+INFO    |150209 20:38:29|Beginning dump of #__konsa_exp_photos
+DEBUG   |150209 20:38:29|Done dumping #__konsa_exp_photos
+DEBUG   |150209 20:38:29|Writing data dump epilogue for #__konsa_exp_photos
+DEBUG   |150209 20:38:29|----- Finished operation 87 ------
+DEBUG   |150209 20:38:29|Rows on #__konsa_exp_regions : 35
+DEBUG   |150209 20:38:29|Writing data dump preamble for #__konsa_exp_regions
+INFO    |150209 20:38:29|Beginning dump of #__konsa_exp_regions
+DEBUG   |150209 20:38:29|Done dumping #__konsa_exp_regions
+DEBUG   |150209 20:38:29|Writing data dump epilogue for #__konsa_exp_regions
+DEBUG   |150209 20:38:29|----- Finished operation 88 ------
+DEBUG   |150209 20:38:29|Rows on #__konsa_exp_sessions : 2
+DEBUG   |150209 20:38:29|Writing data dump preamble for #__konsa_exp_sessions
+INFO    |150209 20:38:29|Beginning dump of #__konsa_exp_sessions
+DEBUG   |150209 20:38:29|Done dumping #__konsa_exp_sessions
+DEBUG   |150209 20:38:29|Writing data dump epilogue for #__konsa_exp_sessions
+DEBUG   |150209 20:38:29|----- Finished operation 89 ------
+DEBUG   |150209 20:38:29|Rows on #__konsa_exp_towns : 271
+DEBUG   |150209 20:38:29|Writing data dump preamble for #__konsa_exp_towns
+INFO    |150209 20:38:29|Beginning dump of #__konsa_exp_towns
+DEBUG   |150209 20:38:29|Done dumping #__konsa_exp_towns
+DEBUG   |150209 20:38:29|Writing data dump epilogue for #__konsa_exp_towns
+DEBUG   |150209 20:38:29|----- Finished operation 90 ------
+DEBUG   |150209 20:38:29|Rows on #__konsa_exp_tracks : 272
+DEBUG   |150209 20:38:29|Writing data dump preamble for #__konsa_exp_tracks
+INFO    |150209 20:38:30|Beginning dump of #__konsa_exp_tracks
+DEBUG   |150209 20:38:30|Writing 136010 bytes to the dump file
+DEBUG   |150209 20:38:30|Done dumping #__konsa_exp_tracks
+DEBUG   |150209 20:38:30|Writing data dump epilogue for #__konsa_exp_tracks
+DEBUG   |150209 20:38:30|----- Finished operation 91 ------
+DEBUG   |150209 20:38:30|Rows on #__kunena_aliases : 26
+DEBUG   |150209 20:38:30|Writing data dump preamble for #__kunena_aliases
+INFO    |150209 20:38:30|Beginning dump of #__kunena_aliases
+DEBUG   |150209 20:38:30|Done dumping #__kunena_aliases
+DEBUG   |150209 20:38:30|Writing data dump epilogue for #__kunena_aliases
+DEBUG   |150209 20:38:30|----- Finished operation 92 ------
+DEBUG   |150209 20:38:30|Rows on #__kunena_announcement : 0
+DEBUG   |150209 20:38:30|Writing data dump preamble for #__kunena_announcement
+DEBUG   |150209 20:38:30|Done dumping #__kunena_announcement
+DEBUG   |150209 20:38:30|Writing data dump epilogue for #__kunena_announcement
+DEBUG   |150209 20:38:30|----- Finished operation 93 ------
+DEBUG   |150209 20:38:30|Rows on #__kunena_attachments : 0
+DEBUG   |150209 20:38:30|Writing data dump preamble for #__kunena_attachments
+DEBUG   |150209 20:38:30|Done dumping #__kunena_attachments
+DEBUG   |150209 20:38:30|Writing data dump epilogue for #__kunena_attachments
+DEBUG   |150209 20:38:30|----- Finished operation 94 ------
+DEBUG   |150209 20:38:30|Rows on #__kunena_categories : 4
+DEBUG   |150209 20:38:30|Writing data dump preamble for #__kunena_categories
+INFO    |150209 20:38:30|Beginning dump of #__kunena_categories
+DEBUG   |150209 20:38:30|Done dumping #__kunena_categories
+DEBUG   |150209 20:38:30|Writing data dump epilogue for #__kunena_categories
+DEBUG   |150209 20:38:30|----- Finished operation 95 ------
+DEBUG   |150209 20:38:30|Rows on #__kunena_configuration : 1
+DEBUG   |150209 20:38:30|Writing data dump preamble for #__kunena_configuration
+INFO    |150209 20:38:30|Beginning dump of #__kunena_configuration
+DEBUG   |150209 20:38:30|Done dumping #__kunena_configuration
+DEBUG   |150209 20:38:30|Writing data dump epilogue for #__kunena_configuration
+DEBUG   |150209 20:38:30|----- Finished operation 96 ------
+DEBUG   |150209 20:38:30|Rows on #__kunena_keywords : 0
+DEBUG   |150209 20:38:30|Writing data dump preamble for #__kunena_keywords
+DEBUG   |150209 20:38:30|Done dumping #__kunena_keywords
+DEBUG   |150209 20:38:30|Writing data dump epilogue for #__kunena_keywords
+DEBUG   |150209 20:38:30|----- Finished operation 97 ------
+DEBUG   |150209 20:38:30|Rows on #__kunena_keywords_map : 0
+DEBUG   |150209 20:38:30|Writing data dump preamble for #__kunena_keywords_map
+DEBUG   |150209 20:38:30|Done dumping #__kunena_keywords_map
+DEBUG   |150209 20:38:30|Writing data dump epilogue for #__kunena_keywords_map
+DEBUG   |150209 20:38:30|----- Finished operation 98 ------
+DEBUG   |150209 20:38:30|Rows on #__kunena_messages : 9
+DEBUG   |150209 20:38:30|Writing data dump preamble for #__kunena_messages
+INFO    |150209 20:38:30|Beginning dump of #__kunena_messages
+DEBUG   |150209 20:38:30|Done dumping #__kunena_messages
+DEBUG   |150209 20:38:30|Writing data dump epilogue for #__kunena_messages
+DEBUG   |150209 20:38:30|----- Finished operation 99 ------
+DEBUG   |150209 20:38:30|Rows on #__kunena_messages_text : 9
+DEBUG   |150209 20:38:30|Writing data dump preamble for #__kunena_messages_text
+INFO    |150209 20:38:30|Beginning dump of #__kunena_messages_text
+DEBUG   |150209 20:38:30|Done dumping #__kunena_messages_text
+DEBUG   |150209 20:38:30|Writing data dump epilogue for #__kunena_messages_text
+DEBUG   |150209 20:38:30|----- Finished operation 100 ------
+DEBUG   |150209 20:38:30|Rows on #__kunena_polls : 0
+DEBUG   |150209 20:38:30|Writing data dump preamble for #__kunena_polls
+DEBUG   |150209 20:38:30|Done dumping #__kunena_polls
+DEBUG   |150209 20:38:30|Writing data dump epilogue for #__kunena_polls
+DEBUG   |150209 20:38:30|----- Finished operation 101 ------
+DEBUG   |150209 20:38:30|Rows on #__kunena_polls_options : 0
+DEBUG   |150209 20:38:30|Writing data dump preamble for #__kunena_polls_options
+DEBUG   |150209 20:38:30|Done dumping #__kunena_polls_options
+DEBUG   |150209 20:38:30|Writing data dump epilogue for #__kunena_polls_options
+DEBUG   |150209 20:38:30|----- Finished operation 102 ------
+DEBUG   |150209 20:38:30|Rows on #__kunena_polls_users : 0
+DEBUG   |150209 20:38:30|Writing data dump preamble for #__kunena_polls_users
+DEBUG   |150209 20:38:30|Done dumping #__kunena_polls_users
+DEBUG   |150209 20:38:30|Writing data dump epilogue for #__kunena_polls_users
+DEBUG   |150209 20:38:30|----- Finished operation 103 ------
+DEBUG   |150209 20:38:30|Rows on #__kunena_ranks : 10
+DEBUG   |150209 20:38:30|Writing data dump preamble for #__kunena_ranks
+INFO    |150209 20:38:31|Beginning dump of #__kunena_ranks
+DEBUG   |150209 20:38:31|Done dumping #__kunena_ranks
+DEBUG   |150209 20:38:31|Writing data dump epilogue for #__kunena_ranks
+DEBUG   |150209 20:38:31|----- Finished operation 104 ------
+DEBUG   |150209 20:38:31|Rows on #__kunena_sessions : 3
+DEBUG   |150209 20:38:31|Writing data dump preamble for #__kunena_sessions
+INFO    |150209 20:38:31|Beginning dump of #__kunena_sessions
+DEBUG   |150209 20:38:31|Done dumping #__kunena_sessions
+DEBUG   |150209 20:38:31|Writing data dump epilogue for #__kunena_sessions
+DEBUG   |150209 20:38:31|----- Finished operation 105 ------
+DEBUG   |150209 20:38:31|Rows on #__kunena_smileys : 66
+DEBUG   |150209 20:38:31|Writing data dump preamble for #__kunena_smileys
+INFO    |150209 20:38:31|Beginning dump of #__kunena_smileys
+DEBUG   |150209 20:38:31|Done dumping #__kunena_smileys
+DEBUG   |150209 20:38:31|Writing data dump epilogue for #__kunena_smileys
+DEBUG   |150209 20:38:31|----- Finished operation 106 ------
+DEBUG   |150209 20:38:31|Rows on #__kunena_thankyou : 0
+DEBUG   |150209 20:38:31|Writing data dump preamble for #__kunena_thankyou
+DEBUG   |150209 20:38:31|Done dumping #__kunena_thankyou
+DEBUG   |150209 20:38:31|Writing data dump epilogue for #__kunena_thankyou
+DEBUG   |150209 20:38:31|----- Finished operation 107 ------
+DEBUG   |150209 20:38:31|Rows on #__kunena_topics : 7
+DEBUG   |150209 20:38:31|Writing data dump preamble for #__kunena_topics
+INFO    |150209 20:38:31|Beginning dump of #__kunena_topics
+DEBUG   |150209 20:38:31|Done dumping #__kunena_topics
+DEBUG   |150209 20:38:31|Writing data dump epilogue for #__kunena_topics
+DEBUG   |150209 20:38:31|----- Finished operation 108 ------
+DEBUG   |150209 20:38:31|Rows on #__kunena_user_categories : 2
+DEBUG   |150209 20:38:31|Writing data dump preamble for #__kunena_user_categories
+INFO    |150209 20:38:31|Beginning dump of #__kunena_user_categories
+DEBUG   |150209 20:38:31|Done dumping #__kunena_user_categories
+DEBUG   |150209 20:38:31|Writing data dump epilogue for #__kunena_user_categories
+DEBUG   |150209 20:38:31|----- Finished operation 109 ------
+DEBUG   |150209 20:38:31|Rows on #__kunena_user_read : 10
+DEBUG   |150209 20:38:31|Writing data dump preamble for #__kunena_user_read
+INFO    |150209 20:38:31|Beginning dump of #__kunena_user_read
+DEBUG   |150209 20:38:31|Done dumping #__kunena_user_read
+DEBUG   |150209 20:38:31|Writing data dump epilogue for #__kunena_user_read
+DEBUG   |150209 20:38:31|----- Finished operation 110 ------
+DEBUG   |150209 20:38:31|Rows on #__kunena_user_topics : 9
+DEBUG   |150209 20:38:31|Writing data dump preamble for #__kunena_user_topics
+INFO    |150209 20:38:31|Beginning dump of #__kunena_user_topics
+DEBUG   |150209 20:38:31|Done dumping #__kunena_user_topics
+DEBUG   |150209 20:38:31|Writing data dump epilogue for #__kunena_user_topics
+DEBUG   |150209 20:38:31|----- Finished operation 111 ------
+DEBUG   |150209 20:38:31|Rows on #__kunena_users : 4
+DEBUG   |150209 20:38:31|Writing data dump preamble for #__kunena_users
+INFO    |150209 20:38:31|Beginning dump of #__kunena_users
+DEBUG   |150209 20:38:31|Done dumping #__kunena_users
+DEBUG   |150209 20:38:31|Writing data dump epilogue for #__kunena_users
+DEBUG   |150209 20:38:31|----- Finished operation 112 ------
+DEBUG   |150209 20:38:31|Rows on #__kunena_users_banned : 0
+DEBUG   |150209 20:38:31|Writing data dump preamble for #__kunena_users_banned
+DEBUG   |150209 20:38:31|Done dumping #__kunena_users_banned
+DEBUG   |150209 20:38:31|Writing data dump epilogue for #__kunena_users_banned
+DEBUG   |150209 20:38:31|----- Finished operation 113 ------
+DEBUG   |150209 20:38:31|Rows on #__kunena_version : 6
+DEBUG   |150209 20:38:31|Writing data dump preamble for #__kunena_version
+INFO    |150209 20:38:31|Beginning dump of #__kunena_version
+DEBUG   |150209 20:38:31|Done dumping #__kunena_version
+DEBUG   |150209 20:38:31|Writing data dump epilogue for #__kunena_version
+DEBUG   |150209 20:38:31|----- Finished operation 114 ------
+DEBUG   |150209 20:38:31|Rows on #__languages : 2
+DEBUG   |150209 20:38:31|Writing data dump preamble for #__languages
+INFO    |150209 20:38:31|Beginning dump of #__languages
+DEBUG   |150209 20:38:31|Done dumping #__languages
+DEBUG   |150209 20:38:31|Writing data dump epilogue for #__languages
+DEBUG   |150209 20:38:31|----- Finished operation 115 ------
+DEBUG   |150209 20:38:31|Rows on #__menu : 76
+DEBUG   |150209 20:38:31|Writing data dump preamble for #__menu
+INFO    |150209 20:38:31|Beginning dump of #__menu
+DEBUG   |150209 20:38:31|Done dumping #__menu
+DEBUG   |150209 20:38:31|Writing data dump epilogue for #__menu
+DEBUG   |150209 20:38:31|----- Finished operation 116 ------
+DEBUG   |150209 20:38:32|Rows on #__menu_types : 2
+DEBUG   |150209 20:38:32|Writing data dump preamble for #__menu_types
+INFO    |150209 20:38:32|Beginning dump of #__menu_types
+DEBUG   |150209 20:38:32|Done dumping #__menu_types
+DEBUG   |150209 20:38:32|Writing data dump epilogue for #__menu_types
+DEBUG   |150209 20:38:32|----- Finished operation 117 ------
+DEBUG   |150209 20:38:32|Rows on #__messages : 0
+DEBUG   |150209 20:38:32|Writing data dump preamble for #__messages
+DEBUG   |150209 20:38:32|Done dumping #__messages
+DEBUG   |150209 20:38:32|Writing data dump epilogue for #__messages
+DEBUG   |150209 20:38:32|----- Finished operation 118 ------
+DEBUG   |150209 20:38:32|Rows on #__messages_cfg : 0
+DEBUG   |150209 20:38:32|Writing data dump preamble for #__messages_cfg
+DEBUG   |150209 20:38:32|Done dumping #__messages_cfg
+DEBUG   |150209 20:38:32|Writing data dump epilogue for #__messages_cfg
+DEBUG   |150209 20:38:32|----- Finished operation 119 ------
+DEBUG   |150209 20:38:32|Rows on #__modules : 16
+DEBUG   |150209 20:38:32|Writing data dump preamble for #__modules
+INFO    |150209 20:38:32|Beginning dump of #__modules
+DEBUG   |150209 20:38:32|Done dumping #__modules
+DEBUG   |150209 20:38:32|Writing data dump epilogue for #__modules
+DEBUG   |150209 20:38:32|----- Finished operation 120 ------
+DEBUG   |150209 20:38:32|Rows on #__modules_menu : 18
+DEBUG   |150209 20:38:32|Writing data dump preamble for #__modules_menu
+INFO    |150209 20:38:32|Beginning dump of #__modules_menu
+DEBUG   |150209 20:38:32|Done dumping #__modules_menu
+DEBUG   |150209 20:38:32|Writing data dump epilogue for #__modules_menu
+DEBUG   |150209 20:38:32|----- Finished operation 121 ------
+DEBUG   |150209 20:38:32|Rows on #__newsfeeds : 0
+DEBUG   |150209 20:38:32|Writing data dump preamble for #__newsfeeds
+DEBUG   |150209 20:38:32|Done dumping #__newsfeeds
+DEBUG   |150209 20:38:32|Writing data dump epilogue for #__newsfeeds
+DEBUG   |150209 20:38:32|----- Finished operation 122 ------
+DEBUG   |150209 20:38:32|Rows on #__overrider : 0
+DEBUG   |150209 20:38:32|Writing data dump preamble for #__overrider
+DEBUG   |150209 20:38:32|Done dumping #__overrider
+DEBUG   |150209 20:38:32|Writing data dump epilogue for #__overrider
+DEBUG   |150209 20:38:32|----- Finished operation 123 ------
+DEBUG   |150209 20:38:32|Rows on #__redirect_links : 0
+DEBUG   |150209 20:38:32|Writing data dump preamble for #__redirect_links
+DEBUG   |150209 20:38:32|Done dumping #__redirect_links
+DEBUG   |150209 20:38:32|Writing data dump epilogue for #__redirect_links
+DEBUG   |150209 20:38:32|----- Finished operation 124 ------
+DEBUG   |150209 20:38:32|Rows on #__schemas : 3
+DEBUG   |150209 20:38:32|Writing data dump preamble for #__schemas
+INFO    |150209 20:38:32|Beginning dump of #__schemas
+DEBUG   |150209 20:38:32|Done dumping #__schemas
+DEBUG   |150209 20:38:32|Writing data dump epilogue for #__schemas
+DEBUG   |150209 20:38:32|----- Finished operation 125 ------
+INFO    |150209 20:38:32|Skipping dumping data of #__session
+DEBUG   |150209 20:38:32|Done dumping #__session
+DEBUG   |150209 20:38:32|----- Finished operation 126 ------
+DEBUG   |150209 20:38:32|Rows on #__template_styles : 6
+DEBUG   |150209 20:38:32|Writing data dump preamble for #__template_styles
+INFO    |150209 20:38:32|Beginning dump of #__template_styles
+DEBUG   |150209 20:38:32|Done dumping #__template_styles
+DEBUG   |150209 20:38:32|Writing data dump epilogue for #__template_styles
+DEBUG   |150209 20:38:32|----- Finished operation 127 ------
+DEBUG   |150209 20:38:32|Rows on #__update_categories : 0
+DEBUG   |150209 20:38:32|Writing data dump preamble for #__update_categories
+DEBUG   |150209 20:38:32|Done dumping #__update_categories
+DEBUG   |150209 20:38:32|Writing data dump epilogue for #__update_categories
+DEBUG   |150209 20:38:32|----- Finished operation 128 ------
+DEBUG   |150209 20:38:32|Rows on #__update_sites : 9
+DEBUG   |150209 20:38:32|Writing data dump preamble for #__update_sites
+INFO    |150209 20:38:32|Beginning dump of #__update_sites
+DEBUG   |150209 20:38:32|Done dumping #__update_sites
+DEBUG   |150209 20:38:32|Writing data dump epilogue for #__update_sites
+DEBUG   |150209 20:38:32|----- Finished operation 129 ------
+DEBUG   |150209 20:38:32|Rows on #__update_sites_extensions : 10
+DEBUG   |150209 20:38:32|Writing data dump preamble for #__update_sites_extensions
+INFO    |150209 20:38:32|Beginning dump of #__update_sites_extensions
+DEBUG   |150209 20:38:32|Breaking dump of #__update_sites_extensions after 1 rows; will continue on next step
+DEBUG   |150209 20:38:32|----- Finished operation 130 ------
+DEBUG   |150209 20:38:32|Successful Smart algorithm on Akeeba\Engine\Core\Domain\Db
+DEBUG   |150209 20:38:32|Kettenrad :: More work required in domain 'PackDB'
+DEBUG   |150209 20:38:32|====== Finished Step number 4 ======
+DEBUG   |150209 20:38:32|*** Engine steps batching: Break flag detected.
+DEBUG   |150209 20:38:32|*** Batching of engine steps finished. I will now return control to the caller.
+DEBUG   |150209 20:38:32|No need to sleep; execution time: 10546.900987625 msec; min. exec. time: 2000 msec
+DEBUG   |150209 20:38:32|Saving Kettenrad instance backend
+DEBUG   |150209 20:38:35|Kettenrad :: Attempting to load from database (backend) [backend.id43]
+DEBUG   |150209 20:38:35| -- Loaded stored Akeeba Factory (backend) [backend.id43]
+DEBUG   |150209 20:38:36|====== Starting Step number 5 ======
+INFO    |150209 20:38:36|Continuing dump of #__update_sites_extensions from record #1
+DEBUG   |150209 20:38:36|Done dumping #__update_sites_extensions
+DEBUG   |150209 20:38:36|Writing data dump epilogue for #__update_sites_extensions
+DEBUG   |150209 20:38:36|----- Finished operation 1 ------
+DEBUG   |150209 20:38:36|Rows on #__updates : 70
+DEBUG   |150209 20:38:36|Writing data dump preamble for #__updates
+INFO    |150209 20:38:36|Beginning dump of #__updates
+DEBUG   |150209 20:38:36|Done dumping #__updates
+DEBUG   |150209 20:38:36|Writing data dump epilogue for #__updates
+DEBUG   |150209 20:38:36|----- Finished operation 2 ------
+DEBUG   |150209 20:38:36|Rows on #__user_notes : 0
+DEBUG   |150209 20:38:36|Writing data dump preamble for #__user_notes
+DEBUG   |150209 20:38:36|Done dumping #__user_notes
+DEBUG   |150209 20:38:36|Writing data dump epilogue for #__user_notes
+DEBUG   |150209 20:38:36|----- Finished operation 3 ------
+DEBUG   |150209 20:38:36|Rows on #__user_profiles : 0
+DEBUG   |150209 20:38:36|Writing data dump preamble for #__user_profiles
+DEBUG   |150209 20:38:36|Done dumping #__user_profiles
+DEBUG   |150209 20:38:36|Writing data dump epilogue for #__user_profiles
+DEBUG   |150209 20:38:36|----- Finished operation 4 ------
+DEBUG   |150209 20:38:36|Rows on #__user_usergroup_map : 22
+DEBUG   |150209 20:38:36|Writing data dump preamble for #__user_usergroup_map
+INFO    |150209 20:38:36|Beginning dump of #__user_usergroup_map
+DEBUG   |150209 20:38:36|Done dumping #__user_usergroup_map
+DEBUG   |150209 20:38:36|Writing data dump epilogue for #__user_usergroup_map
+DEBUG   |150209 20:38:36|----- Finished operation 5 ------
+DEBUG   |150209 20:38:36|Rows on #__usergroups : 8
+DEBUG   |150209 20:38:36|Writing data dump preamble for #__usergroups
+INFO    |150209 20:38:36|Beginning dump of #__usergroups
+DEBUG   |150209 20:38:36|Done dumping #__usergroups
+DEBUG   |150209 20:38:36|Writing data dump epilogue for #__usergroups
+DEBUG   |150209 20:38:36|----- Finished operation 6 ------
+DEBUG   |150209 20:38:36|Rows on #__users : 3
+DEBUG   |150209 20:38:36|Writing data dump preamble for #__users
+INFO    |150209 20:38:36|Beginning dump of #__users
+DEBUG   |150209 20:38:36|Writing 131209 bytes to the dump file
+DEBUG   |150209 20:38:36|Done dumping #__users
+DEBUG   |150209 20:38:36|Writing data dump epilogue for #__users
+DEBUG   |150209 20:38:36|----- Finished operation 7 ------
+DEBUG   |150209 20:38:36|Rows on #__viewlevels : 3
+DEBUG   |150209 20:38:36|Writing data dump preamble for #__viewlevels
+INFO    |150209 20:38:36|Beginning dump of #__viewlevels
+DEBUG   |150209 20:38:36|Done dumping #__viewlevels
+DEBUG   |150209 20:38:36|Writing data dump epilogue for #__viewlevels
+DEBUG   |150209 20:38:36|----- Finished operation 8 ------
+DEBUG   |150209 20:38:36|Rows on #__weblinks : 0
+DEBUG   |150209 20:38:36|Writing data dump preamble for #__weblinks
+DEBUG   |150209 20:38:36|Done dumping #__weblinks
+DEBUG   |150209 20:38:36|Writing data dump epilogue for #__weblinks
+DEBUG   |150209 20:38:36|----- Finished operation 9 ------
+DEBUG   |150209 20:38:36|Rows on #__wf_profiles : 4
+DEBUG   |150209 20:38:36|Writing data dump preamble for #__wf_profiles
+INFO    |150209 20:38:36|Beginning dump of #__wf_profiles
+DEBUG   |150209 20:38:36|Done dumping #__wf_profiles
+DEBUG   |150209 20:38:36|Writing data dump epilogue for #__wf_profiles
+INFO    |150209 20:38:36|End of database detected; flushing the dump buffers...
+DEBUG   |150209 20:38:36|Writing 6105 bytes to the dump file
+INFO    |150209 20:38:36|Database has been successfully dumped to SQL file(s)
+DEBUG   |150209 20:38:36|----- Finished operation 10 ------
+DEBUG   |150209 20:38:36|Adding any extra SQL statements imposed by the filters
+DEBUG   |150209 20:38:36|Closing SQL dump file.
+DEBUG   |150209 20:38:36|Moving the SQL dump to its final location
+DEBUG   |150209 20:38:36|Removing temporary file of final SQL dump
+DEBUG   |150209 20:38:36|-- Removing temporary file af9e29b7.sql
+DEBUG   |150209 20:38:36|-- Windows hack: chowning af9e29b7.sql
+DEBUG   |150209 20:38:36|Akeeba\Engine\Core\Domain\Db :: No more databases left to iterate
+DEBUG   |150209 20:38:36|----- Finished operation 11 ------
+DEBUG   |150209 20:38:36|Akeeba\Engine\Core\Domain\Db :: Skipping databases.ini
+DEBUG   |150209 20:38:36|----- Finished operation 12 ------
+DEBUG   |150209 20:38:36|Successful Smart algorithm on Akeeba\Engine\Core\Domain\Db
+DEBUG   |150209 20:38:36|Kettenrad :: Domain 'PackDB' has finished.
+DEBUG   |150209 20:38:36|====== Finished Step number 5 ======
+DEBUG   |150209 20:38:36|*** Engine steps batching: Break flag detected.
+DEBUG   |150209 20:38:36|*** Batching of engine steps finished. I will now return control to the caller.
+DEBUG   |150209 20:38:36|Sleeping for 881.97493553162 msec, using usleep()
+DEBUG   |150209 20:38:37|Saving Kettenrad instance backend
+DEBUG   |150209 20:38:39|Kettenrad :: Attempting to load from database (backend) [backend.id43]
+DEBUG   |150209 20:38:39| -- Loaded stored Akeeba Factory (backend) [backend.id43]
+DEBUG   |150209 20:38:39|====== Starting Step number 6 ======
+DEBUG   |150209 20:38:39|Kettenrad :: BREAKING STEP BEFORE SWITCHING DOMAIN
+DEBUG   |150209 20:38:40|Finalization action queue: remove_temp_files, update_statistics, update_filesizes, run_post_processing, kickstart_post_processing, apply_quotas, apply_remote_quotas, mail_administrators, update_statistics
+DEBUG   |150209 20:38:40|----- Finished operation 1 ------
+DEBUG   |150209 20:38:40|Successful Smart algorithm on Akeeba\Engine\Core\Domain\Finalization
+DEBUG   |150209 20:38:40|Kettenrad :: More work required in domain 'finale'
+DEBUG   |150209 20:38:40|====== Finished Step number 6 ======
+DEBUG   |150209 20:38:40|*** Engine steps batching: Break flag detected.
+DEBUG   |150209 20:38:40|*** Batching of engine steps finished. I will now return control to the caller.
+DEBUG   |150209 20:38:40|Sleeping for 1576.9929885864 msec, using usleep()
+DEBUG   |150209 20:38:41|Saving Kettenrad instance backend
+DEBUG   |150209 20:38:43|Kettenrad :: Attempting to load from database (backend) [backend.id43]
+DEBUG   |150209 20:38:43| -- Loaded stored Akeeba Factory (backend) [backend.id43]
+DEBUG   |150209 20:38:43|====== Starting Step number 7 ======
+DEBUG   |150209 20:38:43|Akeeba\Engine\Core\Domain\Finalization::_run() Running built-in method remove_temp_files
+DEBUG   |150209 20:38:43|Removing temporary files
+DEBUG   |150209 20:38:43|Akeeba\Engine\Core\Domain\Finalization::_run() Running built-in method update_statistics
+DEBUG   |150209 20:38:43|Updating statistics
+DEBUG   |150209 20:38:44|Removing any old records with site-folk-20150209-193814-SQL.sql filename
+DEBUG   |150209 20:38:44|1 records found
+DEBUG   |150209 20:38:44|Akeeba\Engine\Core\Domain\Finalization::_run() Running built-in method update_filesizes
+DEBUG   |150209 20:38:44|Updating statistics with file sizes
+DEBUG   |150209 20:38:44|Total size of backup archive (in bytes): 2254029
+DEBUG   |150209 20:38:44|Akeeba\Engine\Core\Domain\Finalization::_run() Running built-in method run_post_processing
+DEBUG   |150209 20:38:44|Loading post-processing engine object (none)
+INFO    |150209 20:38:44|Initializing post-processing engine
+DEBUG   |150209 20:38:44|1 files to process found
+INFO    |150209 20:38:44|Beginning post processing file W:/home/folk\site-folk-20150209-193814-SQL.sql
+INFO    |150209 20:38:44|Finished post-processing file W:/home/folk\site-folk-20150209-193814-SQL.sql
+DEBUG   |150209 20:38:44|Not removing processed file W:/home/folk\site-folk-20150209-193814-SQL.sql
+INFO    |150209 20:38:44|Post-processing has finished for all files
+DEBUG   |150209 20:38:44|Akeeba\Engine\Core\Domain\Finalization::_run() Running built-in method kickstart_post_processing
+INFO    |150209 20:38:44|Getting ready to upload Kickstart
+DEBUG   |150209 20:38:44|Akeeba\Engine\Core\Domain\Finalization::_run() Running built-in method apply_quotas
+DEBUG   |150209 20:38:44|Processing count quotas
+DEBUG   |150209 20:38:44|Applying quotas
+DEBUG   |150209 20:38:44|Removing obsolete log files
+DEBUG   |150209 20:38:44|Akeeba\Engine\Core\Domain\Finalization::_run() Running built-in method apply_remote_quotas
+DEBUG   |150209 20:38:44|Akeeba\Engine\Core\Domain\Finalization::_run() Running built-in method mail_administrators
+DEBUG   |150209 20:38:44|Akeeba\Engine\Core\Domain\Finalization::_run() Running built-in method update_statistics
+DEBUG   |150209 20:38:44|Updating statistics
+DEBUG   |150209 20:38:44|Removing any old records with site-folk-20150209-193814-SQL.sql filename
+DEBUG   |150209 20:38:44|1 records found
+DEBUG   |150209 20:38:44|----- Finished operation 1 ------
+DEBUG   |150209 20:38:44|----- Finished operation 2 ------
+DEBUG   |150209 20:38:44|Successful Smart algorithm on Akeeba\Engine\Core\Domain\Finalization
+DEBUG   |150209 20:38:44|Kettenrad :: Domain 'finale' has finished.
+DEBUG   |150209 20:38:44|====== Finished Step number 7 ======
+DEBUG   |150209 20:38:44|*** Engine steps batching: Break flag detected.
+DEBUG   |150209 20:38:44|*** Batching of engine steps finished. I will now return control to the caller.
+DEBUG   |150209 20:38:44|Sleeping for 1148.4279632568 msec, using usleep()
+DEBUG   |150209 20:38:45|Saving Kettenrad instance backend
+DEBUG   |150209 20:38:47|Kettenrad :: Attempting to load from database (backend) [backend.id43]
+DEBUG   |150209 20:38:47| -- Loaded stored Akeeba Factory (backend) [backend.id43]
+DEBUG   |150209 20:38:48|====== Starting Step number 8 ======
+DEBUG   |150209 20:38:48|Kettenrad :: BREAKING STEP BEFORE SWITCHING DOMAIN
+DEBUG   |150209 20:38:48|Kettenrad :: No more domains to process
+DEBUG   |150209 20:38:48|====== Finished Step number 8 ======
+DEBUG   |150209 20:38:48|*** Engine steps batching: Break flag detected.
+DEBUG   |150209 20:38:48|*** Batching of engine steps finished. I will now return control to the caller.
+DEBUG   |150209 20:38:48|Sleeping for 1674.7491359711 msec, using usleep()
+DEBUG   |150209 20:38:49|Saving Kettenrad instance backend
+DEBUG   |150209 20:38:51|Kettenrad :: Attempting to load from database (backend) [backend.id43]
+DEBUG   |150209 20:38:51| -- Loaded stored Akeeba Factory (backend) [backend.id43]
+DEBUG   |150209 20:38:52|Kettenrad :: Just finished
+DEBUG   |150209 20:38:52|*** Batching of engine steps finished. I will now return control to the caller.
+DEBUG   |150209 20:38:52|Sleeping for 1657.6578617096 msec, using usleep()
+DEBUG   |150209 20:38:53|Will not save a finished Kettenrad instance
+DEBUG   |150209 20:38:53|Closing SQL dump file.

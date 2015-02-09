@@ -34,21 +34,23 @@ function new_artist_session(){
 	
 	var newRow = tbl.insertRow();
 	var newCell = newRow.insertCell(0);
-	
 	newCell = newRow.insertCell(1);
 	
-	newCell.innerHTML = '<select name="0_session_' + new_sessions+'" id="0_session_' + new_sessions+'" ">'+document.getElementById("select1").value+'</select> <input type="hidden" name="0_sessiontheme_' + new_sessions+'" id="0_sessiontheme_' + new_sessions+'" value="" />';
 	newCell = newRow.insertCell(2);
+	
+	newCell.innerHTML = '<select name="0_session_' + new_sessions+'" id="0_session_' + new_sessions+'" ">'+document.getElementById("select1").value+'</select> <input type="hidden" name="0_sessiontheme_' + new_sessions+'" id="0_sessiontheme_' + new_sessions+'" value="" />';
+	newCell = newRow.insertCell(3);
 
 }
 
 
-function delete_selected_sessions(){
-	Alert('DELETE');
-	document.adminForm.controller.value = "artist";
-	document.adminForm.task.value = "cancel";
-	//Alert(document.adminForm.controller.value+" : "+document.adminForm.task.value);
-	document.adminForm.submit();
+function delete_selected_sessions(id) {
+	if(confirm("Уверены?")){
+		document.adminForm.controller.value = "artist";
+		document.adminForm.task.value = "remove_session";
+		document.adminForm.sessionid.value = id;
+		document.adminForm.submit();
+	}
 }
 
 var new_phonograms = 0;

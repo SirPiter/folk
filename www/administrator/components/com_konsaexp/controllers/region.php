@@ -72,7 +72,7 @@ class RegionsControllerRegion extends RegionsController
 
 	function cancel()
 	{
-		$msg = JText::_( 'Operation Cancelled' );
+		$msg = JText::_( 'COM_KONSAEXP_OPERATION_CANCELED' );
 		$this->setRedirect( 'index.php?option=com_konsaexp&controller=regions', $msg );
 	}
 }

@@ -19,7 +19,7 @@ class ArtistsViewArtist extends JView
 	{
 		//cridem el CSS
 		$document	= & JFactory::getDocument();
-		$document->addStyleSheet('components/com_konsaexp/assets/albums.css');
+//		$document->addStyleSheet('components/com_konsaexp/assets/albums.css');
 		$user		= JFactory::getUser();
 		
 		$artist	 =& $this->get('Data');

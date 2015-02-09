@@ -37,9 +37,9 @@ class PhonogramsControllerPhonogram extends PhonogramsController{
 		$model = $this->getModel('phonogram');
 
 		if ($expedition_id = $model->store($post)) {
-			$msg = JText::_( 'Phonogram Saved!' );
+			$msg = JText::_( 'COM_KONSAEXP_PHONOGRAM_SAVED' );
 		} else {
-			$msg = JText::_( 'Error Saving Phonogram' );
+			$msg = JText::_( 'COM_KONSAEXP_PHONOGRAM_NOT_SAVED' );
 		}
 		
 		$task = JRequest::getCmd( 'task' );
@@ -72,9 +72,9 @@ class PhonogramsControllerPhonogram extends PhonogramsController{
 		$model = $this->getModel('phonogram');
 		
 		if(!$model->delete()) {
-			$msg = JText::_( 'Error: One or More Tracks Could not be Deleted' );
+			$msg = JText::_( 'COM_KONSAEXP_PHONOGRAM_NOT_DELETED' );
 		} else {
-			$msg = JText::_( 'Phonogram(s) Deleted' );
+			$msg = JText::_( 'COM_KONSAEXP_PHONOGRAM_DELETED' );
 		}
 
 		$this->setRedirect( 'index.php?option=com_konsaexp&controller=expedition&task=edit&tab=2&cid[]=' . $expedition_id, $msg );
@@ -85,7 +85,7 @@ class PhonogramsControllerPhonogram extends PhonogramsController{
 		$expedition_id = JRequest::getVar('expedition_id'); // expedition_id
 		$parent_controller = JRequest::getVar('parent_controller'); // parent_controller
 		
-		$msg = JText::_( 'Operation Cancelled' );
+		$msg = JText::_( 'COM_KONSAEXP_OPERATION_CANCELED' );
 
 	//	print_r($parent_controller); die;
 		if ($parent_controller=="phonograms" OR $expedition_id=="") {
