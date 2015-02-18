@@ -1,7 +1,7 @@
 <?php defined('_JEXEC') or die;
 $phpFileChecker = array(
-	'version' => '3.4.3',
-	'date' => '2015-01-11',
+	'version' => '3.4.4',
+	'date' => '2015-02-16',
 	'directories' => array(
 		'administrator/components/com_admintools',
 		'administrator/components/com_admintools/assets',
@@ -56,10 +56,10 @@ $phpFileChecker = array(
 		'plugins/system/admintools/util',
 	),
 	'files' => array(
-		'administrator/components/com_admintools/CHANGELOG.php' => array('45437', '0f921ccb4746690687d509494cba75dc', 'a5c85179e590895c33f088bd6863364c8ef1e086'),
 		'administrator/components/com_admintools/access.xml' => array('705', '09aa0351a316bf011ecc8c1145134761', 'b95f00c7b49a07a60570dc674f2497c45c4e7152'),
 		'administrator/components/com_admintools/admintools.php' => array('4370', '1bedba9947c346790291687c7db98335', 'aba964adfc00ad8594d1e9ddb5e2e5300311d118'),
 		'administrator/components/com_admintools/assets/stats/usagestats.php' => array('2268', '939d7b9ad7a2a95941b44481c3670336', 'fc6bc224277fb1942eb718fba5af6d472ff0a743'),
+		'administrator/components/com_admintools/CHANGELOG.php' => array('45728', 'bf504710128862a184adf53808934eca', 'f1b4af3b114f3aef09133e88aab834f7a92f9d94'),
 		'administrator/components/com_admintools/config.xml' => array('3673', 'f9aba85ab78497aacd6504ad64c2d4fc', '3dcf0081eca5fe48e11f9ef337f3c5033a4cc7ff'),
 		'administrator/components/com_admintools/controllers/adminpw.php' => array('2340', '1f36d9149de09dbef1d2443e3cc49e9b', '901f0076f60bf0b798c1ae60056108c86e43d70a'),
 		'administrator/components/com_admintools/controllers/adminuser.php' => array('1358', '9b0673de9d6d3a11d63ad7dd7ded4083', '09b38bdbc310cb7946eeb64b7960be8c853a6624'),
@@ -119,7 +119,7 @@ $phpFileChecker = array(
 		'administrator/components/com_admintools/tables/customperm.php' => array('440', 'dfbfc4c9d385aefece765c4cf2190e03', 'cb1823de25c3887c34a4566a67ffb66d89c3a099'),
 		'administrator/components/com_admintools/tables/ipautobanhistory.php' => array('996', 'eddb383e96997071ca1183692ef3b98f', '627f46daf56322a3de4738c303f23770faf8df6a'),
 		'administrator/components/com_admintools/toolbar.php' => array('13111', 'dec436efdd8a072d86ab73ba1f08156d', 'f4bc92211842257b0e10143dc47172bfbf0aaa27'),
-		'administrator/components/com_admintools/version.php' => array('178', '0f5f11025683f29c813975a9b91aae8d', 'caa4e65f02355a82ca1d0cade3f57d4e0937b17e'),
+		'administrator/components/com_admintools/version.php' => array('178', '5e4a0427f7c655a29a52df895709468d', '837c604416d91becf3d60057611c1b6ee716dd40'),
 		'administrator/components/com_admintools/views/adminpw/tmpl/default.php' => array('3209', '04b1636c969385664cf1f17843e39027', 'b3514948a4c3c48962f1c2f8d476daeb9308fa77'),
 		'administrator/components/com_admintools/views/adminpw/view.html.php' => array('637', '365f74502e3b666a7dbcd2f27958b3b2', '6144d51aefb72ab66a2f5963d75f9e80b9e829db'),
 		'administrator/components/com_admintools/views/adminuser/tmpl/default.php' => array('3417', '88ff808e6d9ae6488197491de4ededd1', '745e5b2114a59b0aa31bc1e5beb0ddbaaadd1d92'),
@@ -221,7 +221,7 @@ $phpFileChecker = array(
 		'media/com_admintools/js/scan.js' => array('4372', '0c2383cb2e4ee502710da562d5675f87', 'c4e9b1a2d191ba396c7749fe34dc50dc9a88f278'),
 		'plugins/system/admintools/admintools/main.php' => array('13364', '5c3107964040b218668400283c4e8e45', '1127e5fc62c20cd226ed7e76ea71f7b851aaf126'),
 		'plugins/system/admintools/admintools.php' => array('2529', '374e97b79addb9bc10ab2177d3fef9e7', '79202a6489e439dcfeb84d4062ce76ae113d07de'),
-		'plugins/system/admintools/admintools.xml' => array('832', 'ea85460ba7d168e2ba883ef0f4233605', '1854dcb89a6fe2448fd335ed647d6b5aecee2408'),
+		'plugins/system/admintools/admintools.xml' => array('832', '2c9974b2cd4073e102c838fe6be33983', '4521476d2dc66a9fa48a197d83634140d0970b4e'),
 		'plugins/system/admintools/autoloader.php' => array('2307', 'd331ea1877be636b97f21a98efedab29', '8164cd4f157ecfcb047f380585c2c2a09957fd59'),
 		'plugins/system/admintools/feature/3pdexception.php' => array('1053', '2900125037d71a6eaed48585fd3c5aaa', 'efb4a560d77316f3c47a08c6b86b22347d54c4b4'),
 		'plugins/system/admintools/feature/abstract.php' => array('8054', '02f910f380cd4cbd1f5a477e6af9e95a', '717b5a9b3e81e01bacf78ee2ea54b72ed484f7e0'),

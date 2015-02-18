@@ -18,7 +18,7 @@ $show_expmenu 	= $params->get('show_expmenu', 1);
 $expMenu="";
 $user = JFactory::getUser();
 $lang = JFactory::getLanguage();
-if ($show_vmmenu) {
+if ($show_expmenu) {
 	$hideMainmenu=false;
 }
 
@@ -51,22 +51,22 @@ if ($vmComponentItems) {
 SirPiter */
 
 
-$vmMenu='<ul id="menu"  style="float: left;">';
-$vmMenu.='<li class="node exp"><a href="?option=com_konsaexp">'."Архив фонограмм".'</a>';
-	$vmMenu.='<ul>';
-	$vmMenu.='<li><a class="submenu" href="?option=com_konsaexp&controller=expeditions">'."Экспедиции".'</a></li>';
-	$vmMenu.='<li><a class="submenu" href="?option=com_konsaexp&controller=collectors">'."Собиратели".'</a></li>';
-	$vmMenu.='<li><a class="submenu" href="?option=com_konsaexp&controller=sessions">'."Сессии записи".'</a></li>';
-	$vmMenu.='<li><a class="submenu" href="?option=com_konsaexp&controller=phonograms">'."Фонограммы".'</a></li>';
-	$vmMenu.='<li><a class="submenu" href="?option=com_konsaexp&controller=artists">'."Исполнители".'</a></li>';
-	$vmMenu.='<li><a class="submenu" href="?option=com_konsaexp&controller=documents">'."Документы".'</a></li>';
-	$vmMenu.='<li><a class="submenu" href="?option=com_konsaexp&controller=photos">'."Фотографии".'</a></li>';
-	$vmMenu.='<li><a class="submenu" href="?option=com_konsaexp&controller=expeditions">'."Нотные расшифровки".'</a></li>';
-	$vmMenu.='<li><a class="submenu" href="?option=com_konsaexp&controller=towns">'."Населенные пункты".'</a></li>';
-	$vmMenu.='<li><a class="submenu" href="?option=com_konsaexp&controller=regions">'."Регионы".'</a></li>';
-	$vmMenu.='<li class="separator"><span></span></li>';
-	$vmMenu.='<li><a class="submenu" href="?option=com_konsaexp">'."Параметры архва".'</a></li>';
-	$vmMenu.='</ul>';
-$vmMenu.='</li></ul>';
+$expMenu='<ul id="menu"  style="float: left;">';
+$expMenu.='<li class="node exp"><a href="?option=com_konsaexp">'."Архив фонограмм".'</a>';
+	$expMenu.='<ul>';
+	$expMenu.='<li><a class="submenu" href="?option=com_konsaexp&controller=expeditions">'."Экспедиции".'</a></li>';
+	$expMenu.='<li><a class="submenu" href="?option=com_konsaexp&controller=collectors">'."Собиратели".'</a></li>';
+	$expMenu.='<li><a class="submenu" href="?option=com_konsaexp&controller=sessions">'."Сессии записи".'</a></li>';
+	$expMenu.='<li><a class="submenu" href="?option=com_konsaexp&controller=phonograms">'."Фонограммы".'</a></li>';
+	$expMenu.='<li><a class="submenu" href="?option=com_konsaexp&controller=artists">'."Исполнители".'</a></li>';
+	$expMenu.='<li><a class="submenu" href="?option=com_konsaexp&controller=documents">'."Документы".'</a></li>';
+	$expMenu.='<li><a class="submenu" href="?option=com_konsaexp&controller=photos">'."Фотографии".'</a></li>';
+	$expMenu.='<li><a class="submenu" href="?option=com_konsaexp&controller=expeditions">'."Нотные расшифровки".'</a></li>';
+	$expMenu.='<li><a class="submenu" href="?option=com_konsaexp&controller=towns">'."Населенные пункты".'</a></li>';
+	$expMenu.='<li><a class="submenu" href="?option=com_konsaexp&controller=regions">'."Регионы".'</a></li>';
+	$expMenu.='<li class="separator"><span></span></li>';
+	$expMenu.='<li><a class="submenu" href="?option=com_konsaexp">'."Параметры архва".'</a></li>';
+	$expMenu.='</ul>';
+$expMenu.='</li></ul>';
 
-echo $vmMenu;
+echo $expMenu;

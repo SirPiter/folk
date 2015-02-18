@@ -81,7 +81,7 @@ function getTotal()
 		return $this->_keywords;
 	}
 	function getCollectorId(){
-		if (empty($this->_collectort_id)) {
+		if (empty($this->_collector_id)) {
 			$this->_collector_id = $this->getState('collector_id')	;
 		}
 		return $this->_collector_id;

@@ -27,7 +27,7 @@ class PhotosViewPhoto extends JView
 		$expedition	=& $this->get('Expedition');
 		$collectors	=& $this->get('CollectorsData');
 		//print_r($doc); 
-		//print_r($collectors); 
+		print_r($expedition); 
 		//die;
 
 		$isNew		= ($doc->id < 1);

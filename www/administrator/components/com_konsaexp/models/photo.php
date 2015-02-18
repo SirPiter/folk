@@ -27,7 +27,7 @@ class PhotosModelPhoto extends JModel
 
 	function setId($id, $exp_id)
 	{
-		$this->_id		= $id;
+		$this->_id	= $id;
 		$this->_exp_id	= $exp_id;
 		$this->_data	= null;
 	}
@@ -54,12 +54,12 @@ class PhotosModelPhoto extends JModel
 	function getPhotosData()
 		{
 			// Lets load the data if it doesn't already exist
-			if (empty( $this->_documents_data )){
+			if (empty( $this->_photos_data )){
 				$query = ' SELECT id,document_name FROM #__konsa_exp_photos '.
 						' WHERE id != '.$this->_id.
 						 ' ORDER BY letter,class_name';
 				$this->_db->setQuery( $query );
-				$this->_documents_data = $this->_db->loadObjectList();
+				$this->_photos_data = $this->_db->loadObjectList();
 			}
 
 		return $this->_photos_data;

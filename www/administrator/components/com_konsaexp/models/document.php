@@ -27,7 +27,7 @@ class DocumentsModelDocument extends JModel
 
 	function setId($id, $exp_id)
 	{
-		$this->_id		= $id;
+		$this->_id	= $id;
 		$this->_exp_id	= $exp_id;
 		$this->_data	= null;
 	}

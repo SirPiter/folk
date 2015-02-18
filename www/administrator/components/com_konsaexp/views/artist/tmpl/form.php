@@ -107,7 +107,7 @@ JHTML::_('behavior.calendar');
 </div>
 	
 <div class="width-40 fltrt">
-	<?php echo JHtml::_('sliders.start','content-sliders-'.$this->item->id, array('useCookie'=>1)); ?>
+	<?php echo JHtml::_('sliders.start','content-sliders-'.$this->artist->id, array('useCookie'=>1)); ?>
 
 			<?php echo $this->loadTemplate('sessions'); ?>
 			<?php //echo $this->loadTemplate('phonogramms'); ?>

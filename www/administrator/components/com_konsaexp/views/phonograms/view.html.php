@@ -33,11 +33,11 @@ class PhonogramsViewPhonograms extends JView
 		$pagination =& $this->get('Pagination');
 		$keywords = & $this->get('keywords');
 
-		$this->assignRef('items',		$items);
-		$this->assignRef('towns',		$towns);
+		$this->assignRef('items',	$items);
+		$this->assignRef('towns',	$towns);
 		$this->assignRef('expeditions',	$expeditions);
-		$this->assignRef('pagination', $pagination);
-		$this->assignRef('keywords', $keywords);
+		$this->assignRef('pagination', 	$pagination);
+		$this->assignRef('keywords', 	$keywords);
 		
 		$document->addScript('components/com_konsaexp/assets/audio-player/swfobject/swfobject.js');
 		$document->addScript('components/com_konsaexp/assets/audio-player/audio-player.js');

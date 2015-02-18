@@ -38,11 +38,11 @@ class SessionsModelSessions extends JModel
 		$keywords = $mainframe->getUserStateFromRequest('articleelement.sessions_keywords','keywords','','keywords');
 		$collector_id = $mainframe->getUserStateFromRequest('articleelement.chief_collector','chief_collector',0,'chief_collector');
 
-        $filter_order     = $mainframe->getUserStateFromRequest(  $this->option.'exp_filter_order', 'filter_order', 'year_begin', 'cmd' );
-        $filter_order_Dir = $mainframe->getUserStateFromRequest( $this->option.'exp_filter_order_Dir', 'filter_order_Dir', 'asc', 'word' );
+        $filter_order     = $mainframe->getUserStateFromRequest(  $this->option.'session_filter_order', 'filter_order', 'year_begin', 'cmd' );
+        $filter_order_Dir = $mainframe->getUserStateFromRequest( $this->option.'session_filter_order_Dir', 'filter_order_Dir', 'asc', 'word' );
  
-        $this->setState('exp_filter_order', $filter_order);
-        $this->setState('exp_filter_order_Dir', $filter_order_Dir);
+        $this->setState('session_filter_order', $filter_order);
+        $this->setState('session_filter_order_Dir', $filter_order_Dir);
 
 		$this->setState('limit', $limit);
 		$this->setState('sessions_limitstart', $limitstart);
@@ -228,8 +228,8 @@ function getTotal()
 		$option = JRequest::getCmd('option');
  
                 $orderby = '';
-                $filter_order     = $this->getState('exp_filter_order');
-                $filter_order_Dir = $this->getState('exp_filter_order_Dir');
+                $filter_order     = $this->getState('session_filter_order');
+                $filter_order_Dir = $this->getState('session_filter_order_Dir');
  
                 /* Error handling is never a bad thing*/
                 if(!empty($filter_order) && !empty($filter_order_Dir) ){

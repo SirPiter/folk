@@ -36,7 +36,7 @@ class PhotosModelPhotos extends JModel
 
 		$this->setState('limit', $limit);
 		$this->setState('photos_limitstart', $limitstart);
-		$this->setState('photo_id', $photo_id);
+//		$this->setState('photo_id', $photo_id);
 		$this->setState('photos_keywords', $keywords);
 		
 		$filter_order     = $mainframe->getUserStateFromRequest( $option.'photos_filter_order', 'filter_order', 'title', 'cmd' );
@@ -58,9 +58,9 @@ class PhotosModelPhotos extends JModel
 
 		if ($keywords != "")
 			$where_clause[] = $this->get_where_clause_keywords($keywords);
-		if ($doc_id > 0) {
-			$where_clause[] = ' doc = '.(int) $photo_id;
-		}
+//		if ($doc_id > 0) {
+//			$where_clause[] = ' doc = '.(int) $photo_id;
+//		}
 
 		// Build the where clause of the content record query
 		$where_clause = (count($where_clause) ? ' WHERE '.implode(' AND ', $where_clause) : '');

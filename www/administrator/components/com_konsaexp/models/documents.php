@@ -33,10 +33,11 @@ class DocumentsModelDocuments extends JModel
 
 		$keywords = $mainframe->getUserStateFromRequest('articleelement.documents_keywords','keywords','','keywords');
 		$region_id = $mainframe->getUserStateFromRequest('articleelement.doc','doc',0,'region');
+//		$doc_id = $mainframe->getUserStateFromRequest('articleelement.doc','doc',0,'doc_id');
 
 		$this->setState('limit', $limit);
 		$this->setState('documents_limitstart', $limitstart);
-		$this->setState('doc_id', $doc_id);
+//		$this->setState('doc_id', $doc_id);
 		$this->setState('documents_keywords', $keywords);
 		
 		$filter_order     = $mainframe->getUserStateFromRequest( $option.'documents_filter_order', 'filter_order', 'title', 'cmd' );
@@ -58,9 +59,9 @@ class DocumentsModelDocuments extends JModel
 
 		if ($keywords != "")
 			$where_clause[] = $this->get_where_clause_keywords($keywords);
-		if ($doc_id > 0) {
-			$where_clause[] = ' doc = '.(int) $doc_id;
-		}
+//		if ($doc_id > 0) {
+//			$where_clause[] = ' doc = '.(int) $doc_id;
+//		}
 
 		// Build the where clause of the content record query
 		$where_clause = (count($where_clause) ? ' WHERE '.implode(' AND ', $where_clause) : '');
@@ -105,6 +106,14 @@ function getTotal()
  	}
  	return $this->_total;
   }
+
+function getDocId(){
+	if (empty($this->_doc_id)) {
+		$this->_doc_id = $this->getState('doc_id')	;
+	}
+	return $this->_doc_id;
+}
+
 
  function getPagination()
   {

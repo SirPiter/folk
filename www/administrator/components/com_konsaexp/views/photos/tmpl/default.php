@@ -59,13 +59,13 @@
 				<?php echo $row->short_description; ?>
 			</td>
       <td align="center">
-				<?php echo $row->doc_date; ?>
+				<?php echo $row->date; ?>
 			</td>
       <td align="center">
 				<?php echo $row->add_date; ?>
 			</td>
       <td align="center">
-				<?php echo $row->doc_image; ?>
+				<?php echo $row->path; ?>
 			</td>
 
 		</tr>

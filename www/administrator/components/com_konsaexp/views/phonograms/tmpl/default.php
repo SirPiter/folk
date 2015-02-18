@@ -37,13 +37,7 @@
 				<?php echo JText::_( 'COM_KONSAEXP_ID' ); ?>
 			</th>
 			<th width="20">
-            	<?php 
-				$counter = 0;
-				for ($i=0, $n=count( $this->items ); $i < $n; $i++){ 
-							if($this->items[$i]->num_albums == 0) $counter++;
-				}
-				?>
-				<input type="checkbox" name="toggle" value="" onclick="checkAll(<?php echo $counter; ?>);" />
+				<input type="checkbox" name="toggle" value="" onclick="checkAll(<?php echo count( $this->items ); ?>);" />
 			</th>			
 			<th>
 				<?php echo JText::_( 'COM_KONSAEXP_PHONOGRAM_TITLE' ); ?>
@@ -66,14 +60,10 @@
 
 	<?php
 	$k = 0;
-	for ($i=0, $n=count( $this->items ),$check_i = 0; $i < $n; $i++)	{
+	for ($i=0, $n=count( $this->items ); $i < $n; $i++)	{
 		$row = &$this->items[$i];
 		
-		if($row->num_albums) $checked 	= "";
-		else {
-			$checked 	= JHTML::_('grid.id',   $check_i, $row->id );
-			$check_i++;
-		}
+		$checked 	= JHTML::_('grid.id',   $i, $row->id );
 		$link 		= JRoute::_( 'index.php?option=com_konsaexp&controller=phonogram&task=edit&parent_controller=phonograms&cid[]='. $row->id );
 		?>
 		<tr class="<?php echo "row$k"; ?>">
@@ -83,7 +73,7 @@
 			<td>
 				<?php echo $checked; ?>
 			</td>
-			<td <?php if($row->display_group) echo "style='padding-left:50px;'" ?>>
+			<td <?php // if($row->display_group) echo "style='padding-left:50px;'" ?>>
 				<a href="<?php echo $link; ?>"><?php echo $row->phonogram_title; ?></a>
 			</td>
              <td>

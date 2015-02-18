@@ -44,13 +44,13 @@ class JConfig {
 	public $MetaKeys = '';
 	public $MetaTitle = '1';
 	public $MetaAuthor = '1';
-	public $sef = '1';
+	public $sef = '0';
 	public $sef_rewrite = '0';
-	public $sef_suffix = '1';
+	public $sef_suffix = '0';
 	public $unicodeslugs = '0';
 	public $feed_limit = '10';
-	public $log_path = '/var/www/konsa/data/www/folklab.ru/log';
-	public $tmp_path = '/var/www/konsa/data/www/folklab.ru/tmp';
+	public $log_path = 'w:\\home\\folk\\www\\tmp\\log';
+	public $tmp_path = 'w:\\home\\folk\\www\\tmp';
 	public $lifetime = '15';
 	public $session_handler = 'database';
 	public $MetaRights = '';

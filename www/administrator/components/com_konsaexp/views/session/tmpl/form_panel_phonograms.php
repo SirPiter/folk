@@ -51,7 +51,7 @@ defined('_JEXEC') or die('Restricted access');
 		$checked 	= JHTML::_('grid.id',   $i, $phonogram->id );
 		$link_edit = JRoute::_( 'index.php?option=com_konsaexp&controller=phonogram&task=edit&cid[]=' . $phonogram->id );
 		$tick = JHTML::image("administrator/images/tick.png",JText::_('Yes'));
-		$tick_file = JHTML::image("administrator/images/tick.png",JText::_('Yes'),array("title" => $phonogram->filename));
+		$tick_file = JHTML::image("administrator/images/tick.png",JText::_('Yes'),array("title" => $phonogram->soundfile));
 		$cross = JHTML::image("administrator/images/publish_x.png",JText::_('No'));
 		$link_open = JRoute::_( "..".DS.$phonogram->soundfile );
 

@@ -1,4 +1,9 @@
 <?php die() ?>
+Admin Tools 3.4.4
+================================================================================
+# [MEDIUM] Two Factor Authentication was not working
+# [MEDIUM] Custom administrator directory: some servers misbehave when asked to access /administrator instead of /administrator/index.php
+
 Admin Tools 3.4.3
 ================================================================================
 ! Work around BROKEN Apache installations when you are using BOTH .htaccess files (.htaccess Maker OR Joomla! htaccess.txt contents) AND administrator password protection. If you were affected by this issue PLEASE ASK YOUR HOST TO FIX THEIR SERVERS per the release notes of this version!

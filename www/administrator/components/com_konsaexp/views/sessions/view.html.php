@@ -47,8 +47,8 @@ class SessionsViewSessions extends JView
 		$this->assignRef('towns',		$towns);
 				
 		 $state =& $this->get( 'state' );
-         $lists['exp_order_Dir'] = $state->get( 'exp_filter_order_Dir' );
-         $lists['exp_order']     = $state->get( 'exp_filter_order' );
+         $lists['session_order_Dir'] = $state->get( 'session_filter_order_Dir' );
+         $lists['session_order']     = $state->get( 'session_filter_order' );
 		
 
 		//cridem els JavaScript

@@ -25,10 +25,10 @@
 			</th>
 			<th width="20">
             	<?php 
-				$counter = 0;
-				for ($i=0, $n=count( $this->items ); $i < $n; $i++){ 
-							if($this->items[$i]->num_albums == 0) $counter++;
-				}
+//				$counter = 0;
+//				for ($i=0, $n=count( $this->items ); $i < $n; $i++){ 
+//							if($this->items[$i]->num_albums == 0) $counter++;
+//				}
 				?>
 				<input type="checkbox" name="toggle" value="" onclick="checkAll(<?php echo $counter; ?>);" />
 			</th>			
@@ -62,6 +62,7 @@
 //			}
 		$link 		= JRoute::_( 'index.php?option=com_konsaexp&controller=town&task=edit&cid[]='. $row->id );
 
+		
 		?>
 		<tr class="<?php echo "row$k"; ?>">
 			<td>
@@ -70,7 +71,7 @@
 			<td>
 				<?php echo $checked; ?>
 			</td>
-			<td <?php if($row->display_group) echo "style='padding-left:50px;'" ?>>
+			<td <?php // if($row->display_group) echo "style='padding-left:50px;'" ?>>
 				<a href="<?php echo $link; ?>"><?php echo $row->town_name; ?></a>
 			</td>
             <td>
@@ -79,7 +80,7 @@
              <td>
 				<?  //php echo $row->region; 
 			for ($j=0, $p=count( $this->regions );$j < $p; $j++)	{
-			if($row->region == $this->regions[$j][id]) echo $this->regions[$j][region_name];
+			if($row->region == $this->regions[$j]["id"]) echo $this->regions[$j]["region_name"];
 			}
 			
 		?>
