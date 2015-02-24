@@ -40,12 +40,12 @@ class SessionsModelSession extends JModel
 			$this->_db->setQuery( $query );
 			$this->_data = $this->_db->loadObject();
 
-			if($this->_data){
-				$time = $this->time_to_array($this->_data->length);
-				$this->_data->hours = $time["hours"];
-				$this->_data->minuts = $time["minuts"];
-				$this->_data->seconds = $time["seconds"];
-			}
+//			if($this->_data){
+//				$time = $this->time_to_array($this->_data->length);
+//				$this->_data->hours = $time["hours"];
+//				$this->_data->minuts = $time["minuts"];
+//				$this->_data->seconds = $time["seconds"];
+//			}
 		}
 		// print_r( $this->_data);  //die();
 		if (!$this->_data) {

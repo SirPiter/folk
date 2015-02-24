@@ -186,13 +186,13 @@ var select_town='<?php echo $select_town ?>';
 	<?php
 	
 	$k = 0;
-	for ($i=0, $n=count( $this->tracks ); $i < $n; $i++)	{
-		$track = &$this->tracks[$i];
-		$checked 	= JHTML::_('grid.id',   $i, $track->id );
+	for ($j=0, $tr=count( $this->tracks ); $j < $tr; $j++)	{
+		$track = &$this->tracks[$j];
+		$checked 	= JHTML::_('grid.id',   $j, $track->id );
 		$link_edit = JRoute::_( 'index.php?option=com_konsaexp&controller=track&task=edit&cid[]=' . $track->id );
-		$tick = JHTML::image("administrator/images/tick.png",JText::_('Yes'));
-		$tick_file = JHTML::image("administrator/images/tick.png",JText::_('Yes'),array("title" => $track->filename));
-		$cross = JHTML::image("administrator/images/publish_x.png",JText::_('No'));
+//		$tick = JHTML::image("administrator/images/tick.png",JText::_('Yes'));
+//		$tick_file = JHTML::image("administrator/images/tick.png",JText::_('Yes'),array("title" => $track->town_name));
+//		$cross = JHTML::image("administrator/images/publish_x.png",JText::_('No'));
 		?>
 		<tr class="<?php echo "row$k"; ?>">
 			<td>
@@ -205,15 +205,8 @@ var select_town='<?php echo $select_town ?>';
 				<?php echo $track->number;?>
 			</td>
             <td>
-                
-            <?php
-			for ($j=0, $p=count( $this->townswithregions );$j < $p; $j++)	{
-			$town = &$this->townswithregions[$j];
-			if($town->id == $track->town_id) { echo $town->town_name.', '.$town->region_name; break; }
-			} ?>
-              
-                
-	    </td>
+	            <?php echo $track->town_name.' ('.$track->region_name.')'; ?>
+		    </td>
             <td align="center">
 				<? echo $track->date; ?>
 			</td>
@@ -282,9 +275,9 @@ var select_town='<?php echo $select_town ?>';
 		$phonogram = &$this->phonograms[$i];
 		$checked 	= JHTML::_('grid.id',   $i, $phonogram->id );
 		$link_edit = JRoute::_( 'index.php?option=com_konsaexp&controller=phonogram&task=edit&cid[]=' . $phonogram->id );
-		$tick = JHTML::image("administrator/images/tick.png",JText::_('Yes'));
-		$tick_file = JHTML::image("administrator/images/tick.png",JText::_('Yes'),array("title" => $phonogram->filename));
-		$cross = JHTML::image("administrator/images/publish_x.png",JText::_('No'));
+//		$tick = JHTML::image("administrator/images/tick.png",JText::_('Yes'));
+//		$tick_file = JHTML::image("administrator/images/tick.png",JText::_('Yes'),array("title" => $phonogram->filename));
+//		$cross = JHTML::image("administrator/images/publish_x.png",JText::_('No'));
 		$link_open = JRoute::_( "..".DS.$phonogram->soundfile );
 
 		?>
@@ -361,7 +354,7 @@ var select_town='<?php echo $select_town ?>';
 &nbsp;&nbsp; -->
 <input class="button" type="button" onclick="javascript:delete_selected_docs();" value="<? echo JText::_('COM_KONSAEXP_DELETE_SELECTED_DOCUMENTS'); ?>"/>
 <br/><br/>
-<?php print_r($docs); ?>
+<?php //print_r($docs); ?>
 <table class="adminlist" id="docs_table">
 
 	<thead>
@@ -392,10 +385,10 @@ var select_town='<?php echo $select_town ?>';
 		$doc = &$this->docs[$i];
 		$checked 	= JHTML::_('grid.id',   $i, $doc->id );
 		$link_edit = JRoute::_( 'index.php?option=com_konsaexp&controller=document&task=edit&cid[]=' . $doc->id );
-		$tick = JHTML::image("administrator/images/tick.png",JText::_('Yes'));
-		$tick_file = JHTML::image("administrator/images/tick.png",JText::_('Yes'),array("title" => $doc->filename));
-		$cross = JHTML::image("administrator/images/publish_x.png",JText::_('No'));
-		$link_open = JRoute::_( "..".DS.$doc->soundfile );
+//		$tick = JHTML::image("administrator/images/tick.png",JText::_('Yes'));
+//		$tick_file = JHTML::image("administrator/images/tick.png",JText::_('Yes'),array("title" => $doc->filename));
+//		$cross = JHTML::image("administrator/images/publish_x.png",JText::_('No'));
+		$link_open = JRoute::_( "..".DS.$doc->doc_path );
 
 		?>
 		<tr class="<?php echo "row$k"; ?>">
@@ -464,4 +457,5 @@ Close
 <input type="hidden" name="id" value="<?php echo $this->expedition->id; ?>" />
 <input type="hidden" name="task" value="" />
 <input type="hidden" name="controller" value="expedition" />
+<input type="hidden" name="boxchecked" value="0" />
 </form>

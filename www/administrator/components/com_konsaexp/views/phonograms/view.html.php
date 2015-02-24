@@ -28,7 +28,7 @@ class PhonogramsViewPhonograms extends JView
 
 		// Get data from the model
 		$items		= & $this->get('Data');
-		$towns	= & $this->get('TownsData');
+		$towns		= & $this->get('TownsData');
 		$expeditions	= & $this->get('ExpeditionsData');
 		$pagination =& $this->get('Pagination');
 		$keywords = & $this->get('keywords');

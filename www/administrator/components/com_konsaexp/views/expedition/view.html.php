@@ -20,13 +20,13 @@ class ExpeditionsViewExpedition extends JView
 		$document	= & JFactory::getDocument();
 		$document->addStyleSheet('components/com_konsaexp/assets/albums.css');
 
-		$expedition		=& $this->get('Data');
-		$tracks		=& $this->get('Tracks');
-		$collectors		=& $this->get('CollectorsList');
-		$towns	=& $this->get('TownsList');
+		$expedition			=& $this->get('Data');
+		$tracks				=& $this->get('Tracks');
+		$collectors			=& $this->get('CollectorsList');
+		$towns				=& $this->get('TownsList');
 		$townswithregions	=& $this->get('ExtendedTownsList');
-		$phonograms		=& $this->get('Phonograms');
-		$docs		=& $this->get('Docs');		
+		$phonograms			=& $this->get('Phonograms');
+		$docs				=& $this->get('Docs');		
 		
 		$tab = JRequest::getVar('tab',  0, '');
 		$this->assignRef('tab',		$tab);

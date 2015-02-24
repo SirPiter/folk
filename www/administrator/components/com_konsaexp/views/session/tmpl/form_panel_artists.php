@@ -9,7 +9,7 @@ defined('_JEXEC') or die('Restricted access');
 ?>
 
 <div id="editcell">
- 		<table>
+<!--  		<table>
               <tr>
 					<td width="100%">
 						<?php echo JText::_( 'COM_KONSAEXP_FILTER' ); ?>:
@@ -19,12 +19,15 @@ defined('_JEXEC') or die('Restricted access');
 
                         <td nowrap="nowrap">
 						<?php
-						echo $this->lists['letter'];
+					//	echo $this->lists['letter'];
 						?>
 					</td>
                </tr>
            </table>
-
+-->
+<fieldset class="adminform"> <!-- Блок исполнителей -->
+    <legend><?php echo JText::_( 'COM_KONSAEXP_SESSION_ARTIST_LIST' ); ?></legend>
+					
 	<table class="adminlist">
 	<thead>
 		<tr>
@@ -35,16 +38,16 @@ defined('_JEXEC') or die('Restricted access');
 				<input type="checkbox" name="toggle" value="" onclick="checkAll(<?php echo count( $this->items ); ?>);" />
 			</th>
 			<th>
-				<?php // echo JText::_( 'Collector' ); ?>
-                <?php echo JHTML::_( 'grid.sort', 'COM_KONSAEXP_SESSION_ARTIST', 'artist_name', $this->lists['sessions_order_Dir'], $this->lists['sessions_order']); ?>
+				<?php echo JText::_( 'COM_KONSAEXP_SESSION_ARTIST' ); ?>
+                <?php //echo JHTML::_( 'grid.sort', 'COM_KONSAEXP_SESSION_ARTIST', 'artist_name', $this->lists['sessions_order_Dir'], $this->lists['sessions_order']); ?>
 
 			</th>
      		<th>
                 <?php echo JText::_( 'COM_KONSAEXP_BIRTH_DATE'); ?>
 			</th>
 			<th>
-				<?php // echo JText::_( 'Town' ); ?>
-                <?php echo JHTML::_( 'grid.sort', 'COM_KONSAEXP_SESSION_ATRIST_TOWN', 'town_name', $this->lists['sessions_order_Dir'], $this->lists['sessions_order']); ?>
+				<?php  echo JText::_( 'COM_KONSAEXP_SESSION_ARTIST_TOWN' ); ?>
+                <?php //echo JHTML::_( 'grid.sort', 'COM_KONSAEXP_SESSION_ARTIST_TOWN', 'town_name', $this->lists['sessions_order_Dir'], $this->lists['sessions_order']); ?>
                 
 			</th>
 
@@ -87,4 +90,6 @@ defined('_JEXEC') or die('Restricted access');
   	</tfoot>
 
 	</table>
+	
+	</fieldset>
 </div>

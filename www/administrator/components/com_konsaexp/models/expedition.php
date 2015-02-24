@@ -46,18 +46,18 @@ class ExpeditionsModelExpedition extends JModel
 			$this->_db->setQuery( $query );
 			$this->_data = $this->_db->loadObject();
 
-			if($this->_data){
+		//print_r( $this->_data);  //die();
+//			if($this->_data){
 				//$this->_data->genres = explode(",",$this->_data->genres);
 		//		$this->_data->tags = explode(",",$this->_data->tags);
 		//		$this->_data->types = explode(",",$this->_data->types);
 
-				$time = $this->time_to_array($this->_data->length);
-				$this->_data->hours = $time["hours"];
-				$this->_data->minuts = $time["minuts"];
-				$this->_data->seconds = $time["seconds"];
-			}
+			//	$time = $this->time_to_array($this->_data->length);
+			//	$this->_data->hours = $time["hours"];
+			//	$this->_data->minuts = $time["minuts"];
+			//	$this->_data->seconds = $time["seconds"];
+	//		}
 		}
-		// print_r( $this->_data);  //die();
 		if (!$this->_data) {
 			$this->_data = new stdClass();
 			$this->_data->id = 0;
@@ -205,13 +205,24 @@ function getCollectorsList()
 
 	function getTracks(){
 			if (empty( $this->tracks )){
-				$query = 	' SELECT * FROM #__konsa_exp_tracks '.
-							' WHERE expedition_id = ' . $this->_id .
-						 	' ORDER BY number, date ';
+//				$query = 	' SELECT *, #__konsa_exp_towns.town_name, #__konsa_exp_regions.region_name '.
+//							' FROM #__konsa_exp_tracks LEFT JOIN #__konsa_exp_towns '.
+//							' ON (#__konsa_exp_tracks.town_id = #__konsa_exp_towns.id) '.
+//							' WHERE expedition_id = ' . $this->_id .
+//						 	' ORDER BY number, date ';
+				$query = 	'SELECT TRACKS.*, TOWNS.town_name, TOWNS.region, REGIONS.region_name '.
+				'FROM #__konsa_exp_tracks as TRACKS LEFT JOIN #__konsa_exp_towns as TOWNS '.
+				'ON (TRACKS.town_id = TOWNS.id) '.
+				'LEFT JOIN arch25_konsa_exp_regions as REGIONS '.
+				'ON (REGIONS.id = TOWNS.region) '.
+				'WHERE expedition_id = ' . $this->_id .
+				' ORDER BY number, date';
+				
 				$this->_db->setQuery( $query );
 				$this->tracks = $this->_db->loadObjectList();
 			}
-			//print_r($this->tracks);die();
+			
+			//print_r($this->tracks); //die();
 		return $this->tracks;
 	}
 

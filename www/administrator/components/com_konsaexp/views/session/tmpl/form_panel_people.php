@@ -9,7 +9,10 @@ defined('_JEXEC') or die('Restricted access');
 ?>
 
 <div id="editcell">
- 		<table>
+<fieldset class="adminform"> <!-- Блок участников -->
+    <legend><?php echo JText::_( 'COM_KONSAEXP_SESSION_PEOPLE_LIST' ); ?></legend>
+<!-- 
+    <table>
               <tr>
 					<td width="100%">
 						<?php echo JText::_( 'COM_KONSAEXP_FILTER' ); ?>:
@@ -19,12 +22,12 @@ defined('_JEXEC') or die('Restricted access');
 
                         <td nowrap="nowrap">
 						<?php
-						echo $this->lists['letter'];
+					//	echo $this->lists['letter'];
 						?>
 					</td>
                </tr>
            </table>
-
+-->
 	<table class="adminlist">
 	<thead>
 		<tr>
@@ -35,19 +38,19 @@ defined('_JEXEC') or die('Restricted access');
 				<input type="checkbox" name="toggle" value="" onclick="checkAll(<?php echo count( $this->items ); ?>);" />
 			</th>
 			<th>
-				<?php // echo JText::_( 'Collector' ); ?>
-                <?php echo JHTML::_( 'grid.sort', 'COM_KONSAEXP_SESSION_PERSON', 'collector_name', $this->lists['collectors_order_Dir'], $this->lists['collectors_order']); ?>
+				<?php  echo JText::_( 'COM_KONSAEXP_SESSION_PERSON' ); ?>
+                <?php //echo JHTML::_( 'grid.sort', 'COM_KONSAEXP_SESSION_PERSON', 'collector_name', $this->lists['collectors_order_Dir'], $this->lists['collectors_order']); ?>
 
 			</th>
      <th>
-				<?php // echo JText::_( 'Town' ); ?>
-                <?php echo JHTML::_( 'grid.sort', 'COM_KONSAEXP_SESSION_PERSON_JOB', 'town_name', $this->lists['collectors_order_Dir'], $this->lists['collectors_order']); ?>
+				<?php  echo JText::_( 'COM_KONSAEXP_SESSION_PERSON_JOB' ); ?>
+                <?php //echo JHTML::_( 'grid.sort', 'COM_KONSAEXP_SESSION_PERSON_JOB', 'town_name', $this->lists['collectors_order_Dir'], $this->lists['collectors_order']); ?>
                 
 			</th>
 
 		</tr>
 	</thead>
-	<?php
+<!-- 	<?php 
 	$k = 0;
 	for ($i=0, $n=count( $this->items ); $i < $n; $i++)	{
 		$row = &$this->items[$i];
@@ -73,12 +76,20 @@ defined('_JEXEC') or die('Restricted access');
 		$k = 1 - $k;
 		
 	}
-	?>
-    <tfoot>
+	?> -->
+	
+	<tr>
+		<td colspan=4>
+		<?php  echo JText::_( 'COM_KONSAEXP_TABLE_IN_WORK' ); ?>
+		</td>
+	</tr>
+	
+	<tfoot>
     <tr>
       <td colspan="6"><?php // echo $this->pagination->getListFooter(); ?></td>
     </tr>
   	</tfoot>
 
 	</table>
+	</fieldset>
 </div>
