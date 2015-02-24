@@ -1,0 +1,28 @@
+
+/***************************************************************************************/
+/*
+/*		Author: AS Designing
+/*		Author URI: http://www.asdesigning.com
+/*		Theme URI: http://www.astemplates.com
+/*		
+/*		Note: Design for Large desktop
+/*
+/***************************************************************************************/
+
+@media (max-width: 1199px) 
+{
+	body
+	{
+		font-size: 11px;	
+	}
+	
+	#camera-slideshow	
+	{
+		min-height: inherit;
+	}
+	
+	#as-menu ul.as-menu > li > a 
+	{
+		min-width: 80px !important;
+	}	
+}

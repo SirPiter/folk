@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="1.6" method="upgrade" client="site">
+    <name><![CDATA[ats - ru-RU]]></name>
+    <author><![CDATA[AkeebaBackup.com]]></author>
+    <authorurl>http://www.akeebabackup.com</authorurl>
+	<copyright>Copyright (C)2014 AkeebaBackup.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <version>/Users/nikosdion/Projects/akeeba/ats/build/..</version>
+    <creationDate>22 Dec 2014</creationDate>
+    <description><![CDATA[Russian (Russia) translation file for Akeeba Ticket System]]></description>
+	<fileset>
+		<files folder="backend" target="administrator/language/ru-RU">
+			<filename>ru-RU.com_ats.ini</filename>
+			<filename>ru-RU.com_ats.sys.ini</filename>
+			<filename>ru-RU.plg_ats_alphauserpoints.ini</filename>
+			<filename>ru-RU.plg_ats_alphauserpoints.sys.ini</filename>
+			<filename>ru-RU.plg_ats_customfields.ini</filename>
+			<filename>ru-RU.plg_ats_customfields.sys.ini</filename>
+			<filename>ru-RU.plg_ats_gravatar.ini</filename>
+			<filename>ru-RU.plg_ats_gravatar.sys.ini</filename>
+			<filename>ru-RU.plg_ats_postemail.ini</filename>
+			<filename>ru-RU.plg_ats_postemail.sys.ini</filename>
+			<filename>ru-RU.plg_ats_sociallike.ini</filename>
+			<filename>ru-RU.plg_ats_sociallike.sys.ini</filename>
+			<filename>ru-RU.plg_content_atscredits.ini</filename>
+			<filename>ru-RU.plg_content_atscredits.sys.ini</filename>
+			<filename>ru-RU.plg_finder_ats.ini</filename>
+			<filename>ru-RU.plg_finder_ats.sys.ini</filename>
+			<filename>ru-RU.plg_installer_akeebaticketsystem.ini</filename>
+			<filename>ru-RU.plg_installer_akeebaticketsystem.sys.ini</filename>
+			<filename>ru-RU.plg_search_ats.ini</filename>
+			<filename>ru-RU.plg_search_ats.sys.ini</filename>
+			<filename>ru-RU.plg_system_atsreplybyemail.ini</filename>
+			<filename>ru-RU.plg_system_atsreplybyemail.sys.ini</filename>
+			<filename>ru-RU.plg_user_ats.ini</filename>
+			<filename>ru-RU.plg_user_ats.sys.ini</filename>
+		</files>
+		<files folder="frontend" target="language/ru-RU">
+			<filename>ru-RU.com_ats.ini</filename>
+			<filename>ru-RU.mod_atscredits.ini</filename>
+			<filename>ru-RU.mod_atscredits.sys.ini</filename>
+			<filename>ru-RU.mod_atstickets.ini</filename>
+			<filename>ru-RU.mod_atstickets.sys.ini</filename>
+		</files>
+	</fileset>
+</extension>

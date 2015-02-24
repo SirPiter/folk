@@ -1,0 +1,102 @@
+
+/**************************************************************************************/
+/*
+/*		Designed by 'AS Designing'
+/*		Web: http://www.asdesigning.com
+/*		Web: http://www.astemplates.com
+/*		License: GNU/GPL
+/*
+/**************************************************************************************/
+
+ul.sf-menu.sf-vertical li
+{
+    background: url("../images/bg.menu.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+    margin: 0;
+    overflow: visible;
+    padding: 0 0 0 52px;
+    z-index: 0;
+	line-height: 35px;
+	border-bottom: 1px dotted #6c6b6b;
+    color: #6c6b6b;
+}
+
+ul.sf-menu.sf-vertical li.current, 
+ul.sf-menu.sf-vertical li.active, 
+ul.sf-menu.sf-vertical li:hover 
+{
+	background-position: left bottom;	
+    border-bottom: 1px dotted #6aa2ca;
+    color: #6aa2ca;
+	list-style-image: none;
+}
+
+ul.sf-menu.sf-vertical li.current a, 
+ul.sf-menu.sf-vertical li.active a, 
+ul.sf-menu.sf-vertical li a:hover 
+{
+	color: #6aa2ca;	
+}
+
+ul.sf-menu.sf-vertical li a
+{
+	color: #6c6b6b;
+    text-shadow: 1px 1px #ffffff;
+    text-transform: uppercase;
+}
+
+ul.sf-menu.sf-vertical ul li
+{
+	background-color: #e2e2e2;
+	border-bottom: 1px dotted transparent;
+	padding: 0 0 0 25px;
+	background: url("../images/bg.sub.menu.png") repeat-y scroll left top rgba(0, 0, 0, 0);
+}
+
+ul.sf-menu.sf-vertical ul li.firstItem
+{
+	border-top: 1px dotted #6aa2ca;
+}
+
+ul.sf-menu.sf-vertical ul li.lastItem
+{
+	border-bottom: 1px dotted #6aa2ca !important;
+}
+
+ul.sf-menu.sf-vertical ul li.current, 
+ul.sf-menu.sf-vertical ul li.active, 
+ul.sf-menu.sf-vertical ul li:hover 
+{
+	border-bottom: 1px dotted transparent;
+}
+
+ul.sf-menu.sf-vertical li.current li:hover a, 
+ul.sf-menu.sf-vertical li.active li:hover a,
+ul.sf-menu.sf-vertical li li.current a, 
+ul.sf-menu.sf-vertical li li.active a
+{
+	color: #6c6b6b;
+}
+
+
+@media (max-width: 767px) 
+{
+	
+	ul.sf-menu.sf-vertical ul li
+	{
+		background: transparent;
+		padding: 0 0 0 25px;
+		border: none;
+	}
+	
+	ul.sf-menu.sf-vertical ul li.current, 
+	ul.sf-menu.sf-vertical ul li.active, 
+	ul.sf-menu.sf-vertical ul li:hover, 
+	ul.sf-menu.sf-vertical ul li.firstItem,
+	ul.sf-menu.sf-vertical ul li.lastItem
+	{
+		border: none !important;
+	}
+	
+}
