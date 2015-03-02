@@ -1,0 +1,125 @@
+@charset "utf-8";
+/* CSS Document */
+
+/** 
+ * @version		1.0.0
+ * @package		konsaexp
+ * @copyright	2010
+ */
+
+/********************************/
+
+.konsaexpfooter {
+	float:right;
+	margin-top:10px;
+	font-style:italic;
+	font-size:x-small;
+}
+
+/** Table styles **/
+
+table.adminlist {
+	width: 100%;
+	border-spacing: 1px;
+	background-color: #e7e7e7;
+	color: #666;
+}
+
+table.adminlist td,
+table.adminlist th { padding: 4px; }
+
+table.adminlist thead th {
+	text-align: center;
+	background: #f0f0f0;
+	color: #666;
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #fff;
+}
+
+table.adminlist thead a:hover { text-decoration: none; }
+
+table.adminlist thead th img { vertical-align: middle; margin-left:3px;}
+
+table.adminlist tbody th { font-weight: bold; }
+
+table.adminlist tbody tr			{ background-color: #fff;  text-align: left; }
+table.adminlist tbody tr.row1 	{ background: #f9f9f9; border-top: 1px solid #fff; }
+
+table.adminlist tbody tr.row0:hover td,
+table.adminlist tbody tr.row1:hover td  { background-color: #ffd ; }
+
+table.adminlist tbody tr td 	   { height: 25px; background: #fff; border: 1px solid #fff; }
+table.adminlist tbody tr.row1 td { background: #f9f9f9; border-top: 1px solid #FFF; }
+
+table.adminlist tfoot tr { text-align: center;  color: #333; }
+table.adminlist tfoot td,
+table.adminlist tfoot th { background-color: #f3f3f3; border-top: 1px solid #999; text-align: center; }
+
+table.adminlist td.order 		{ text-align: center; white-space: nowrap; }
+table.adminlist td.order span { float: left; display: block; width: 20px; text-align: center; }
+
+table.adminlist .pagination { display:table; padding:0;  margin:0 auto;	 }
+
+.pagination div.limit {
+	float: left;
+	height: 22px;
+	line-height: 22px;
+	margin: 0 10px;
+}
+
+dl.tabs {
+float:left;
+margin:10px 0 -1px;
+z-index:50;
+}
+dl.tabs dt {
+background:none repeat scroll 0 0 #F0F0F0;
+border-left:1px solid #CCCCCC;
+border-right:1px solid #CCCCCC;
+border-top:1px solid #CCCCCC;
+color:#666666;
+float:left;
+margin-left:3px;
+padding:4px 10px;
+}
+dl.tabs dt.open {
+background:none repeat scroll 0 0 #F9F9F9;
+border-bottom:1px solid #F9F9F9;
+color:#000000;
+z-index:100;
+}
+
+div.current {
+border:1px solid #CCCCCC;
+clear:both;
+padding:10px;
+}
+
+div.current dd {
+margin:0;
+padding:0;
+}
+
+
+.collector_photo {
+	width: 220px;
+	margin: 0 5px 5px 0;
+	float: left;
+}
+
+.collector_info {
+	display:block;
+	padding-left: 220px;
+}
+
+fieldset.adminform {
+	border:1px solid #CCCCCC;
+	margin:0 10px 10px;
+	background:none;
+}
+
+legend {
+	color:#333;
+	font-size:12px;
+	font-weight:bold;
+}

@@ -1,0 +1,6 @@
+fieldset.adminform label {
+	min-width: 10%;
+	max-width: 50%;
+	width: 50%;
+	padding: 0 5px 0 0;
+}

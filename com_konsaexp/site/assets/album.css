@@ -1,0 +1,330 @@
+@charset "utf-8";
+/* CSS Document */
+
+/** 
+ * @version		1.0.1
+ * @package		muscol
+ * @copyright	2009 JoomlaMusicSolutions.com
+ * @license		GPLv2
+ */
+
+/********************************/
+
+tr.tr_song_link:hover{
+background-color:#fffeee;
+}
+a.song_link{
+width:100%;
+display:block;
+}
+a.song_link:hover{
+color:#FF0000;
+}
+
+/*********************************/
+
+.rule_sep{
+height:5px;
+border-top:1px solid #999999;
+margin-left:200px;
+margin-right:200px;
+}
+.imatge_gran{
+max-width:643px;
+border:1px solid #CCCCCC;
+}
+.div_imatge_gran{
+text-align:center;
+padding-top:5px;
+padding-bottom:5px;
+}
+h2.artista_disc{
+font-family:"century gothic",arial;
+font-weight:normal;
+font-size:24px;
+color:#999999;
+text-align:left;
+margin:0px;
+padding:0px;
+}
+h2.artista_disc img{
+max-height:40px;
+}
+.artista_disc a{
+color:#999999;
+}
+.artista_disc a:link{
+color:#999999;
+}
+.artista_disc a:hover{
+color:#666666;
+}
+h1.album_disc{
+font-family:"century gothic",arial;
+font-weight:normal;
+font-size:34px;
+color:#006699;
+text-align:left;
+margin:0px;
+padding:0px;
+}
+h1.album_disc img{
+max-height:50px;
+}
+.subtitle_disc{
+color:#999999;
+}
+.nom_song{
+text-align:left;
+padding-left:10px;
+color:#999999;
+}
+.num_song{
+width:20px;
+text-align:right;
+color:#CCCCCC;
+}
+.time_song{
+text-align:right; 
+padding-left:20px;
+color:#CCCCCC;
+}
+.time_song_total{
+text-align:right; 
+padding-left:20px;
+color:#999999;
+}
+.disc_label{
+border-bottom:1px solid #006699; color:#006699;
+margin-bottom:3px;
+padding-bottom:3px;
+}
+.year_disc{
+font-family:"century gothic";
+font-size:24px;
+color:#999999;
+}
+.date_disc{
+font-size:18px;
+color:#999999;
+padding-left:20px;
+}
+.date_disc img{
+vertical-align:bottom;
+padding-bottom:4px;
+border:none;
+}
+.year_disc img{
+padding-bottom:2px;
+border:none;
+}
+.year_disc a,.year_disc a:link,.year_disc a:visited{
+color:#999999;
+}
+.year_disc a:hover{
+color:#666666;
+}
+.taula_next_album{
+	width:100%;
+	-moz-border-radius:4px;
+	padding:5px;
+	background-color:#f9f9f9;
+	border:1px solid #dfdfdf;
+}
+.taula_next_album a img{
+vertical-align:middle;
+border:1px solid #cccccc;
+}
+.taula_next_album a:hover img{
+vertical-align:middle;
+border:1px solid #000000;
+
+}
+.prev_album{
+text-align:left;
+width:33%;
+}
+td.prev_album a:hover{
+color:#FF0000;
+background-color:#fffeee;
+}
+.next_album{
+text-align:right;
+width:33%;
+}
+td.next_album a:hover{
+color:#FF0000;
+background-color:#fffeee;
+}
+.next_album_type{
+width:33%;
+text-align:center;
+color:#CCCCCC;
+}
+.no_songs{
+padding:5px;
+color:#999999;
+}
+
+/********************* DETAILS ************************/
+
+.disc_details{
+	margin-bottom:10px;
+}
+
+table.details{
+	border-bottom:1px solid #eeeeee;
+	border-right:1px solid #eeeeee;
+	font-size:12px;
+}
+table.details table td{
+	border-top:1px solid #eeeeee;
+}
+td.label_detailed_album{
+	/*background-color:#eeeeee;*/
+	padding-left:1px;
+	width:30%;
+	color:#999;
+}
+.value_detailed_album{
+	/*width:50%;*/
+	padding-left:1px;
+	padding-right:1px;
+}
+
+/******************** grid view *********************/
+
+ul,li {
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+padding-left:0px;
+padding-right:0px;
+margin-left:0px;
+}
+
+ul.albums {
+display:inline-block;
+}
+
+ul.albums li {
+float:left;
+width:117px;
+margin:5px;
+}
+
+ul.albums img{
+border:1px solid #CCCCCC;
+
+}
+ul.albums li div{
+height:117px;
+display:table-cell;
+vertical-align:bottom;
+}
+ul.albums li a, ul.albums li a:visited {
+display:block;
+width:117px;
+}
+
+ul.albums li a:hover img{ border:1px solid #000; }
+ul.albums li a:hover span{ color:#000;}
+
+
+ul.albums .name {
+display:block;
+padding-top:5px;
+color:#666666;
+}
+ul.albums span {
+font-size:12px;
+line-height:16px;
+text-align:left;
+}
+
+div.cd{
+	height:117px;
+}
+div.dvd{
+	height:164px;
+}
+a.cd{
+	height:205px;
+}
+a.dvd{
+	height:230px;
+}
+
+ul.albums .year{
+color:#999999;
+font-size:10px;
+}
+ul.albums .year img{
+border:none;
+vertical-align:middle;
+padding-bottom:4px;
+}
+ul.albums a:hover .year img{
+border:none;
+}
+.nom_artist_song{
+	color:#999;
+	padding-left:10px;
+}
+.konsaexpfooter {
+	float:right;
+	margin-top:10px;
+	font-style:italic;
+	font-size:x-small;
+}
+
+/** Table styles **/
+
+table.adminlist {
+	width: 100%;
+	border-spacing: 1px;
+	background-color: #e7e7e7;
+	color: #666;
+}
+
+table.adminlist td,
+table.adminlist th { padding: 4px; }
+
+table.adminlist thead th {
+	text-align: center;
+	background: #f0f0f0;
+	color: #666;
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #fff;
+}
+
+table.adminlist thead a:hover { text-decoration: none; }
+
+table.adminlist thead th img { vertical-align: middle; }
+
+table.adminlist tbody th { font-weight: bold; }
+
+table.adminlist tbody tr			{ background-color: #fff;  text-align: left; }
+table.adminlist tbody tr.row1 	{ background: #f9f9f9; border-top: 1px solid #fff; }
+
+table.adminlist tbody tr.row0:hover td,
+table.adminlist tbody tr.row1:hover td  { background-color: #ffd ; }
+
+table.adminlist tbody tr td 	   { height: 25px; background: #fff; border: 1px solid #fff; }
+table.adminlist tbody tr.row1 td { background: #f9f9f9; border-top: 1px solid #FFF; }
+
+table.adminlist tfoot tr { text-align: center;  color: #333; }
+table.adminlist tfoot td,
+table.adminlist tfoot th { background-color: #f3f3f3; border-top: 1px solid #999; text-align: center; }
+
+table.adminlist td.order 		{ text-align: center; white-space: nowrap; }
+table.adminlist td.order span { float: left; display: block; width: 20px; text-align: center; }
+
+table.adminlist .pagination { display:table; padding:0;  margin:0 auto;	 }
+
+.pagination div.limit {
+	float: left;
+	height: 22px;
+	line-height: 22px;
+	margin: 0 10px;
+}

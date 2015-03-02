@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0" >
+	<name>KonsaExp</name>
+	<license>GPLv2. Private software</license>
+	<author>SirPiter</author>
+	<authorEmail>sirpiter@ya.ru</authorEmail>
+	<authorUrl>http://www.sirpiter.ru</authorUrl>
+	<creationDate>March 2015</creationDate>
+	<copyright>2009 - 2015, sirpiter.ru</copyright>
+	<version>2.5.14</version>
+	<description>
+		Folklor Expedition DataBase for Joomla!
+	</description>
+	<installfile></installfile>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">install/konsaexp.sql</file>
+			<file driver="mysql">install/konsaexp.sql</file>
+		</sql>
+	</install>
+
+	<uninstall>
+	</uninstall>
+
+    <files folder="site">
+		<folder>helpers</folder>
+		<folder>assets</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+		<filename>konsaexp.php</filename>
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+    </files>
+	
+	<languages folder="admin/language/ru-RU">
+		<language tag="ru-RU">ru-RU.com_konsaexp.ini</language>
+   	</languages>
+
+
+	<administration>
+	
+		<!-- Administration Menu Section -->
+		<menu img="components/com_konsaexp/assets/images/konsaexp_16.png" link="option=com_konsaexp">COM_KONSAEXP_MENU</menu>
+		<submenu>
+		  <menu img="components/com_konsaexp/assets/images/map_16.png"  link="option=com_konsaexp&amp;controller=expeditions">COM_KONSAEXP_MENU_EXPEDITIONS</menu>
+		  <menu img="components/com_konsaexp/assets/images/vcard_16.png"  link="option=com_konsaexp&amp;controller=collectors">COM_KONSAEXP_MENU_COLLECTORS</menu>
+		  <menu img="components/com_konsaexp/assets/images/record_16.png"  link="option=com_konsaexp&amp;controller=recordsessions">COM_KONSAEXP_MENU_RECORDSESSIONS</menu>
+		  <menu img="components/com_konsaexp/assets/images/music.png"  link="option=com_konsaexp&amp;controller=genres">COM_KONSAEXP_MENU_PHONOGRAMS</menu>
+		  <menu img="components/com_konsaexp/assets/images/artists_16.png"  link="option=com_konsaexp&amp;controller=artists">COM_KONSAEXP_MENU_ARTISTS</menu>
+		  <menu img="components/com_konsaexp/assets/images/docs_16.png"  link="option=com_konsaexp&amp;controller=documents">COM_KONSAEXP_MENU_DOCUMENTS</menu>
+		  <menu img="components/com_konsaexp/assets/images/photo_16.png"  link="option=com_konsaexp&amp;controller=photos">COM_KONSAEXP_MENU_PHOTOS</menu>
+		  <menu img="components/com_konsaexp/assets/images/video_16.png"  link="option=com_konsaexp&amp;controller=videos">COM_KONSAEXP_MENU_VIDEOS</menu>
+		  <menu img="components/com_konsaexp/assets/images/home_16.png"  link="option=com_konsaexp&amp;controller=towns">COM_KONSAEXP_MENU_TOWNS</menu>
+		  <menu img="components/com_konsaexp/assets/images/region_16.png"  link="option=com_konsaexp&amp;controller=regions">COM_KONSAEXP_MENU_REGIONS</menu>
+		</submenu>
+
+	    <files folder="admin">
+		    <folder>assets</folder>
+		    <folder>helpers</folder>
+		    <folder>controllers</folder>
+		    <folder>install</folder>
+		    <folder>models</folder>
+		    <folder>tables</folder>
+		    <folder>language</folder>
+		    <folder>media</folder>
+		    <folder>views</folder>
+									
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>konsaexp.php</filename>
+	    </files>
+
+ 	</administration>
+
+	<params />
+
+</install>
