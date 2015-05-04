@@ -115,3 +115,14 @@ class SessionsController extends JController{
 		parent::display();
 	}
 }
+
+class OrganizationsController extends JController{
+
+	function display()
+	{
+		//require_once JPATH_COMPONENT.'/helpers/helpers.php';
+		parent::display();
+	}
+}
+
+

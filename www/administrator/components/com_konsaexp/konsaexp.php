@@ -41,6 +41,7 @@ if($controller = JRequest::getWord('controller')) {
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_PHONOGRAMS'), 'index.php?option=com_konsaexp&controller=phonograms' );
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_DOCUMENTS'), 'index.php?option=com_konsaexp&controller=documents');
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_PHOTOS'), 'index.php?option=com_konsaexp&controller=photos');
+				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_ORGANIZATIONS'), 'index.php?option=com_konsaexp&controller=organizations');
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_TOWNS'), 'index.php?option=com_konsaexp&controller=towns');
 				$prefix	= 'Expeditions';
 				break;
@@ -55,10 +56,26 @@ if($controller = JRequest::getWord('controller')) {
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_PHONOGRAMS'), 'index.php?option=com_konsaexp&controller=phonograms' );
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_DOCUMENTS'), 'index.php?option=com_konsaexp&controller=documents');
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_PHOTOS'), 'index.php?option=com_konsaexp&controller=photos');
+				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_ORGANIZATIONS'), 'index.php?option=com_konsaexp&controller=organizations');
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_TOWNS'), 'index.php?option=com_konsaexp&controller=towns');
 				$prefix	= 'Sessions';
 				break;
 
+
+			case "organizations":
+			case "organization":
+				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_ARHIVE_MAIN'), 'index.php?option=com_konsaexp');
+				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_EXPEDITIONS'), 'index.php?option=com_konsaexp&controller=expeditions');
+				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_SESSIONS'), 'index.php?option=com_konsaexp&controller=sessions');
+				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_COLLECTORS'), 'index.php?option=com_konsaexp&controller=collectors' );
+				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_ARTISTS'), 'index.php?option=com_konsaexp&controller=artists' );
+				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_PHONOGRAMS'), 'index.php?option=com_konsaexp&controller=phonograms' );
+				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_DOCUMENTS'), 'index.php?option=com_konsaexp&controller=documents');
+				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_PHOTOS'), 'index.php?option=com_konsaexp&controller=photos');
+				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_ORGANIZATIONS'), 'index.php?option=com_konsaexp&controller=organizations', true );
+				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_TOWNS'), 'index.php?option=com_konsaexp&controller=towns');
+				$prefix	= 'Organizations';
+				break;
 			case "collectors":
 			case "collector":
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_ARHIVE_MAIN'), 'index.php?option=com_konsaexp');
@@ -69,6 +86,7 @@ if($controller = JRequest::getWord('controller')) {
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_PHONOGRAMS'), 'index.php?option=com_konsaexp&controller=phonograms' );
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_DOCUMENTS'), 'index.php?option=com_konsaexp&controller=documents');
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_PHOTOS'), 'index.php?option=com_konsaexp&controller=photos');
+				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_ORGANIZATIONS'), 'index.php?option=com_konsaexp&controller=organizations');
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_TOWNS'), 'index.php?option=com_konsaexp&controller=towns');
 				$prefix	= 'Collectors';
 				break;
@@ -83,6 +101,7 @@ if($controller = JRequest::getWord('controller')) {
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_PHONOGRAMS'), 'index.php?option=com_konsaexp&controller=phonograms' );
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_DOCUMENTS'), 'index.php?option=com_konsaexp&controller=documents');
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_PHOTOS'), 'index.php?option=com_konsaexp&controller=photos');
+				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_ORGANIZATIONS'), 'index.php?option=com_konsaexp&controller=organizations');
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_TOWNS'), 'index.php?option=com_konsaexp&controller=towns');
 				$prefix	= 'Artists';
 				break;
@@ -97,6 +116,7 @@ if($controller = JRequest::getWord('controller')) {
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_PHONOGRAMS'), 'index.php?option=com_konsaexp&controller=phonograms' );
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_DOCUMENTS'), 'index.php?option=com_konsaexp&controller=documents');
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_PHOTOS'), 'index.php?option=com_konsaexp&controller=photos');
+				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_ORGANIZATIONS'), 'index.php?option=com_konsaexp&controller=organizations');
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_TOWNS'), 'index.php?option=com_konsaexp&controller=towns', true);
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_REGIONS'), 'index.php?option=com_konsaexp&controller=regions' );
 
@@ -113,6 +133,7 @@ if($controller = JRequest::getWord('controller')) {
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_PHONOGRAMS'), 'index.php?option=com_konsaexp&controller=phonograms' );
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_DOCUMENTS'), 'index.php?option=com_konsaexp&controller=documents');
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_PHOTOS'), 'index.php?option=com_konsaexp&controller=photos');
+				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_ORGANIZATIONS'), 'index.php?option=com_konsaexp&controller=organizations');
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_TOWNS'), 'index.php?option=com_konsaexp&controller=towns');
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_REGIONS'), 'index.php?option=com_konsaexp&controller=regions', true );
 
@@ -137,6 +158,7 @@ if($controller = JRequest::getWord('controller')) {
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_PHONOGRAMS'), 'index.php?option=com_konsaexp&controller=phonograms', true );
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_DOCUMENTS'), 'index.php?option=com_konsaexp&controller=documents');
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_PHOTOS'), 'index.php?option=com_konsaexp&controller=photos');
+				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_ORGANIZATIONS'), 'index.php?option=com_konsaexp&controller=organizations');
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_TOWNS'), 'index.php?option=com_konsaexp&controller=towns');
 				$prefix	= 'Phonograms';
 				break;
@@ -151,6 +173,7 @@ if($controller = JRequest::getWord('controller')) {
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_PHONOGRAMS'), 'index.php?option=com_konsaexp&controller=phonograms' );
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_DOCUMENTS'), 'index.php?option=com_konsaexp&controller=documents', true);
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_PHOTOS'), 'index.php?option=com_konsaexp&controller=photos');
+				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_ORGANIZATIONS'), 'index.php?option=com_konsaexp&controller=organizations');
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_TOWNS'), 'index.php?option=com_konsaexp&controller=towns');
 				$prefix	= 'Documents';
 				break;
@@ -165,6 +188,7 @@ if($controller = JRequest::getWord('controller')) {
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_PHONOGRAMS'), 'index.php?option=com_konsaexp&controller=phonograms' );
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_DOCUMENTS'), 'index.php?option=com_konsaexp&controller=documents');
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_PHOTOS'), 'index.php?option=com_konsaexp&controller=photos', true);
+				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_ORGANIZATIONS'), 'index.php?option=com_konsaexp&controller=organizations');
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_TOWNS'), 'index.php?option=com_konsaexp&controller=towns');
 				$prefix	= 'Photos';
 				break;
@@ -182,6 +206,7 @@ if($controller = JRequest::getWord('controller')) {
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_PHONOGRAMS'), 'index.php?option=com_konsaexp&controller=phonograms');
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_DOCUMENTS'), 'index.php?option=com_konsaexp&controller=documents');
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_PHOTOS'), 'index.php?option=com_konsaexp&controller=photos');
+				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_ORGANIZATIONS'), 'index.php?option=com_konsaexp&controller=organizations');
 				JSubMenuHelper::addEntry(JText::_('COM_KONSAEXP_TOWNS'), 'index.php?option=com_konsaexp&controller=towns');
 				$prefix	= 'Cpanel';
 				break;

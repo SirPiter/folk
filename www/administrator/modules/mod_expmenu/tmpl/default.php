@@ -62,6 +62,7 @@ $expMenu.='<li class="node exp"><a href="?option=com_konsaexp">'."Архив ф�
 	$expMenu.='<li><a class="submenu" href="?option=com_konsaexp&controller=documents">'."Документы".'</a></li>';
 	$expMenu.='<li><a class="submenu" href="?option=com_konsaexp&controller=photos">'."Фотографии".'</a></li>';
 	$expMenu.='<li><a class="submenu" href="?option=com_konsaexp&controller=expeditions">'."Нотные расшифровки".'</a></li>';
+	$expMenu.='<li><a class="submenu" href="?option=com_konsaexp&controller=organizations">'."Организации".'</a></li>';
 	$expMenu.='<li><a class="submenu" href="?option=com_konsaexp&controller=towns">'."Населенные пункты".'</a></li>';
 	$expMenu.='<li><a class="submenu" href="?option=com_konsaexp&controller=regions">'."Регионы".'</a></li>';
 	$expMenu.='<li class="separator"><span></span></li>';

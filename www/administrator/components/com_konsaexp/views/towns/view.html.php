@@ -17,7 +17,7 @@ class TownsViewTowns extends JView
 
 	function display($tpl = null)
 	{
-		JToolBarHelper::title(   JText::_( 'Town Manager' ), 'town' );
+		JToolBarHelper::title(   JText::_( 'COM_KONSAEXP_TOWN_MANAGER' ), 'town' );
 		JToolBarHelper::deleteList();
 		JToolBarHelper::editListX();
 		JToolBarHelper::addNewX();

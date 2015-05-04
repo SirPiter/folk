@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @version		2.5.1
+ * @version		2.5.28
  * @package		konsa_expeditions
  * @copyright	2013 SP
  * @license		GPLv2
