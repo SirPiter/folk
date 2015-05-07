@@ -43,6 +43,12 @@ class OrganizationsModelOrganization extends JModel
 		if (!$this->_data) {
 			$this->_data = new stdClass();
 			$this->_data->id = 0;
+			
+			$this->_data->code = '';
+			$this->_data->name = '';
+			$this->_data->comment = '';
+			$this->_data->modified = '';
+			$this->_data->created = '';
 		}
 
 		return $this->_data;
@@ -70,8 +76,22 @@ class OrganizationsModelOrganization extends JModel
 		$data = JRequest::get( 'post' );
 		$data['review'] = JRequest::getVar('review', '', 'post', 'string', JREQUEST_ALLOWRAW);
 		$datafiles = JRequest::get( 'files' );
-
-//		print_r($data); die;
+		
+		$date	= JFactory::getDate();
+		$user	= JFactory::getUser();
+		if ($data->id) {
+			// Existing item
+			$data->modified		= $date->toSql();
+			$data->modified_by	= $user->get('id');
+		} else {
+			// New organization.
+			if (!intval($data->created)) {
+				$data->created = $date->toSql();
+			}
+			if (empty($data->created_by)) {
+				$data->created_by = $user->get('id');
+			}
+		}
 		
 		// Bind the form fields to the album table
 		if (!$row->bind($data)) {
@@ -89,6 +109,8 @@ class OrganizationsModelOrganization extends JModel
 			$this->setError($this->_db->getErrorMsg());
 			return false;
 		}
+		
+		//print_r($row); die;
 		// Store the web link table to the database
 		if (!$row->store()) {
 			$this->setError( $row->getErrorMsg() );
@@ -209,7 +231,46 @@ class OrganizationsModelOrganization extends JModel
 		return $this->_sessions_list;
 	}
 
-	
+	public function publish($cid)
+	{
+		if ($cid) {
+			$params = JComponentHelper::getParams('com_konsaexp');
+			$params->set('Organization', $cid);
+
+			$table = JTable::getInstance('extension');
+			$id = $table->find(array('element' => 'com_konsaexp'));
+
+			// Load
+			if (!$table->load($id)) {
+				$this->setError($table->getError());
+				return false;
+			}
+
+			$table->params = (string)$params;
+			// pre-save checks
+			if (!$table->check()) {
+				$this->setError($table->getError());
+				return false;
+			}
+
+			// save the changes
+			if (!$table->store()) {
+				$this->setError($table->getError());
+				return false;
+			}
+		}
+		else {
+			$this->setError(JText::_('COM_LANGUAGES_ERR_NO_LANGUAGE_SELECTED'));
+			return false;
+		}
+
+		// Clean the cache of com_languages and component cache.
+		$this->cleanCache();
+		$this->cleanCache('_system');
+
+		return true;
+	}
+		
 	
 	
 }

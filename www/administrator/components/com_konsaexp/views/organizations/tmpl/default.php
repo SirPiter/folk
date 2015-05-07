@@ -25,7 +25,6 @@
 			</th>
 			<th width="20">
 				&#160;
-		<!-- 		<input type="checkbox" name="toggle" value="" onclick="checkAll(<?php echo count( $this->items ); ?>);" />  -->
 			</th>
 			<th>
 				<?php // echo JText::_( 'organization' ); ?>
@@ -53,8 +52,7 @@
 				<?php echo $row->id; ?>
 			</td>
 			<td>
-				<?php // echo $checked; ?>
-				<?php //echo JHtml::_('organizations.id', $i, $row->organization);?>
+				<input id="cb0" type="radio" title="1" onclick="Joomla.isChecked(this.checked);" value=<?php echo $row->id; ?> name="cid">
 			</td>
 			<td>
 				<?php echo JHTML::_('link', $link, $fullname, array('class'=>'art-link')); ?>
@@ -63,7 +61,7 @@
 				<?php echo JHTML::_('link', $link, $row->code, array('class'=>'art-link')); ?>
       	</td>
 		<td align="center">
-			<?php echo JHtml::_('jgrid.isdefault', $row->published, $i, 'installed.',  !$row->published && $canChange);?>
+			<?php echo JHtml::_('jgrid.isdefault', $row->default, $i, FALSE);?>
 		</td>
 
 		</tr>

@@ -3,7 +3,7 @@
 //jimport('joomla.application.component.view');
 
 
-JHTML::_('behavior.calendar'); 
+//JHTML::_('behavior.calendar'); 
 // Load the tooltip behavior.
 //JHtml::_('behavior.tooltip');
 //JHtml::_('behavior.formvalidation');
@@ -25,7 +25,7 @@ JHTML::_('behavior.calendar');
 					<input class="text_area" type="text" name="name" id="name" size="48" maxlength="250" value="<?php echo $this->organization->name;?>" /></li>
 				<li>	
 					<label for="Code">	<?php echo JText::_( 'COM_KONSAEXP_ORGANIZATION_CODE' ); ?>:	</label>
-					<input class="text_area" type="text" name="code" id="code" size="48" maxlength="10" value="<?php echo $this->organization->code;?>" /></li>
+					<input class="text_area" type="text" name="code" id="code" size="10" maxlength="10" value="<?php echo $this->organization->code;?>" /></li>
 			</ul>
 			<div class="clr"></div>
 			<label for="review"><?php echo JText::_( 'COM_KONSAEXP_COMMENT' ); ?>:</label>
@@ -38,7 +38,9 @@ JHTML::_('behavior.calendar');
 </div>
 	
 <div class="width-40 fltrt">
-<fieldset class="panelform">
+<fieldset class="panelform" style="margin-top: 10px;">
+	<legend><?php echo JText::_( 'COM_KONSAEXP_METADATA' ); ?></legend>
+
     <ul class="adminformlist">
         <li>
 	        <label for="metadescription"><?php echo JText::_( 'COM_KONSAEXP_METADESCRIPTION' ); ?>:</label>
@@ -61,14 +63,20 @@ JHTML::_('behavior.calendar');
 	        <label for="modified_date"><?php echo JText::_( 'COM_KONSAEXP_MODIFIED_DATE' ); ?>:</label>
 	        <span style="float: left; margin: 5px 5px 5px 0px; width: auto;"><?php echo JHTML::_('date', $this->organization->modified, JText::_('DATE_FORMAT_LC3'));?></span>
 	        <input  type="hidden" name="modified_by" value="<?php echo $this->user->id;?>" />
-            <input  type="hidden" name="modified" id="modified" value="<?php echo JHTML::_('date', now, "Y-m-d H:i:s" );?>" />
-        </li>
+            <input  type="hidden" name="modified" id="modified" value="<?php  
+            //echo JHTML::_('date', now, "Y-m-d H:i:s" );
+            echo JHTML::_('date', JFactory::getDate(), "Y-m-d H:i:s" );
+            ?>" />
+            
+                    </li>
         <li>
 	        <label for="ID"><?php echo JText::_( 'COM_KONSAEXP_RECORD_ID' ); ?>:</label>
 	        <span style="float: left; margin: 5px 5px 5px 0px; width: auto;"><?php echo $this->organization->id; ?></span>
         </li>
     </ul>
-</fieldset></div>		
+
+   
+    </fieldset></div>		
 <div class="clr"></div>
 
 <input type="hidden" name="option" value="com_konsaexp" />

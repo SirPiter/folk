@@ -18,7 +18,7 @@ class OrganizationsViewOrganizations extends JView
 	function display($tpl = null)
 	{
 		JToolBarHelper::title(  JText::_( 'COM_KONSAEXP_ORGANIZATION_MANAGER' ), 'organization' );
-		JToolBarHelper::makeDefault('installed.setDefault');
+		JToolBarHelper::makeDefault();
 		JToolBarHelper::divider();
 		
 		JToolBarHelper::deleteList();
@@ -54,6 +54,19 @@ class OrganizationsViewOrganizations extends JView
 		$lists['letter'] = "<select name='letter' ".$javascript.">".$lists['letter']."</select>";
 */
 
+       	// if current than set published
+       	$params = JComponentHelper::getParams('com_konsaexp');
+       	foreach ($items as $item) {
+       		if ($params->get('Organization', '1') == $item->id) {
+       			$item->default	= 1;
+       		}
+       		else {
+       			$item->default = 0;
+       		}
+       	}
+       	
+      // 	print_r($items); die;
+       	
 		// push data into the template
        	$this->assignRef('lists', $lists);
 		$this->assignRef('pagination', $pagination);

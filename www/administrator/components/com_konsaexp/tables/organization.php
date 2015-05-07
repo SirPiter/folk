@@ -16,7 +16,8 @@ class TableOrganization extends JTable
 {
 
 	var $id = null;
-	var $name = null;        // имя
+	var $name = null;          // имя
+	var $code = null;          // код
 	var $comment = null;       // комментарий
 	var $created = null;       // дата добавления
 	var $created_by = null;    // кто добавил (id)

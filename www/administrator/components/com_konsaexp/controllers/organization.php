@@ -21,6 +21,8 @@ class OrganizationsControllerOrganization extends OrganizationsController
 		$this->registerTask( 'add'  , 	'edit' );
 		$this->registerTask( 'apply',	'save' );
 		$this->registerTask( 'remove_session',	'remove_session' );
+		$this->registerTask( 'default',	'setDefault' );
+		
 	}
 
 	function edit()
@@ -92,5 +94,25 @@ class OrganizationsControllerOrganization extends OrganizationsController
 			$this->setRedirect( 'index.php?option=com_konsaexp&controller=organizations', $msg );
 		}
 	}
+	
+	
+	function setDefault(){
+		// Check for request forgeries
+		$cid = JRequest::getCmd('cid', '');
+		$model = $this->getModel('organization');
+		if ($model->publish($cid))
+		{
+			$msg = JText::_('COM_KONSAEXP_MSG_DEFAULT_ORG_SAVED');
+			$type = 'message';
+		}
+		else
+		{
+			$msg = $this->getError();
+			$type = 'error';
+		}
+		$this->setredirect('index.php?option=com_konsaexp&controller=organizations', $msg);
+	}
+	
+	
 		
 }

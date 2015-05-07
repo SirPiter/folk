@@ -189,6 +189,11 @@ class OrganizationsModelOrganizations extends JModel
 		return $cadena2;
 	}
 
-
+	function setDefault($sid){
+		$params = JComponentHelper::getParams('com_languages');
+		$params->set("Default", $cid);
+		die;
+		return $cid;
+	}
 
 }

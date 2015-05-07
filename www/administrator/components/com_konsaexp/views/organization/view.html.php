@@ -23,6 +23,7 @@ class OrganizationsViewOrganization extends JView
 		$user		= JFactory::getUser();
 		
 		$organization	 =& $this->get('Data');
+		//print_r($organization); 
 //		$related =& $this->get('OrganizationsData');
 //		$towns	 =& $this->get('TownsData');
 //		$linkedsessions=& $this->get('LinkedSessions');
