@@ -271,8 +271,21 @@ function getCollectorsList()
 			//print_r($this->phonograms);die();
 		return $this->docs;
 	}
-
-
+	
+	function getOrganization(){
+		if (empty( $this->organization )){
+			
+			$params = JComponentHelper::getParams('com_konsaexp');
+			$query = 	' SELECT * FROM #__konsa_exp_organizations '.
+						' WHERE id = ' . $params->get('Organization');
+			$this->_db->setQuery( $query );
+			$this->organization = $this->_db->loadObjectList();
+		}
+		//print_r($this->phonograms);die();
+		return $this->organization;
+	}
+	
+	
 	function save_phonogram($data)
 	{
 		$row =& $this->getTable('phonogram');

@@ -159,7 +159,7 @@ function getTotal()
 	}
 
 	function getData(){
-
+		$this->checkTable();
 		if (empty( $this->_data )){
 			$query = $this->_buildQuery();
 			// print_r($query);
@@ -223,5 +223,56 @@ function getTotal()
                 }
  
                 return $orderby;
+	}
+	
+	function checkTable(){  // проверяем таблицу, добавляем поля по необходимости
+		$res = $this->_db->setQuery ( 'SHOW COLUMNS FROM #__konsa_exp_expeditions' );
+		
+		if( !$this->_db->query($res))
+		{
+			$this->_db->setQuery ( // создаем таблицу
+					"CREATE TABLE IF NOT EXISTS #__konsa_exp_expeditions (".
+  					"`id` int(11) unsigned NOT NULL AUTO_INCREMENT, ".
+  					"`expedition_title` varchar(255) NOT NULL DEFAULT 'Тема экспедиции', ".
+  					"`begin_date` date DEFAULT NULL, ".
+    				"`end_date` date DEFAULT NULL, ".
+  					"`chief_collector` int(11) unsigned DEFAULT '0', ".
+  					"`comment` text NOT NULL, ".
+  					"`keywords` varchar(2048) NOT NULL, ".
+  					"`image_folder` varchar(255) NOT NULL, ".
+  					"`added` datetime NOT NULL, ".
+  					"`year_begin` year(4) NOT NULL DEFAULT '0000', ".
+  					"`month_begin` int(2) NOT NULL DEFAULT '0', ".
+  					"`month_end` int(2) NOT NULL DEFAULT '0', ".
+  					"`year_end` year(4) NOT NULL DEFAULT '0000', ".
+  					"PRIMARY KEY (`id`), ".
+  					"KEY `year` (`year_begin`) ".
+  					") ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Экспедиции' AUTO_INCREMENT=70 ;"
+			);
+			$this->_db->query ();
+		
+			//$log->addEntry ( array ('comment' => 'Этап 4.1.1) База __konsa_exp_expeditions создана') );
+			//$logs_http[] = "<strong>Загрузка товара</strong> - База __konsa_exp_expeditions создана";
+		}
+		else
+		{
+		//	$log->addEntry ( array ('comment' => 'Этап 4.1.1) База __konsa_exp_expeditions существует') );
+		//	$logs_http[] = "<strong>Загрузка товара</strong> - База __konsa_exp_expeditions существует";
+		}
+		
+		$sql = 'SELECT `organization_id` FROM #__konsa_exp_expeditions WHERE 0';
+		$this->_db->setQuery ( $sql );
+		$res2 = $this->_db->query ();
+		if(!$res2)
+		{
+			$sql = 'ALTER TABLE #__konsa_exp_expeditions ADD `organization_id` INT( 11 ) unsigned NOT NULL';
+			$this->_db->setQuery ( $sql );
+			$this->_db->query ();
+		
+			//$logs_http[] = "<strong>Загрузка товара</strong> - Недостоющие поля таблицы product_to_1c созданы";
+		}
+		
+		return true;
+		
 	}
 }

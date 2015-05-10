@@ -31,6 +31,7 @@ class TableExpedition extends JTable
 	var $month_begin = null;    
 	var $month_end = null;    
 	var $year_end = null;    
+	var $organization_id = null;
     
 	
 	function TableExpedition(& $db) {

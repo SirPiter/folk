@@ -45,6 +45,17 @@ echo $pane->startPanel( JText::_('COM_KONSAEXP_EXPEDITION_DETAILS'), 'panel1' );
 			</select>
 		</td>
 		</tr>
+		<tr>   <!-- строка для организации экспедиции -->
+			<td width="100" align="right" class="key">
+				<label for="organization">
+					<?php echo JText::_( 'COM_KONSAEXP_EXPEDITION_ORGANIZATION' ); ?>:
+				</label>
+			</td>
+
+			<td colspan="3">
+				<input class="text_area" type="text" name="organization_code" id="organization_code" size="10" maxlength="25" value="<?php echo $this->organization->id;?>" />
+            </tr>
+		
 			<tr>    <!-- строка для даты начала экспедиции (месяц, год) -->
 			<td width="100" align="right" class="key">
 				<label for="short_begin">

@@ -27,6 +27,8 @@ class ExpeditionsViewExpedition extends JView
 		$townswithregions	=& $this->get('ExtendedTownsList');
 		$phonograms			=& $this->get('Phonograms');
 		$docs				=& $this->get('Docs');		
+		$organization		=& $this->get('Organization');
+		
 		
 		$tab = JRequest::getVar('tab',  0, '');
 		$this->assignRef('tab',		$tab);
@@ -55,6 +57,9 @@ class ExpeditionsViewExpedition extends JView
 		$this->assignRef('townswithregions',	$townswithregions);
 		$this->assignRef('phonograms',	$phonograms);
 		$this->assignRef('docs',	$docs);
+		$this->assignRef('organization',	$organization);
+		
+	//	print_r($organization); 
 		
 		// JS
 		$document->addScript('components/com_konsaexp/assets/tracks.js');
