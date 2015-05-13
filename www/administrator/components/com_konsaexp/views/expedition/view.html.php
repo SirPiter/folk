@@ -27,7 +27,9 @@ class ExpeditionsViewExpedition extends JView
 		$townswithregions	=& $this->get('ExtendedTownsList');
 		$phonograms			=& $this->get('Phonograms');
 		$docs				=& $this->get('Docs');		
-		$organization		=& $this->get('Organization');
+//		$organization		=& $this->get('Organization');
+		$organizations		=& $this->get('Organizations');
+		
 		
 		
 		$tab = JRequest::getVar('tab',  0, '');
@@ -41,6 +43,8 @@ class ExpeditionsViewExpedition extends JView
 
 		if ($isNew)  {
 			JToolBarHelper::cancel();
+			$params = JComponentHelper::getParams('com_konsaexp');
+			$expedition->organization_id = $params->get('Organization');
 		} else {
 			// for existing items the button is renamed `close`
 			JToolBarHelper::apply();
@@ -57,12 +61,17 @@ class ExpeditionsViewExpedition extends JView
 		$this->assignRef('townswithregions',	$townswithregions);
 		$this->assignRef('phonograms',	$phonograms);
 		$this->assignRef('docs',	$docs);
-		$this->assignRef('organization',	$organization);
+		//$this->assignRef('organization',	$organization);
+		$this->assignRef('organizations',	$organizations);
 		
 	//	print_r($organization); 
 		
 		// JS
 		$document->addScript('components/com_konsaexp/assets/tracks.js');
+		
+//		$this->log->addEntry(array('LEVEL' => '1','STATUS' => 'Expedition','COMMENT' => 'Your message here'));
+		//JLog::add('Это сообщения для записи в лог файл');
+		JLog::add(JText::_('Открывается форма Экспедиция'), JLog::INFO);
 
 
 		parent::display($tpl);

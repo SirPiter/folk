@@ -43,6 +43,12 @@ class ExpeditionsModelExpedition extends JModel
 		if (empty( $this->_data )) {
 			$query = ' SELECT * FROM #__konsa_exp_expeditions '.
 					'  WHERE id = '.$this->_id;
+			
+			$query = ' SELECT expeditions.*, orgs.name as org_name, orgs.code as org_code '
+					.' FROM #__konsa_exp_expeditions as expeditions ' 
+					.' LEFT JOIN #__konsa_exp_organizations as orgs ON expeditions.organization_id = orgs.id ' 
+					.' WHERE expeditions.id = '.$this->_id;
+
 			$this->_db->setQuery( $query );
 			$this->_data = $this->_db->loadObject();
 
@@ -283,6 +289,18 @@ function getCollectorsList()
 		}
 		//print_r($this->phonograms);die();
 		return $this->organization;
+	}
+
+	function getOrganizations(){
+		if (empty( $this->organizations )){
+				
+			$params = JComponentHelper::getParams('com_konsaexp');
+			$query = 	' SELECT * FROM #__konsa_exp_organizations ';
+			$this->_db->setQuery( $query );
+			$this->organizations = $this->_db->loadObjectList();
+		}
+		//print_r($this->phonograms);die();
+		return $this->organizations;
 	}
 	
 	

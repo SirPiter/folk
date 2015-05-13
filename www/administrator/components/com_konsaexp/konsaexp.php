@@ -10,6 +10,19 @@
 // No direct access
 defined( '_JEXEC' ) or die( 'Restricted access' );
 
+
+// Подключаем библиотеку JLog
+jimport('joomla.log.log');
+// Инициализация JLog-объекта, файл логов будет называться "my.log.php"
+JLog::addLogger(array(
+// Файл для логов:
+'text_file' => 'konsaexp.log.php',
+// (необязательный параметр) Директория для логов:
+//'text_file_path' => 'somewhere/logs'
+), JLog::ALL, array('com_konsaexp'));
+// Добавляем какие-то данные строку в лог
+//JLog::add(array('LEVEL' => '1','STATUS' => 'SOME ERROR:','COMMENT' => 'Your message here'));
+
 // import joomla controller library 2.5
 jimport('joomla.application.component.controller');
  

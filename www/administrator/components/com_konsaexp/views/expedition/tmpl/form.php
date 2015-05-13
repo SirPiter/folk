@@ -8,7 +8,7 @@ jimport('joomla.html.pane');
 $pane =& JPane::getInstance('tabs', array('startOffset' => $this->tab ));
 echo $pane->startPane( 'pane' );
 echo $pane->startPanel( JText::_('COM_KONSAEXP_EXPEDITION_DETAILS'), 'panel1' );
-//print_r($this->expedition); die;
+//print_r($this->expedition); //die;
 ?>
 
 	<fieldset class="adminform">  <!-- Блок для основных данных экспедиции: название, руководитель, краткие даты  -->
@@ -53,8 +53,18 @@ echo $pane->startPanel( JText::_('COM_KONSAEXP_EXPEDITION_DETAILS'), 'panel1' );
 			</td>
 
 			<td colspan="3">
-				<input class="text_area" type="text" name="organization_code" id="organization_code" size="10" maxlength="25" value="<?php echo $this->organization->id;?>" />
-            </tr>
+             <select name="organization_id" id="organization_id">
+             <option value="0">--<? echo JText::_('None'); ?>--</option>
+            <?php
+			for ($i=0, $n=count( $this->organizations );$i < $n; $i++)	{
+			$row = &$this->organizations[$i];
+			$selected = "";
+			if($row->id == $this->expedition->organization_id) $selected = "selected";
+?>
+            <option <?php echo $selected;?> value="<?php echo $row->id;?>"><?php echo $row->name;?></option>
+            <?php  } ?>
+			</select>
+				   </tr>
 		
 			<tr>    <!-- строка для даты начала экспедиции (месяц, год) -->
 			<td width="100" align="right" class="key">
